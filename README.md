@@ -4,8 +4,6 @@
   Alberto's blog powered by Gatsby
 </h1>
 
-<img alt="screenshot" src="./screenshot.png">
-
 ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**
