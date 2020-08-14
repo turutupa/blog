@@ -6,10 +6,6 @@
 
 <img alt="screenshot" src="./screenshot.png">
 
-This starter is a fork of Gatsby Starter Blog, the most popular starter by far – with second place being Gatsby Starter Netlify CMS. So I decided to combine the 2!
-
-Too see a search-enabled version of this starter, please visit the [with-search](https://github.com/thomaswang/gatsby-personal-starter-blog/tree/with-search) branch.
-
 ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**
