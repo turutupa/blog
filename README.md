@@ -1,8 +1,9 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-![blog header](https://github.com/Turutupa/blog/blob/master/blog.png?raw=true)
 <h1 align="center">
   Alberto's blog powered by Gatsby
 </h1>
+
+<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
+![blog header](https://github.com/Turutupa/blog/blob/master/blog.png?raw=true)
 
 ## 🚀 Quick start
 
