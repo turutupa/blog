@@ -1,11 +1,7 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
+![blog header](https://github.com/Turutupa/blog/blob/master/blog.png?raw=true)
 <h1 align="center">
-  Gatsby Personal Starter Blog
+  Alberto's blog powered by Gatsby
 </h1>
 
 <img alt="screenshot" src="./screenshot.png">
