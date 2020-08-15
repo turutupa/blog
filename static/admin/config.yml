@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: turutupa/blog
+  repo: Turutupa/blog
 
 media_folder: content/assets
 public_folder: ../assets
