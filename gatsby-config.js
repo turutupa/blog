@@ -4,7 +4,7 @@ module.exports = {
     title: `turutupa's garage`,
     author: `Alberto Delgado`,
     description: `A starter personal blog with styled components, dark mode, and Netlify CMS.`,
-    siteUrl: `https://turutupa.netlify.com/`,
+    siteUrl: `https://turutupa.netlify.app/`,
     social: {
       twitter: `gatsbyjs`,
     },
@@ -32,32 +32,9 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-mdx`,
+      resolve: "gatsby-plugin-mdx",
       options: {
-        extensions: [".mdx", ".md"],
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 590,
-            },
-          },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
-          },
-          {
-            resolve: `gatsby-remark-vscode`,
-          },
-          {
-            resolve: `gatsby-remark-copy-linked-files`,
-          },
-          {
-            resolve: `gatsby-remark-smartypants`,
-          },
-        ],
+        gatsbyRemarkPlugins: [`gatsby-remark-images`],
         plugins: [`gatsby-remark-images`],
       },
     },
