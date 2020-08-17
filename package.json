@@ -1,12 +1,9 @@
 {
-  "name": "gatsby-personal-starter-blog",
+  "name": "myblog",
   "private": true,
   "description": "A personal blog starter for a blog powered by Netlify CMS, based on the default blog starter",
   "version": "1.0.0",
-  "author": "Thomas Wang <thomas@wang.sh>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
+  "author": "Alberto Delgado < adc.batros@gmail.com >",
   "dependencies": {
     "@deckdeckgo/highlight-code": "^1.1.3",
     "@mdx-js/mdx": "^1.5.1",
@@ -47,15 +44,18 @@
   "devDependencies": {
     "prettier": "^1.17.0"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://turutupa.netlify.app",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "blog", 
+    "react",
+    "create"
   ],
   "license": "MIT",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/Turutupa/blog"
   },
   "scripts": {
     "build": "gatsby build",
