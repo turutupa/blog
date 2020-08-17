@@ -5,6 +5,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Button from "../components/button"
 
+import "./App.css"
+
 class IndexPage extends React.Component {
   render() {
     const siteTitle = "Gatsby Starter Personal Website"
