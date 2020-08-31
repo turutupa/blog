@@ -8,7 +8,6 @@ import { rhythm } from "../utils/typography"
 import Button from "../components/button"
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
 deckDeckGoHighlightElement()
-
 class Blog extends React.Component {
   render() {
     const { data } = this.props
