@@ -35,7 +35,7 @@ function Bio() {
             />
             <p>
               Personal blog by <strong>{author}</strong>
-              <br />I like to learn, I like to share, I like to create.
+              <br />Learn, share, create.
             </p>
           </Container>
         )
