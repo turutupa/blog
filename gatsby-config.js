@@ -32,16 +32,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-highlight-code`,
-          },
-        ],
-      },
-    },
-    {
       resolve: "gatsby-plugin-mdx",
       options: {
         extensions: [".mdx", ".md"],
