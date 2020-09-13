@@ -6,6 +6,8 @@ function randomTwoDigitNumber() {
   return randomNumber === 0 ? randomTwoDigitNumber() : randomNumber
 }
 
+const scrollToRef = ref => window.scrollTo(0, ref.current.offsetTop)
+
 export default function Multiplication(props) {
   const [firstNumber, setFirstNumber] = React.useState(0)
   const [secondNumber, setSecondNumber] = React.useState(0)
@@ -17,7 +19,11 @@ export default function Multiplication(props) {
   const CORRECT = "Correct!"
   const WRONG = "Wrong!"
 
+  const myRef = React.useRef(null)
+  const executeScroll = () => scrollToRef(myRef)
+
   React.useEffect(() => {
+    executeScroll()
     setFirstNumber(randomTwoDigitNumber())
     setSecondNumber(randomTwoDigitNumber())
   }, [counter])
@@ -60,6 +66,7 @@ export default function Multiplication(props) {
       </h1>
       <form onSubmit={e => submit(e)}>
         <input
+          ref={myRef}
           onKeyDown={e => {
             if (e.key === "Enter") {
               submit(e)
@@ -67,7 +74,14 @@ export default function Multiplication(props) {
           }}
           value={response}
           onChange={e => setResponse(e.target.value)}
-          style={{ width: "100%", padding: "15px" }}
+          style={{
+            width: "100%",
+            padding: "15px",
+            borderColor: answerMsg === CORRECT ? "green" : "red",
+            borderRadius: "5px",
+            borderWidth: "3px",
+            outline: "none",
+          }}
           type="number"
           autoFocus
         ></input>
