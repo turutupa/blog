@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 
 function randomTwoDigitNumber() {
   const randomNumber = Math.floor(Math.random() * 21)
-  return randomNumber === 0 ? randomTwoDigitNumber() : randomNumber
+  return randomNumber <= 1 ? randomTwoDigitNumber() : randomNumber
 }
 
 const scrollToRef = ref => window.scrollTo(0, ref.current.offsetTop)
@@ -16,6 +16,7 @@ export default function Multiplication(props) {
   const [counter, setCounter] = React.useState(0)
   const [answerMsg, setAnswerMsg] = React.useState("")
   const [correctAnswer, setCorrectAnswer] = React.useState("")
+  const [incorrectAnswers, setIncorrectAnswers] = React.useState([])
   const CORRECT = "Correct!"
   const WRONG = "Wrong!"
 
@@ -39,6 +40,10 @@ export default function Multiplication(props) {
     } else {
       setAnswerMsg(WRONG)
       setCorrectAnswer(answer)
+      setIncorrectAnswers([
+        ...incorrectAnswers,
+        `${firstNumber} x ${secondNumber}`,
+      ])
     }
     setCounter(counter + 1)
   }
@@ -98,6 +103,14 @@ export default function Multiplication(props) {
         <h3 style={{ textAlign: "center" }}>
           Correct answer was {correctAnswer}
         </h3>
+      ) : (
+        ""
+      )}
+      {incorrectAnswers.length > 0 ? (
+        <div>
+          <h3>Wrong answers</h3>
+          {incorrectAnswers.map(a => a)}
+        </div>
       ) : (
         ""
       )}
