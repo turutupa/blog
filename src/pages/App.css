@@ -1,3 +1,15 @@
+body {
+  transition: background-color 1s ease;
+  background-color: #ffffff;
+}
+
+body.dark {
+  transition: background-color 1s ease;
+  -webkit-font-smoothing: antialiased;
+  background-color: #282d35;
+  color: #e5e5e6;
+}
+
 p > code {
   background-color: rgb(245, 245, 245);
   padding: 15px 40px;
@@ -6,5 +18,34 @@ p > code {
 }
 
 a {
-  color: #b43e8f;
+  color: #00c27e;
+}
+
+body.dark a {
+  color: #78d6b5;
+}
+
+body.dark blockquote {
+  color: #b3b3b8;
+}
+
+.react-toggle-track-check {
+  padding-top: 5px;
+}
+
+.react-toggle-track-x {
+  padding-top: 5px;
+}
+
+.react-toggle--checked .react-toggle-track {
+  /* font-size: 30px !important; */
+  background-color: #f2fbf8;
+}
+
+.react-toggle-track:hover {
+  background-color: #f2fbf8;
+}
+
+.react-toggle-thumb {
+  box-shadow: 0 0 2px 3px #78d6b5 !important;
 }

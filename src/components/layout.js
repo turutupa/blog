@@ -4,76 +4,67 @@ import styled from "styled-components"
 
 import { rhythm, scale } from "../utils/typography"
 
+import ThemeSwitcher from "../components/themeSwitcher"
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
 deckDeckGoHighlightElement()
 
+const StyledDot = styled.span`
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: bold;
+`
+
+function DotSeparator() {
+  return <StyledDot>·</StyledDot>
+}
+
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    const blogPath = `${__PATH_PREFIX__}/blog/`
-    let header
+    const { title, children } = this.props
 
-    if (location.pathname === rootPath || location.pathname === blogPath) {
-      header = (
-        <h1
+    const header = (
+      <h3
+        style={{
+          fontFamily: `Montserrat, sans-serif`,
+          marginTop: 0,
+        }}
+      >
+        <Link
           style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
+            boxShadow: `none`,
+            textDecoration: `none`,
+            color: `inherit`,
           }}
+          to={`/blog/`}
         >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={location.pathname === blogPath ? `/blog/` : `/`}
-          >
-            {title}
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/blog/`}
-          >
-            {title}
-          </Link>
-        </h3>
-      )
-    }
+          {title}
+        </Link>
+      </h3>
+    )
+    // }
     return (
       <Wrapper>
         <div
           style={{
+            position: "relative",
             marginLeft: `auto`,
             marginRight: `auto`,
             maxWidth: rhythm(24),
             padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
           }}
         >
+          <ThemeSwitcher />
           <header>{header}</header>
           <main>{children}</main>
         </div>
-        {/* <Footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </Footer> */}
+        <Footer>
+          © {new Date().getFullYear()}, Built with love
+          <p>
+            <a href="https://www.gatsbyjs.org">LinkedIn</a>
+            <DotSeparator />
+            <a href="https://www.buymeacoffee.com/turutupa">Buy me a beer</a>
+          </p>
+        </Footer>
       </Wrapper>
     )
   }
