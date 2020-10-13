@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+import { rhythm, scale } from "../utils/typography"
 import Button from "../components/button"
 import "@deckdeckgo/highlight-code"
 
@@ -23,9 +23,10 @@ class Blog extends React.Component {
             const title = node.frontmatter.title || node.fields.slug
             return (
               <div key={node.fields.slug}>
-                <h3
+                <h1
                   style={{
-                    marginBottom: rhythm(1 / 4),
+                    fontSize: rhythm(1),
+                    marginBottom: rhythm(1 / 5),
                   }}
                 >
                   <Link
@@ -34,7 +35,7 @@ class Blog extends React.Component {
                   >
                     {title}
                   </Link>
-                </h3>
+                </h1>
                 <small>{node.frontmatter.date}</small>
                 <p
                   dangerouslySetInnerHTML={{
