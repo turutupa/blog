@@ -37,21 +37,25 @@ body.dark small {
   color: #beebda;
 }
 
+.react-toggle-track {
+  width: 55px;
+}
+
 .react-toggle-track-check {
   padding-top: 5px;
 }
 
 .react-toggle-track-x {
   padding-top: 5px;
+  margin-right: 5px;
 }
 
 .react-toggle--checked .react-toggle-track {
-  /* font-size: 30px !important; */
   background-color: #f2fbf8;
 }
 
-.react-toggle-track:hover {
-  background-color: #f2fbf8;
+.react-toggle--checked .react-toggle-thumb {
+  left: 32px !important;
 }
 
 .react-toggle-thumb {
