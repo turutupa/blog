@@ -18,7 +18,6 @@ export default function ThemeSwitcher() {
           else
             return (
               <label>
-                {console.log("theme", theme)}
                 <Toggle
                   onChange={e =>
                     toggleTheme(e.target.checked ? "dark" : "light")
