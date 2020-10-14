@@ -17,7 +17,7 @@ export default function ThemeSwitcher() {
           <label>
             <Toggle
               onChange={e => toggleTheme(e.target.checked ? "dark" : "light")}
-              checked={theme === "dark"}
+              checked={theme === "dark" || localStorage.theme === "dark"}
               icons={{
                 unchecked: "🌒",
                 checked: "☀️",
