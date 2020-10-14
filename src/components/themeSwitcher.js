@@ -6,7 +6,7 @@ import styled from "styled-components"
 
 const Wrapper = styled.div`
   position: absolute !important;
-  right: 0;
+  right: 10px;
 `
 
 export default function ThemeSwitcher() {

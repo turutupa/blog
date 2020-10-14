@@ -29,6 +29,14 @@ body.dark blockquote {
   color: #b3b3b8;
 }
 
+body.dark blockquote {
+  border-left: 0.35rem solid #beebda;
+}
+
+body.dark small {
+  color: #beebda;
+}
+
 .react-toggle-track-check {
   padding-top: 5px;
 }
