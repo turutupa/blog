@@ -60,9 +60,23 @@ class Layout extends React.Component {
         <Footer>
           © {new Date().getFullYear()}, Built with love
           <p>
-            <a href="https://www.gatsbyjs.org">LinkedIn</a>
+            <a
+              href="https://www.linkedin.com/in/albertodelgadocabrera/"
+              target="_blank"
+            >
+              LinkedIn
+            </a>
             <DotSeparator />
-            <a href="https://www.buymeacoffee.com/turutupa">Buy me a beer</a>
+            <a href="https://www.buymeacoffee.com/turutupa" target="_blank">
+              Buy me a beer
+            </a>
+            <DotSeparator />
+            <a
+              href="https://open.spotify.com/user/metalbatros91?si=96mrGNfHR7y95eVPjjziFQ"
+              target="_blank"
+            >
+              Spotify
+            </a>
           </p>
         </Footer>
       </Wrapper>
