@@ -13,18 +13,25 @@ export default function ThemeSwitcher() {
   return (
     <Wrapper>
       <ThemeToggler>
-        {({ theme, toggleTheme }) => (
-          <label>
-            <Toggle
-              onChange={e => toggleTheme(e.target.checked ? "dark" : "light")}
-              checked={theme === "dark" || localStorage.theme === "dark"}
-              icons={{
-                unchecked: "🌒",
-                checked: "☀️",
-              }}
-            />
-          </label>
-        )}
+        {({ theme, toggleTheme }) => {
+          if (!theme) return <label></label>
+          else
+            return (
+              <label>
+                {console.log("theme", theme)}
+                <Toggle
+                  onChange={e =>
+                    toggleTheme(e.target.checked ? "dark" : "light")
+                  }
+                  checked={theme === "dark"}
+                  icons={{
+                    unchecked: "🌒",
+                    checked: "☀️",
+                  }}
+                />
+              </label>
+            )
+        }}
       </ThemeToggler>
     </Wrapper>
   )
