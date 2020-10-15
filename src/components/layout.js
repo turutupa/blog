@@ -18,30 +18,39 @@ function DotSeparator() {
   return <StyledDot>·</StyledDot>
 }
 
+const H3 = styled.h3`
+  font-family: Montserrat, sans-serif;
+  margin-top: 0;
+  display: inline;
+  margin-right: 15px;
+  margin-left: 0;
+`
+
+const StyledLink = styled(Link)`
+  box-shadow: none;
+  text-decoration: none;
+  color: inherit;
+`
+
 class Layout extends React.Component {
   render() {
-    const { title, children } = this.props
-
+    const { location, title, children } = this.props
     const header = (
-      <h3
-        style={{
-          fontFamily: `Montserrat, sans-serif`,
-          marginTop: 0,
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`,
-          }}
-          to={`/blog/`}
-        >
-          {title}
-        </Link>
-      </h3>
+      <>
+        <H3>
+          <StyledLink to={`/`}>{title}</StyledLink>
+        </H3>
+        {location.pathname !== "/" && (
+          <>
+            <H3>/</H3>
+            <H3>
+              <StyledLink to={"/blog/"}>blog</StyledLink>
+            </H3>
+          </>
+        )}
+      </>
     )
-    // }
+
     return (
       <Wrapper>
         <div

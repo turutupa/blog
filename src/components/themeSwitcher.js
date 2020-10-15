@@ -2,6 +2,7 @@ import React from "react"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import Toggle from "react-toggle"
 import "react-toggle/style.css"
+import "./ThemeSwitcher.css"
 import styled from "styled-components"
 
 const Wrapper = styled.div`
@@ -24,8 +25,8 @@ export default function ThemeSwitcher() {
                   }
                   checked={theme === "dark"}
                   icons={{
-                    unchecked: "🌒",
-                    checked: "☀️",
+                    unchecked: "☀️",
+                    checked: "🌒",
                   }}
                 />
               </label>

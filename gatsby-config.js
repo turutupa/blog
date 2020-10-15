@@ -18,6 +18,7 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-feed-mdx`,
+    "gatsby-plugin-breakpoints",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -65,7 +66,7 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         // edit below
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/dev.png`,
       },
     },
     {

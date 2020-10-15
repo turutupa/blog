@@ -1,45 +1,77 @@
 import React from "react"
 import { Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
+import { useBreakpoint } from "gatsby-plugin-breakpoints"
+import Img from "gatsby-image"
+import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Button from "../components/button"
+import Header from "../components/home/header"
+import Contact from "../components/home/contact"
+import About from "../components/home/about"
 
 import "./App.css"
 
-class IndexPage extends React.Component {
-  render() {
-    const siteTitle = ""
+const Container = styled.div`
+  margin-left: ${props => (props.breakpoints ? "40%" : null)};
+  padding-left: ${props => (props.breakpoints ? "30px" : null)};
+  padding-right: ${props => (props.breakpoints ? "30px" : null)};
+`
 
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title="Home"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+const SideImage = styled(Img)`
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 42%;
+  height: 100vh;
+  margin-right: 100px;
+`
+
+function IndexPage(props) {
+  const breakpoints = useBreakpoint()
+  const siteTitle = "turutupa's garage"
+
+  const backgroundImage = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "home-background.jpeg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+    <>
+      {!breakpoints.md ? (
+        <SideImage
+          fluid={backgroundImage?.file?.childImageSharp?.fluid}
+          alt=""
+          objectFit="cover"
         />
-        {/* <img style={{ margin: 0 }} src="./GatsbyScene.svg" alt="Gatsby Scene" /> */}
-        <header>
-          <h1>
-            Hey{" "}
-            <span role="img" aria-label="wave emoji">
-              👋
-            </span>
-          </h1>
+      ) : null}
 
-          <h3>Welcome to Alberto Delgado's homepage.</h3>
-          <p>I like to code, listen to music and read.</p>
-        </header>
-        <p>
-          This starter comes out of the box with styled components and Gatsby's
-          default starter blog running on Netlify CMS.
-        </p>
-        <p>Now go build something great!</p>
-        <Link to="/blog/">
-          <Button marginTop="35px">Go to Blog</Button>
-        </Link>
-      </Layout>
-    )
-  }
+      <Container breakpoints={!breakpoints.md}>
+        <Layout location={props.location} title={siteTitle}>
+          <SEO
+            title="Home"
+            keywords={[`blog`, `turutpa`, `javascript`, `react`, `typescript`]}
+          />
+          <Header />
+          <Link to="/blog/">
+            <Button marginTop="35px">Go to Blog</Button>
+          </Link>
+          <About />
+          <Contact />
+        </Layout>
+      </Container>
+    </>
+  )
 }
 
 export default IndexPage

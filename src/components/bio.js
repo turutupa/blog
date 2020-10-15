@@ -35,7 +35,8 @@ function Bio() {
             />
             <p>
               Personal blog by <strong>{author}</strong>
-              <br />Learn, create, share.
+              <br />
+              Learn, create, share.
             </p>
           </Container>
         )
@@ -46,7 +47,7 @@ function Bio() {
 
 const bioQuery = graphql`
   query BioQuery {
-    avatar: file(absolutePath: { regex: "/avatar-zoom.png/" }) {
+    avatar: file(absolutePath: { regex: "/zoom.png/" }) {
       childImageSharp {
         fixed(width: 65, height: 65) {
           ...GatsbyImageSharpFixed
