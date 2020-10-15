@@ -3,10 +3,10 @@ module.exports = {
     // edit below
     title: `turutupa's garage`,
     author: `Alberto Delgado`,
-    description: `A starter personal blog with styled components, dark mode, and Netlify CMS.`,
-    siteUrl: `https://turutupa.netlify.app/`,
+    description: `Welcome to Alberto Delgado's personal website. Happy to make your acquaintance, please feel free to contact me`,
+    siteUrl: `https://turutupa.com`,
     social: {
-      twitter: `gatsbyjs`,
+      twitter: `PereBlanc`,
     },
   },
   plugins: [
