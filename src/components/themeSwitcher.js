@@ -10,7 +10,20 @@ const Wrapper = styled.div`
   right: 10px;
 `
 
+const Img = styled.img`
+  max-width: none;
+`
+
+function renderIcon(src) {
+  return <Img src={src} alt="" width="17px" height="17px" />
+}
+
 export default function ThemeSwitcher() {
+  const sunIconUrl =
+    "https://www.flaticon.com/svg/static/icons/svg/146/146199.svg"
+  const moonIconUrl =
+    "https://www.flaticon.com/svg/static/icons/svg/740/740880.svg"
+
   return (
     <Wrapper>
       <ThemeToggler>
@@ -25,8 +38,8 @@ export default function ThemeSwitcher() {
                   }
                   checked={theme === "dark"}
                   icons={{
-                    unchecked: "☀️",
-                    checked: "🌒",
+                    unchecked: renderIcon(sunIconUrl),
+                    checked: renderIcon(moonIconUrl),
                   }}
                 />
               </label>

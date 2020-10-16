@@ -3,11 +3,12 @@
 }
 
 .react-toggle-track-check {
-  padding-top: 5px;
+  padding-bottom: 16px;
+  margin-left: 0px;
 }
 
 .react-toggle-track-x {
-  padding-top: 5px;
+  padding-bottom: 17px;
   margin-right: 5px;
 }
 
