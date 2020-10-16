@@ -11,10 +11,12 @@ import Button from "../components/button"
 import Header from "../components/home/header"
 import Contact from "../components/home/contact"
 import About from "../components/home/about"
+import Navbar, { home, about, contact } from "../components/home/navbar"
 
 import "./App.css"
 
 const Container = styled.div`
+  min-height: 100vh;
   margin-left: ${props => (props.breakpoints ? "40%" : null)};
   padding-left: ${props => (props.breakpoints ? "30px" : null)};
   padding-right: ${props => (props.breakpoints ? "30px" : null)};
@@ -33,6 +35,7 @@ const SideImage = styled(Img)`
 function IndexPage(props) {
   const breakpoints = useBreakpoint()
   const siteTitle = "turutupa's garage"
+  const [section, setSection] = React.useState(home)
 
   const backgroundImage = useStaticQuery(graphql`
     query {
@@ -62,12 +65,17 @@ function IndexPage(props) {
             title="Home"
             keywords={[`blog`, `turutpa`, `javascript`, `react`, `typescript`]}
           />
-          <Header />
-          <Link to="/blog/">
-            <Button marginTop="35px">Go to Blog</Button>
-          </Link>
-          <About />
-          <Contact />
+          <Navbar section={section} setSection={setSection} />
+          {section === home && (
+            <>
+              <Header />
+              <Link to="/blog/">
+                <Button marginTop="35px">Go to Blog</Button>
+              </Link>
+            </>
+          )}
+          {section === about && <About />}
+          {section === contact && <Contact />}
         </Layout>
       </Container>
     </>
