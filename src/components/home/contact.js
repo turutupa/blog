@@ -9,16 +9,38 @@ const H1 = styled.h1`
 `
 
 const Input = styled.input`
+  border-radius: 6px;
+  background-color: #303a45;
+  border: none;
+  color: #e5e5e6;
   width: 100% !important;
   padding: 7px 20px;
   margin-bottom: 10px;
+
+  &:focus {
+    border-radius: 6px;
+    outline: none;
+    box-shadow: 0 0 0.5pt 0.5pt #00c27e;
+  }
 `
 
 const TextArea = styled.textarea`
+  background-color: #303a45;
+  border: none;
+  border-radius: 6px;
+  color: #e5e5e6;
+  box-shadow: none;
   width: 100% !important;
   padding: 7px 20px;
   margin-bottom: 10px;
   min-height: 180px;
+  resize: none;
+
+  &:focus {
+    border-radius: 6px;
+    outline: none;
+    box-shadow: 0 0 0.5pt 0.5pt #00c27e;
+  }
 `
 
 export default function Contact() {

@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const H1 = styled.h1`
-  margin-bottom: 5px;
+  margin-bottom: 25px;
 `
 
 export default function Header() {
