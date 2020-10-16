@@ -2,6 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import Button from "../button"
 
+import "./Contact.css"
+
 const Container = styled.div``
 
 const H1 = styled.h1`
@@ -10,9 +12,7 @@ const H1 = styled.h1`
 
 const Input = styled.input`
   border-radius: 6px;
-  background-color: #303a45;
   border: none;
-  color: #e5e5e6;
   width: 100% !important;
   padding: 7px 20px;
   margin-bottom: 10px;
@@ -25,10 +25,8 @@ const Input = styled.input`
 `
 
 const TextArea = styled.textarea`
-  background-color: #303a45;
   border: none;
   border-radius: 6px;
-  color: #e5e5e6;
   box-shadow: none;
   width: 100% !important;
   padding: 7px 20px;
@@ -66,6 +64,7 @@ export default function Contact() {
         }}
       >
         <Input
+          className="input-color-responsive"
           type="text"
           placeholder="Subject"
           value={subject}
@@ -73,6 +72,7 @@ export default function Contact() {
           required
         />
         <TextArea
+          className="input-color-responsive"
           placeholder="Message"
           value={message}
           onChange={e => setMessage(e.target.value)}

@@ -1,0 +1,25 @@
+body .input-color-responsive {
+  background-color: white;
+  color: black;
+  border-color: black !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+}
+
+body .input-color-responsive:focus {
+  border-width: 1px !important;
+  border-color: rgba(255, 255, 255, 0) !important;
+  box-shadow: 0 0 0.5pt 1pt #00c27e !important;
+}
+
+body.dark .input-color-responsive {
+  background-color: #303a45;
+  color: #e5e5e6;
+  border: none !important;
+}
+
+body.dark .input-color-responsive:focus {
+  border-width: 1px !important;
+  border-color: rgba(255, 255, 255, 0) !important;
+  box-shadow: 0 0 0.5pt 1pt #00c27e !important;
+}
