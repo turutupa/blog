@@ -42,7 +42,9 @@ Let's get started with the basics.
 
 # Pure/Impure functions
 
-Pure functions are functions that for a series of arguments will always return the same output. Pure functions perform **one** and one task only and their output is predictable. Let's see some simple examples:
+> Pure functions are functions that for a series of arguments will always return the same output. Pure functions perform **one** and one task only and their output is predictable. 
+
+Let's see some simple examples:
 
 ```
 // example 1
@@ -93,7 +95,7 @@ Understanding these two concepts is key in FP and personally I believe it is als
 
 This one has definitely the most intimidating name but the concept is actually quite straightforward and you have actually been using these ALL the time. 
 
-Higher order functions are functions that operate on other functions, either by taking them as arguments or by returning them. In simple words, A Higher-Order function is a function that receives a function as an argument or returns the function as output. Enough with the confusing explanations, let's see the code:
+> Higher order functions are functions that operate on other functions, either by taking them as arguments or by returning them. In simple words, A Higher-Order function is a function that receives a function as an argument or returns the function as output. Enough with the confusing explanations, let's see the code:
 
 ```
 // example array
@@ -132,7 +134,9 @@ The more intuitive manner of filtering the dogs from the *pets* array would be b
 
 # Closures
 
-A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time ([](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)[Mozilla Developer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)). It is one of those concepts I personally must see in action to understand so let's do it:
+> A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time ([](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)[Mozilla Developer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)). 
+
+It is one of those concepts I personally must see in action to understand so let's do it:
 
 ```
 // example 1 -> taken from above
@@ -207,7 +211,9 @@ This is a very useful example, in case you are developing let's say a mobile app
 
 # Currying
 
-Currying is a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c). This definition is just as easy as it gets. The benefit of currying is being able to assign a variable to a curried function. It can be shown in the following rudimentary implementation:
+> Currying is a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c). 
+
+This definition is just as easy as it gets. The benefit of currying is being able to assign a variable to a curried function. It can be shown in the following rudimentary implementation:
 
 ```
 // example 1
@@ -261,7 +267,9 @@ The second example is particularly interesting as it provides the weary creation
 
 # Function composition
 
-It has been a long way but you made it to the very end! Unfortunately this is not going any more easier than the previous topic. Let's have a look at the definition: function composition is the process of combining two or more functions to produce a new function, it is represented by f,g => f(g(x)).
+It has been a long way but you made it to the very end! Unfortunately this is not going any more easier than the previous topic. Let's have a look at the definition: 
+
+> Function composition is the process of combining two or more functions to produce a new function, it is represented by f,g => f(g(x)).
 
 ```
 const compose = (f,g) => x => f(g(x));
@@ -293,8 +301,3 @@ Personally it has been a lot of fun, I didn't know hosting a workshop could actu
 My experience was so substantial I am working on encouraging my colleagues present their own topics, some of which already have and have had such a great time. 
 
 Have you gone through a similar experience? I'd love to hear about it.
-
-
-
-
-
