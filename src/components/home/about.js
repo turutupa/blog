@@ -17,7 +17,7 @@ export default function About() {
         are amazing such as <i>How to win friends and influence people</i> or{" "}
         <i>The little book of Stoicism</i>.
       </p>
-      {/* <H1>What I am up to lately</H1> */}
+
       <p>
         Some of the stuff I am looking forward to learning is Systems Designs
         and building scalable applications, I am particulary interested in

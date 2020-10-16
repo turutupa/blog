@@ -66,7 +66,7 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         // edit below
-        icon: `content/assets/dev.png`,
+        icon: `content/assets/programmer.png`,
       },
     },
     {
