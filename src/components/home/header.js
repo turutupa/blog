@@ -25,7 +25,7 @@ export default function Header() {
       <H2>I like to code, listen to music and read.</H2>
       <p>
         I'm a full stack developer based in Barcelona with a passion for coding,
-        innovating and learning new technologies. I love building from IoT
+        innovation and learning new technologies. I love building from IoT
         projects to beautiful applications and anything in between.
       </p>
     </header>

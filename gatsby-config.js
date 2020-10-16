@@ -3,7 +3,7 @@ module.exports = {
     // edit below
     title: `turutupa's garage`,
     author: `Alberto Delgado`,
-    description: `Welcome to Alberto Delgado's personal website. Happy to make your acquaintance, please feel free to contact me`,
+    description: `Alberto Delgado, passionate for coding, innovation and learning new technologies.`,
     siteUrl: `https://turutupa.com`,
     social: {
       twitter: `PereBlanc`,
