@@ -5,6 +5,8 @@ import { useBreakpoint } from "gatsby-plugin-breakpoints"
 import Img from "gatsby-image"
 import styled from "styled-components"
 
+import FadeIn from "react-fade-in"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Button from "../components/button"
@@ -67,15 +69,23 @@ function IndexPage(props) {
           />
           <Navbar section={section} setSection={setSection} />
           {section === home && (
-            <>
+            <FadeIn>
               <Header />
               <Link to="/blog/">
                 <Button marginTop="35px">Go to Blog</Button>
               </Link>
-            </>
+            </FadeIn>
           )}
-          {section === about && <About />}
-          {section === contact && <Contact />}
+          {section === about && (
+            <FadeIn>
+              <About />
+            </FadeIn>
+          )}
+          {section === contact && (
+            <FadeIn>
+              <Contact />
+            </FadeIn>
+          )}
         </Layout>
       </Container>
     </>
