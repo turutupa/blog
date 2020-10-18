@@ -39,9 +39,23 @@ function IndexPage(props) {
   const siteTitle = "turutupa's garage"
   const [section, setSection] = React.useState(home)
 
-  const backgroundImage = useStaticQuery(graphql`
+  const sideImages = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "home-background.jpeg" }) {
+      home: file(relativePath: { eq: "home-background.jpeg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      about: file(relativePath: { eq: "about.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      contact: file(relativePath: { eq: "contact.jpeg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -53,12 +67,15 @@ function IndexPage(props) {
 
   return (
     <>
-      {!breakpoints.md ? (
-        <SideImage
-          fluid={backgroundImage?.file?.childImageSharp?.fluid}
-          alt=""
-          objectFit="cover"
-        />
+      {section && breakpoints && !breakpoints.md ? (
+        <FadeIn>
+          <SideImage
+            className="image"
+            fluid={sideImages && sideImages[section].childImageSharp.fluid}
+            alt=""
+            objectFit="cover"
+          />
+        </FadeIn>
       ) : null}
 
       <Container breakpoints={!breakpoints.md}>

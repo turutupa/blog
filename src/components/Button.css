@@ -1,0 +1,22 @@
+/* .button {
+  border-width: 1px !important;
+  border-style: solid !important;
+}
+
+body .button {
+  border-color: #00c27e;
+  color: #00c27e;
+}
+
+body.dark .button {
+  transition: all 0.5s ease;
+  border-color: black;
+  color: white;
+}
+
+body.dark .button:hover {
+  transition: all 0.5s ease;
+  border-color: #00c27e !important;
+  background-color: #00c27e;
+  color: black !important;
+} */

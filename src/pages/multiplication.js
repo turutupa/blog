@@ -19,6 +19,7 @@ export default function Multiplication(props) {
   const [incorrectAnswers, setIncorrectAnswers] = React.useState([])
   const CORRECT = "Correct!"
   const WRONG = "Wrong!"
+  const title = `turutupa's garage`
 
   const myRef = React.useRef(null)
   const executeScroll = () => scrollToRef(myRef)
@@ -49,7 +50,7 @@ export default function Multiplication(props) {
   }
 
   return (
-    <Layout location={props.location}>
+    <Layout location={props.location} title={title}>
       <h1>Multiplication exercises</h1>
       <h3>
         What is the result of{" "}
