@@ -1,7 +1,7 @@
 ---
 path: functional-programming
 date: 2020-10-16T07:18:59.884Z
-title: "Having fun with my colleagues: functional programming"
+title: Functional Programming 101
 description: What is functional programming? A reflection on a series of
   sessions I hosted for my colleagues
 ---
@@ -9,13 +9,13 @@ description: What is functional programming? A reflection on a series of
 >
 > René Descartes
 
-Right before summer I started a series of sessions on functional programming with my colleagues in which we saw the motivation and basics of functional programming. I am no expert on the topic and some time ago I started getting into it and I was astonished with its capabilities. There were two concepts which I had heard before but it wasn't until I got to study it in depth that I grasped its potential: currying and closures. As I has been advised during my journey, it is one of those things you might be wary of at first, nonetheless once you start using them you just can't stop using them. The only inconvenient I've encountered is some techniques in functional programming, such as the two mentioned, may not be so intuitive at first, and that could cause some trouble when working with other developers not familiarized with this concepts. 
+Right before summer I started a series of sessions on functional programming with my work colleagues in which we saw the motivation and basics of functional programming. I am no expert on the topic and some time ago I started getting into it and I was astonished with its capabilities. There were two concepts which I had heard before but it wasn't until I got to study it in depth that I grasped its potential: currying and closures. As I has been advised during my journey, it is one of those things you might be wary of at first, nonetheless once you start using them you just can't stop using them. The only inconvenient I've encountered so far is some techniques in functional programming, such as the two mentioned, may not be so intuitive at first, and that could cause some trouble when working with other developers not familiarized with these concepts. 
 
 *We will refer to functional programming as FP from now onwards.* 
 
-The most fascinating aspect of FP for me was nonetheless, aiming to split every single function into one small purposely task. It may be as simple as add two numbers; it may be to add an exclamation mark at the end of the string or even just trim the string. It doesn't matter how stupid it may seem, just keep it simple. You'll quickly realize how easy is to debug any errors and how easy is to adapt an old function to your new requirements. It is at this point that started my motivation to host these sessions on FP, even if you didn't fully follow the FP guidelines, most of the tenets it is based on will apply to any kind of programming, hence making you a better code. And that is all I want for my fellow colleagues. 
+The most fascinating aspect of FP for me was nonetheless, aiming to split every single function into one small discrete task. It may be as simple as add two numbers; it may be to add an exclamation mark at the end of the string or even just trim the string. It doesn't matter how stupid it may seem, just keep it simple. You'll quickly realize how easy is to debug any errors and how easy is to adapt an old function to your new requirements. It is at this point that started my motivation to host these sessions on FP, even if you didn't fully follow the FP guidelines, most of the tenets it is based on will apply to any kind of programming, hence making you a better code. And that is all I want for my fellow colleagues. 
 
-As you might have guessed already, if you are familiarized with FP, Session 1 was all around pure and impure functions. Let's look at the rest of the content and I'll give a brief introduction to each one of them. Hopefully this will work as a guide if you are new and curious about FP or on the other hand it might refresh your concepts if you are already familiar with the topic. 
+As you might have guessed already, if you are familiarized with FP, Session 1 was all around pure and impure functions. Let's look at the rest of the content and I'll give a brief introduction to each one of them. Hopefully this will serve you as a guide if you are new and curious to FP, as it is not intended to go into too much depth but to merely introduce you to FP concepts, on the other hand it might refresh your memory if you are already familiar with the topic. 
 
 * What is functional programming
 * Pure/Impure functions
@@ -294,10 +294,10 @@ This technique does take some time to acquire but the results are formidable.
 
 # Conclusion
 
-I just went over some of the techniques we saw during the sessions but I didn't really deep dove into some more complex scenarios. The intention is to not overwhelm with cumbersome examples but to be able to understand the techniques and why they can acutally make your life easier. 
+These are the techniques we learned during the sessions but I didn't really deep dove into complex scenarios, as I wanted this to serve as a brief intro into the matter. The intention is to not overwhelm with cumbersome examples but to be able to understand the techniques and why they can substantially make your life easier. May it also serve you as a guideline if you want to keep exploring the subject.
 
-Personally it has been a lot of fun, I didn't know hosting a workshop could actually drain so much energy leaving me completely worn out after each session. It takes some effort to make a presentation with compelling storytelling to keep the attention of all participants, nevertheless it is even harder while coding and doing so in English (not my native language). I could literally feel my entire brain working at 100% capacity, in no other situation had I had so many sections of my brain at full power. Whereas this may seem like a complain, to me was completely reinvigorating. It pushes you to the limit and improves so many competences such as live coding, storytelling, public speaking and technical preparation. 
+Personally it has been a lot of fun, I didn't know hosting this workshop would actually drain so much energy from me leaving me completely worn out after each session. It takes some effort to develop a session with compelling storytelling in English (not my native language), but furthermore it is even harder to do so while coding. I could literally feel my entire brain working at 100% capacity; in no other situation had I had so many sections of my brain at full power. Do not take this as a complain, on the contrary, to me it was completely reinvigorating. It pushes you to the limit and improves so many competences such as live coding, storytelling, public speaking and technical preparation. 
 
-My experience was so substantial I am working on encouraging my colleagues present their own topics, some of which already have and have had such a great time. 
+My experience was so substantial I am working on encouraging my colleagues present their own topics, some of them have already done so and have had such a great time. 
 
 Have you gone through a similar experience? I'd love to hear about it.
