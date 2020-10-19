@@ -1,11 +1,50 @@
 import React from "react"
 import styled from "styled-components"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 const H1 = styled.h1`
   margin-bottom: 5px;
 `
 
+const AvatarWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+`
+
+const AvatarBorder = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 220px;
+  width: 220px;
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #00c27e;
+`
+
+const Avatar = styled(Img)`
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+`
+
 export default function About() {
+  const avatar = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "zoom.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <div>
       <H1>About</H1>
@@ -23,6 +62,15 @@ export default function About() {
         and building scalable applications, I am particulary interested in
         creating microservices with docker
       </p>
+      <AvatarWrapper>
+        <AvatarBorder>
+          <Avatar
+            fluid={avatar?.file?.childImageSharp?.fluid}
+            alt=""
+            objectFit="cover"
+          />
+        </AvatarBorder>
+      </AvatarWrapper>
     </div>
   )
 }

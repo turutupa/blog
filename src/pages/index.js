@@ -39,7 +39,7 @@ function IndexPage(props) {
   const siteTitle = "turutupa's garage"
   const [section, setSection] = React.useState(home)
 
-  const backgroundImage = useStaticQuery(graphql`
+  const sideImage = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "home-background.jpeg" }) {
         childImageSharp {
@@ -53,9 +53,9 @@ function IndexPage(props) {
 
   return (
     <>
-      {!breakpoints.md ? (
+      {breakpoints && !breakpoints.md ? (
         <SideImage
-          fluid={backgroundImage?.file?.childImageSharp?.fluid}
+          fluid={sideImage?.file?.childImageSharp?.fluid}
           alt=""
           objectFit="cover"
         />

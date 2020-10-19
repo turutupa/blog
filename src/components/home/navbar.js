@@ -27,6 +27,7 @@ export default function Navbar(props) {
     <Container>
       {sections.map(section => (
         <NavItem
+          key={section}
           active={props.section === section}
           onClick={() => props.setSection(section)}
         >
