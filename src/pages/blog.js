@@ -75,7 +75,7 @@ function Blog(props) {
           })}
         </div>
         <Link to="/">
-          <Button marginTop="85px">Go Home</Button>
+          <Button position="flex-start">Go Home</Button>
         </Link>
       </Layout>
       {/* </Container> */}

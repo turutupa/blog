@@ -9,7 +9,7 @@ const P = styled.p`
 
 const H1 = styled.h1`
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 `
 
 const H2 = styled.h1`

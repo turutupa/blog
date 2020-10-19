@@ -1,0 +1,7 @@
+body li::before {
+  color: #00c27e !important;
+}
+
+body.dark li::before {
+  color: #00c27e;
+}

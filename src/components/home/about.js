@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import "./About.css"
 
 const H1 = styled.h1`
   margin-bottom: 5px;
@@ -18,6 +19,7 @@ const AvatarBorder = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
   height: 220px;
   width: 220px;
   border-radius: 50%;
@@ -32,7 +34,43 @@ const Avatar = styled(Img)`
   border-radius: 50%;
 `
 
+const Ul = styled.ul`
+  columns: 2;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+`
+
+const Li = styled.li`
+  padding-left: 16px;
+  margin-bottom: 5px;
+  font-family: "Merriweather", "Georgia", serif;
+
+  &:before {
+    content: ">";
+    padding-right: 8px;
+    font-weight: bold;
+  }
+`
+
+function renderSkills(skills) {
+  return skills.map(skill => {
+    return <Li>{skill}</Li>
+  })
+}
+
 export default function About() {
+  const skills = [
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Docker",
+    "HTML & CSS",
+    "Python",
+    "Node.js",
+    "AWS Serverless",
+  ]
+
   const avatar = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "zoom.png" }) {
@@ -62,6 +100,10 @@ export default function About() {
         and building scalable applications, I am particulary interested in
         creating microservices with docker
       </p>
+
+      <h3>Skills</h3>
+
+      <Ul>{renderSkills(skills)}</Ul>
       <AvatarWrapper>
         <AvatarBorder>
           <Avatar

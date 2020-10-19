@@ -2,32 +2,39 @@ import React from "react"
 import styled from "styled-components"
 
 const Button = props => (
-  <ButtonWrapper props={props}>{props.children}</ButtonWrapper>
+  <Container position={props.position}>
+    <ButtonWrapper className="button" props={props} {...props}>
+      {props.children}
+    </ButtonWrapper>
+  </Container>
 )
 
+const Container = styled.div`
+  display: flex;
+  justify-content: ${props => props.position || "center"};
+  padding-top: 10px;
+`
+
 const ButtonWrapper = styled.button`
+  transition: all 0.5s ease;
   display: block;
-  border: none;
+  border: 1px solid black;
   text-align: center;
   box-sizing: border-box;
   text-decoration: none;
-  padding: 10px 25px;
+  padding: 20px 40px;
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 2px;
 
   width: ${props => props.props.width || "auto"};
-  background: ${props => props.props.background || "black"};
-  color: ${props => props.props.color || "rgb(255, 255, 255)"};
+  background: ${props => props.props.background || "rgb(0,0,0,0)"};
+  color: ${props => props.props.color || "rgb(0,0,0)"};
   font-size: ${props => props.props.fontSize || "15px"};
   font-weight: ${props => props.props.fontWeight || "600"};
   border-radius: ${props => props.props.radius || "6px"};
   margin-top: ${props => props.props.marginTop};
   margin-bottom: ${props => props.props.marginBottom};
-
-  &:hover {
-    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.25);
-  }
 `
 
 export default Button

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { rhythm } from "../../utils/typography"
+import { navigate } from "gatsby"
 
 const Container = styled.div`
   display: flex;
@@ -20,7 +20,8 @@ const NavItem = styled.span`
 export const home = "home"
 export const about = "about"
 export const contact = "contact"
-export const sections = [home, about, contact]
+export const blog = "blog ↩"
+export const sections = [home, about, contact, blog]
 
 export default function Navbar(props) {
   return (
@@ -29,7 +30,12 @@ export default function Navbar(props) {
         <NavItem
           key={section}
           active={props.section === section}
-          onClick={() => props.setSection(section)}
+          onClick={() => {
+            if (section === blog) {
+              return navigate("/blog/")
+            }
+            props.setSection(section)
+          }}
         >
           #{section}
         </NavItem>
