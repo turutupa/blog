@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { navigate } from "gatsby"
+import { IoMdReturnLeft } from "react-icons/io"
 
 const Container = styled.div`
   display: flex;
@@ -9,6 +10,7 @@ const Container = styled.div`
 `
 
 const NavItem = styled.span`
+  position: relative;
   font-family: SF Mono, monospace;
   cursor: pointer;
   color: ${props => (props.active ? "#00c27e" : null)};
@@ -17,10 +19,17 @@ const NavItem = styled.span`
     color: #78d6b5;
   }
 `
+
+const IconWrapper = styled.span`
+  position: absolute;
+  right: -20px;
+  top: 4px;
+`
+
 export const home = "home"
 export const about = "about"
 export const contact = "contact"
-export const blog = "blog ↩"
+export const blog = `blog`
 export const sections = [home, about, contact, blog]
 
 export default function Navbar(props) {
@@ -37,7 +46,12 @@ export default function Navbar(props) {
             props.setSection(section)
           }}
         >
-          #{section}
+          #{section}{" "}
+          {section === blog && (
+            <IconWrapper>
+              <IoMdReturnLeft />
+            </IconWrapper>
+          )}
         </NavItem>
       ))}
     </Container>
