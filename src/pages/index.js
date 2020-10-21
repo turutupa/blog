@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 import { useBreakpoint } from "gatsby-plugin-breakpoints"
 import Img from "gatsby-image"
@@ -9,8 +8,8 @@ import FadeIn from "react-fade-in"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Button from "../components/button"
-import Header from "../components/home/header"
+
+import Welcome from "../components/home/welcome"
 import Contact from "../components/home/contact"
 import About from "../components/home/about"
 import Navbar, { home, about, contact } from "../components/home/navbar"
@@ -70,10 +69,7 @@ function IndexPage(props) {
           <Navbar section={section} setSection={setSection} />
           {section === home && (
             <FadeIn>
-              <Header />
-              <Link to="/blog/">
-                <Button marginTop="35px">Go to Blog</Button>
-              </Link>
+              <Welcome />
             </FadeIn>
           )}
           {section === about && (

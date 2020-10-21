@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import { rhythm } from "../../utils/typography"
+import { Link } from "gatsby"
+import Button from "../../components/button"
 
 const P = styled.p`
   margin-top: 50px;
@@ -28,6 +30,9 @@ export default function Header() {
         innovation and learning new technologies. I love building from IoT
         projects to beautiful applications and anything in between.
       </p>
+      <Link to="/blog/">
+        <Button marginTop="35px">Go to Blog</Button>
+      </Link>
     </header>
   )
 }
