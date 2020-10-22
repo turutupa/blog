@@ -37,6 +37,7 @@ function IndexPage(props) {
   const breakpoints = useBreakpoint()
   const siteTitle = "turutupa's garage"
   const [section, setSection] = React.useState(home)
+  const [showSideImage, setShowSideImage] = React.useState(false)
 
   const sideImage = useStaticQuery(graphql`
     query {
@@ -50,9 +51,13 @@ function IndexPage(props) {
     }
   `)
 
+  React.useEffect(() => {
+    setShowSideImage(true)
+  }, [])
+
   return (
     <>
-      {breakpoints && !breakpoints.md ? (
+      {showSideImage && !breakpoints.md ? (
         <SideImage
           fluid={sideImage?.file?.childImageSharp?.fluid}
           alt=""

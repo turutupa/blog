@@ -13,7 +13,7 @@ const P = styled.p`
   margin-bottom: 50px;
 `
 function sendEmail() {
-  const email = "adc.batros@gmail.com"
+  const email = "albertodelgadocabrera@gmail.com"
   const subject = "Hey!"
   const message = "Hi Alberto, "
   window.open(`mailto:${email}?subject=${subject}&body=${message}`)
