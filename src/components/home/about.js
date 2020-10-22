@@ -61,14 +61,14 @@ function renderSkills(skills) {
 
 export default function About() {
   const skills = [
-    "JavaScript",
     "TypeScript",
+    "Node.js",
     "React",
-    "Docker",
+    "Google Firebase",
     "HTML & CSS",
     "Python",
-    "Node.js",
-    "AWS Serverless",
+    "Docker",
+    "AWS Serverless Stack",
   ]
 
   const avatar = useStaticQuery(graphql`
@@ -83,26 +83,47 @@ export default function About() {
     }
   `)
 
+  const howToWinFriendsAndInfluencePeopleUrl =
+    "https://www.amazon.com/How-Win-Friends-Influence-People/dp/0671027034/ref=sr_1_3?dchild=1&keywords=how+to+win+friends&qid=1603392854&sr=8-3"
+
+  const theLittleBookOfStoicismUrl =
+    "https://www.amazon.com/Little-Book-Stoicism-Resilience-Confidence/dp/3952506907/ref=sr_1_1_sspa?dchild=1&keywords=the+little+book+of+stoicism&qid=1603392899&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFZMUtLMUZaS1FHM0kmZW5jcnlwdGVkSWQ9QTAzOTQ4MDQzM0VYRktTSFVHRTM5JmVuY3J5cHRlZEFkSWQ9QTA2MTMzNDgzNjAwNDc1R0VPRU0md2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl"
+
   return (
     <div>
       <H1>About</H1>
       <p>
-        I am working on a fancy cool description about who I am and what I love
-        doing. Some of that will envolve more coding on my spare time, yes, I do
-        that, cause I also love IoT and creating cool projects; playing padel
-        and reading. Lately I have read a lot of self-development books which
-        are amazing such as <i>How to win friends and influence people</i> or{" "}
-        <i>The little book of Stoicism</i>.
+        My source of joy is building, from huge projects with tons of
+        microservices to small fun IoT projects like a smart watering system to
+        keep your plants nice and healthy.
       </p>
-
       <p>
-        Some of the stuff I am looking forward to learning is Systems Designs
-        and building scalable applications, I am particulary interested in
-        creating microservices with docker
+        JavaScript is my weapon of choice, ideally in its most beautiful form
+        and structure shaped by TypeScript - good job Microsoft. My preffered
+        stack would include React, very fond of Gatsby and Next.js; the
+        wonderful AWS for my backend services; and DynamoDB or MongoDB as
+        desireable Databases.
+      </p>
+      <p>
+        On my own time I love to play padel tennis - being the subsequent beers
+        equally important; hike and read - always accompanied by the best tunes.
+        Some of the books I've most enjoyed are{" "}
+        <a href={howToWinFriendsAndInfluencePeopleUrl} target="_blank">
+          <i>How to win friends and influence people</i>
+        </a>
+        ,{" "}
+        <a href={theLittleBookOfStoicismUrl} target="_blank">
+          <i>The little book of Stoicism</i>
+        </a>{" "}
+        and{" "}
+        <a>
+          <i>Clean Code</i>
+        </a>
+        . The last being an essential read, even for developers who might feel
+        overqualified for an apparently elementary read.
       </p>
 
-      <h3>Skills</h3>
-
+      <p>Some of the technologies I like using:</p>
       <Ul>{renderSkills(skills)}</Ul>
       <AvatarWrapper>
         <AvatarBorder>
