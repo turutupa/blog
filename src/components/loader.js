@@ -11,11 +11,19 @@ const Container = styled.div`
 `
 
 function setSessionStorage(data, value) {
-  window.sessionStorage.setItem(data, value)
+  try {
+    window.sessionStorage.setItem(data, value)
+  } catch (e) {
+    console.error("Oops! Something went wrong setting session storage")
+  }
 }
 
 function fetchSessionStorage(data) {
-  return window.sessionStorage.getItem(data)
+  try {
+    return window.sessionStorage.getItem(data)
+  } catch (e) {
+    console.error("Oops! Something went wrong retrieving session storage")
+  }
 }
 
 export default function LoaderSpinner(props) {
