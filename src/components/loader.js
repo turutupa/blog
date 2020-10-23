@@ -39,7 +39,10 @@ export default function LoaderSpinner(props) {
     }, minTimeLoaderAnimation)
   }, [props.isLoading])
 
-  if (fetchSessionStorage(finishedLoading)) return <div>{props.children}</div>
+  if (fetchSessionStorage(finishedLoading)) {
+    props.setFinishedLoading(true)
+    return <></>
+  }
   if (!renderChildren) {
     return (
       <Container>
@@ -53,6 +56,7 @@ export default function LoaderSpinner(props) {
       </Container>
     )
   } else {
-    return <div>{props.children}</div>
+    props.setFinishedLoading(true)
+    return <></>
   }
 }

@@ -38,6 +38,10 @@ function IndexPage(props) {
   let breakpoints = useBreakpoint()
   const siteTitle = "turutupa's garage"
   const [section, setSection] = React.useState(welcome)
+  const [isLoading, setIsLoading] = React.useState(true)
+  const [finishedLoading, setFinishedLoading] = React.useState(false)
+
+  React.useEffect(() => {}, [isLoading])
 
   const sideImage = useStaticQuery(graphql`
     query {
@@ -67,10 +71,10 @@ function IndexPage(props) {
     })
   }
 
-  return (
-    // Using Loader to force first
-    // loader spinner to render
-    <Loader isLoading={false}>
+  return !finishedLoading ? (
+    <Loader isLoading={false} setFinishedLoading={setFinishedLoading} />
+  ) : (
+    <>
       {!breakpoints.md && (
         <SideImage
           fluid={sideImage?.file?.childImageSharp?.fluid}
@@ -89,7 +93,7 @@ function IndexPage(props) {
           {renderSections()}
         </Layout>
       </Container>
-    </Loader>
+    </>
   )
 }
 
