@@ -1,6 +1,7 @@
 import React from "react"
 import Loader from "react-loader-spinner"
 import styled from "styled-components"
+import { setSessionStorage } from "../utils/sessionStorage"
 
 const Container = styled.div`
   display: flex;
@@ -11,22 +12,6 @@ const Container = styled.div`
   width: 100vw;
 `
 
-function setSessionStorage(data, value) {
-  try {
-    window.sessionStorage.setItem(data, value)
-  } catch (e) {
-    console.error("Oops! Something went wrong setting session storage")
-  }
-}
-
-function fetchSessionStorage(data) {
-  try {
-    return window.sessionStorage.getItem(data)
-  } catch (e) {
-    console.error("Oops! Something went wrong retrieving session storage")
-  }
-}
-
 export default function LoaderSpinner(props) {
   const [renderChildren, setRenderChildren] = React.useState(false)
   const finishedLoading = "finishedLoading"
@@ -34,15 +19,12 @@ export default function LoaderSpinner(props) {
 
   React.useEffect(() => {
     setTimeout(() => {
-      setRenderChildren(true)
       setSessionStorage(finishedLoading, true)
+      setRenderChildren(true)
+      props.setFinishedLoading(true)
     }, minTimeLoaderAnimation)
-  }, [props.isLoading])
+  }, [])
 
-  if (fetchSessionStorage(finishedLoading)) {
-    props.setFinishedLoading(true)
-    return <></>
-  }
   if (!renderChildren) {
     return (
       <Container>
@@ -56,7 +38,6 @@ export default function LoaderSpinner(props) {
       </Container>
     )
   } else {
-    props.setFinishedLoading(true)
     return <></>
   }
 }
