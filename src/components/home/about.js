@@ -43,13 +43,13 @@ const Ul = styled.ul`
 
 const Li = styled.li`
   position: relative;
-  padding-left: 16px;
+  padding-left: 30px;
   margin-bottom: 5px;
-  font-family: "Merriweather", "Georgia", serif;
+  word-wrap: break-word;
 
   &:before {
     position: absolute;
-    left: 0px;
+    left: 14px;
     content: ">";
     padding-right: 8px;
     font-weight: bold;
