@@ -26,19 +26,18 @@ const Container = styled.div`
 
 const SideImage = styled(Img)`
   position: fixed !important;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  width: 42%;
-  height: 100vh;
-  margin-right: 100px;
+  top: 0 !important;
+  left: 0 !important;
+  object-fit: cover !important;
+  width: 42% !important;
+  height: 100vh !important;
+  margin-right: 100px !important;
 `
 
 function IndexPage(props) {
   let breakpoints = useBreakpoint()
   const siteTitle = "turutupa's garage"
   const [section, setSection] = React.useState(welcome)
-  const [loading, setLoading] = React.useState(true)
 
   const sideImage = useStaticQuery(graphql`
     query {
@@ -51,10 +50,6 @@ function IndexPage(props) {
       }
     }
   `)
-
-  React.useEffect(() => {
-    setLoading(false)
-  }, [])
 
   const sections = [welcome, about, contact]
   const sectionsComponents = {
@@ -73,20 +68,22 @@ function IndexPage(props) {
   }
 
   return (
-    <Loader isLoading={loading}>
-      {!breakpoints.md ? (
+    // Using Loader to force first
+    // loader spinner to render
+    <Loader isLoading={false}>
+      {!breakpoints.md && (
         <SideImage
           fluid={sideImage?.file?.childImageSharp?.fluid}
           alt=""
           objectFit="cover"
         />
-      ) : null}
+      )}
 
       <Container breakpoints={!breakpoints.md}>
         <Layout location={props.location} title={siteTitle}>
           <SEO
-            title="Turutupa"
-            keywords={[`blog`, `turutpa`, `javascript`, `react`, `typescript`]}
+            title="Home"
+            keywords={[`blog`, `turutupa`, `javascript`, `react`, `typescript`]}
           />
           <Navbar section={section} setSection={setSection} />
           {renderSections()}

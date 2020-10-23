@@ -30,7 +30,7 @@ function fetchSessionStorage(data) {
 export default function LoaderSpinner(props) {
   const [renderChildren, setRenderChildren] = React.useState(false)
   const finishedLoading = "finishedLoading"
-  const minTimeLoaderAnimation = 800
+  const minTimeLoaderAnimation = 500
 
   React.useEffect(() => {
     setTimeout(() => {
@@ -39,7 +39,7 @@ export default function LoaderSpinner(props) {
     }, minTimeLoaderAnimation)
   }, [props.isLoading])
 
-  if (fetchSessionStorage(finishedLoading)) return <>{props.children}</>
+  if (fetchSessionStorage(finishedLoading)) return <div>{props.children}</div>
   if (!renderChildren) {
     return (
       <Container>
@@ -53,6 +53,6 @@ export default function LoaderSpinner(props) {
       </Container>
     )
   } else {
-    return <>{props.children}</>
+    return <div>{props.children}</div>
   }
 }
