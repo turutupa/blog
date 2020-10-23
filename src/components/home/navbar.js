@@ -26,11 +26,11 @@ const IconWrapper = styled.span`
   top: 4px;
 `
 
-export const home = "home"
+export const welcome = "welcome"
 export const about = "about"
 export const contact = "contact"
 export const blog = `blog`
-export const sections = [home, about, contact, blog]
+export const sections = [welcome, about, contact, blog]
 
 export default function Navbar(props) {
   return (

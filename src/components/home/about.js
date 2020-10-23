@@ -99,7 +99,7 @@ export default function About() {
       </p>
       <p>
         JavaScript is my weapon of choice, ideally in its most beautiful form
-        and structure shaped by TypeScript - good job Microsoft. My preffered
+        and structure shaped by TypeScript - good job Microsoft. My preferred
         stack would include React, very fond of Gatsby and Next.js; the
         wonderful AWS for my backend services; and DynamoDB or MongoDB as
         desireable Databases.

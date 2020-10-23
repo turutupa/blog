@@ -8,11 +8,12 @@ import FadeIn from "react-fade-in"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Loader from "../components/loader"
 
 import Welcome from "../components/home/welcome"
 import Contact from "../components/home/contact"
 import About from "../components/home/about"
-import Navbar, { home, about, contact } from "../components/home/navbar"
+import Navbar, { welcome, about, contact } from "../components/home/navbar"
 
 import "./App.css"
 
@@ -34,10 +35,10 @@ const SideImage = styled(Img)`
 `
 
 function IndexPage(props) {
-  const breakpoints = useBreakpoint()
+  let breakpoints = useBreakpoint()
   const siteTitle = "turutupa's garage"
-  const [section, setSection] = React.useState(home)
-  const [showSideImage, setShowSideImage] = React.useState(false)
+  const [section, setSection] = React.useState(welcome)
+  const [loading, setLoading] = React.useState(true)
 
   const sideImage = useStaticQuery(graphql`
     query {
@@ -52,12 +53,28 @@ function IndexPage(props) {
   `)
 
   React.useEffect(() => {
-    setShowSideImage(true)
+    setLoading(false)
   }, [])
 
+  const sections = [welcome, about, contact]
+  const sectionsComponents = {
+    [welcome]: <Welcome />,
+    [about]: <About />,
+    [contact]: <Contact />,
+  }
+
+  // rendering of Welcome/About/Contact sections
+  function renderSections() {
+    return sections.map(s => {
+      return (
+        section === s && <FadeIn key={section}>{sectionsComponents[s]}</FadeIn>
+      )
+    })
+  }
+
   return (
-    <>
-      {showSideImage && !breakpoints.md ? (
+    <Loader isLoading={loading}>
+      {!breakpoints.md ? (
         <SideImage
           fluid={sideImage?.file?.childImageSharp?.fluid}
           alt=""
@@ -68,28 +85,14 @@ function IndexPage(props) {
       <Container breakpoints={!breakpoints.md}>
         <Layout location={props.location} title={siteTitle}>
           <SEO
-            title="Home"
+            title="Turutupa"
             keywords={[`blog`, `turutpa`, `javascript`, `react`, `typescript`]}
           />
           <Navbar section={section} setSection={setSection} />
-          {section === home && (
-            <FadeIn>
-              <Welcome />
-            </FadeIn>
-          )}
-          {section === about && (
-            <FadeIn>
-              <About />
-            </FadeIn>
-          )}
-          {section === contact && (
-            <FadeIn>
-              <Contact />
-            </FadeIn>
-          )}
+          {renderSections()}
         </Layout>
       </Container>
-    </>
+    </Loader>
   )
 }
 

@@ -26,9 +26,9 @@ export default function Header() {
       <H1>Alberto Delgado</H1>
       <H2>I like to code, listen to music and read.</H2>
       <p>
-        I'm a full stack developer based in Barcelona with a passion for coding,
-        innovation and learning new technologies. I love building from IoT
-        projects to beautiful applications and anything in between.
+        I'm a full stack developer with a passion for coding, innovation and
+        learning new technologies. I love building from IoT projects to
+        beautiful applications and anything in between.
       </p>
       <Link to="/blog/">
         <Button marginTop="35px">Go to Blog</Button>
