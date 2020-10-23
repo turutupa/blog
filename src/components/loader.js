@@ -11,11 +11,11 @@ const Container = styled.div`
 `
 
 function setSessionStorage(data, value) {
-  sessionStorage.setItem(data, value)
+  window.sessionStorage.setItem(data, value)
 }
 
 function fetchSessionStorage(data) {
-  return sessionStorage.getItem(data)
+  return window.sessionStorage.getItem(data)
 }
 
 export default function LoaderSpinner(props) {
