@@ -42,11 +42,14 @@ const Ul = styled.ul`
 `
 
 const Li = styled.li`
+  position: relative;
   padding-left: 16px;
   margin-bottom: 5px;
   font-family: "Merriweather", "Georgia", serif;
 
   &:before {
+    position: absolute;
+    left: 0px;
     content: ">";
     padding-right: 8px;
     font-weight: bold;
