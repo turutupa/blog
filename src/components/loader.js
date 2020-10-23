@@ -13,19 +13,18 @@ const Container = styled.div`
 `
 
 export default function LoaderSpinner(props) {
-  const [renderChildren, setRenderChildren] = React.useState(false)
+  const [animationFinished, setAnimationFinished] = React.useState(false)
   const finishedLoading = "finishedLoading"
   const minTimeLoaderAnimation = 500
 
   React.useEffect(() => {
     setTimeout(() => {
       setSessionStorage(finishedLoading, true)
-      setRenderChildren(true)
-      props.setFinishedLoading(true)
+      setAnimationFinished(true)
     }, minTimeLoaderAnimation)
   }, [])
 
-  if (!renderChildren) {
+  if (props.isLoading && !animationFinished) {
     return (
       <Container>
         <Loader
@@ -38,6 +37,6 @@ export default function LoaderSpinner(props) {
       </Container>
     )
   } else {
-    return <></>
+    return <>{props.children}</>
   }
 }

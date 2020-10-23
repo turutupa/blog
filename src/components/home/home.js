@@ -33,10 +33,33 @@ const SideImage = styled(Img)`
   margin-right: 100px !important;
 `
 
+// rendering of Welcome/About/Contact sections
+function renderSections(focusedSection) {
+  const sections = [welcome, about, contact]
+  const sectionsComponents = {
+    [welcome]: <Welcome />,
+    [about]: <About />,
+    [contact]: <Contact />,
+  }
+
+  return sections.map(s => {
+    return (
+      focusedSection === s && (
+        <FadeIn key={focusedSection}>{sectionsComponents[s]}</FadeIn>
+      )
+    )
+  })
+}
+
 export default function Home(props) {
   let breakpoints = useBreakpoint()
   const siteTitle = "turutupa's garage"
   const [section, setSection] = React.useState(welcome)
+  const [showImage, setShowImage] = React.useState(false)
+
+  React.useEffect(() => {
+    setShowImage(true)
+  }, [])
 
   const sideImage = useStaticQuery(graphql`
     query {
@@ -50,25 +73,9 @@ export default function Home(props) {
     }
   `)
 
-  const sections = [welcome, about, contact]
-  const sectionsComponents = {
-    [welcome]: <Welcome />,
-    [about]: <About />,
-    [contact]: <Contact />,
-  }
-
-  // rendering of Welcome/About/Contact sections
-  function renderSections() {
-    return sections.map(s => {
-      return (
-        section === s && <FadeIn key={section}>{sectionsComponents[s]}</FadeIn>
-      )
-    })
-  }
-
   return (
     <>
-      {!breakpoints.md && (
+      {showImage && !breakpoints.md && (
         <SideImage
           fluid={sideImage?.file?.childImageSharp?.fluid}
           alt=""
@@ -83,7 +90,7 @@ export default function Home(props) {
             keywords={[`blog`, `turutupa`, `javascript`, `react`, `typescript`]}
           />
           <Navbar section={section} setSection={setSection} />
-          {renderSections()}
+          {renderSections(section)}
         </Layout>
       </Container>
     </>

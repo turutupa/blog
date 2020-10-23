@@ -55,7 +55,7 @@ const Li = styled.li`
 
 function renderSkills(skills) {
   return skills.map(skill => {
-    return <Li>{skill}</Li>
+    return <Li key={skill}>{skill}</Li>
   })
 }
 
