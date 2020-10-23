@@ -55,10 +55,10 @@ export default function Home(props) {
   let breakpoints = useBreakpoint()
   const siteTitle = "turutupa's garage"
   const [section, setSection] = React.useState(welcome)
-  const [showImage, setShowImage] = React.useState(false)
+  const [loadBreakpoint, setLoadBreakpoint] = React.useState(false)
 
   React.useEffect(() => {
-    setShowImage(true)
+    setLoadBreakpoint(true)
   }, [])
 
   const sideImage = useStaticQuery(graphql`
@@ -75,7 +75,7 @@ export default function Home(props) {
 
   return (
     <>
-      {showImage && !breakpoints.md && (
+      {loadBreakpoint && !breakpoints.md && (
         <SideImage
           fluid={sideImage?.file?.childImageSharp?.fluid}
           alt=""
@@ -83,16 +83,24 @@ export default function Home(props) {
         />
       )}
 
-      <Container breakpoints={!breakpoints.md}>
-        <Layout location={props.location} title={siteTitle}>
-          <SEO
-            title="Home"
-            keywords={[`blog`, `turutupa`, `javascript`, `react`, `typescript`]}
-          />
-          <Navbar section={section} setSection={setSection} />
-          {renderSections(section)}
-        </Layout>
-      </Container>
+      {loadBreakpoint && (
+        <Container breakpoints={!breakpoints.md}>
+          <Layout location={props.location} title={siteTitle}>
+            <SEO
+              title="Home"
+              keywords={[
+                `blog`,
+                `turutupa`,
+                `javascript`,
+                `react`,
+                `typescript`,
+              ]}
+            />
+            <Navbar section={section} setSection={setSection} />
+            {renderSections(section)}
+          </Layout>
+        </Container>
+      )}
     </>
   )
 }
