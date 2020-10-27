@@ -89,7 +89,7 @@ export default function Home(props) {
             <SEO
               title="Home"
               keywords={[
-                `blog`,
+                `alberto delgado`,
                 `turutupa`,
                 `javascript`,
                 `react`,

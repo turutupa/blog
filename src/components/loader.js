@@ -4,12 +4,15 @@ import styled from "styled-components"
 import { setSessionStorage } from "../utils/sessionStorage"
 
 const Container = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
+  height: calc(100vh - 10px);
+  width: calc(100vw - 14px);
 `
 
 export default function LoaderSpinner(props) {
@@ -22,7 +25,7 @@ export default function LoaderSpinner(props) {
       setSessionStorage(finishedLoading, true)
       setAnimationFinished(true)
     }, minTimeLoaderAnimation)
-  }, [])
+  }, [props.isLoading])
 
   if (props.isLoading && !animationFinished) {
     return (
