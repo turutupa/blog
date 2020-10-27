@@ -29,12 +29,12 @@ const IconWrapper = styled.span`
   top: 4px;
 `
 
-const typingStyle = {
-  fontWeight: "bold",
-  position: "absolute",
-  color: "#00c27e",
-  minWidth: "300px",
-}
+const TypingEffect = styled(ReactTypingEffect)`
+  font-weight: bold;
+  position: absolute;
+  color: #00c27e;
+  width: calc(100% + 11px);
+`
 
 export const welcome = "welcome"
 export const about = "about"
@@ -53,8 +53,7 @@ export default function Navbar(props) {
   function renderSectionWithTypingEffect(section) {
     try {
       return (
-        <ReactTypingEffect
-          style={typingStyle}
+        <TypingEffect
           text={[`#${section}`]}
           speed={50}
           typingDelay={70}

@@ -4,6 +4,12 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import "./About.css"
 
+import {
+  howToWinFriendsAndInfluencePeopleUrl,
+  theLittleBookOfStoicismUrl,
+  cleanCodeUrl,
+} from "../../utils/books"
+
 const H1 = styled.h1`
   margin-bottom: 5px;
 `
@@ -86,12 +92,6 @@ export default function About() {
     }
   `)
 
-  const howToWinFriendsAndInfluencePeopleUrl =
-    "https://www.amazon.com/How-Win-Friends-Influence-People/dp/0671027034/ref=sr_1_3?dchild=1&keywords=how+to+win+friends&qid=1603392854&sr=8-3"
-
-  const theLittleBookOfStoicismUrl =
-    "https://www.amazon.com/Little-Book-Stoicism-Resilience-Confidence/dp/3952506907/ref=sr_1_1_sspa?dchild=1&keywords=the+little+book+of+stoicism&qid=1603392899&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFZMUtLMUZaS1FHM0kmZW5jcnlwdGVkSWQ9QTAzOTQ4MDQzM0VYRktTSFVHRTM5JmVuY3J5cHRlZEFkSWQ9QTA2MTMzNDgzNjAwNDc1R0VPRU0md2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl"
-
   return (
     <div>
       <H1>About</H1>
@@ -119,7 +119,7 @@ export default function About() {
           <i>The little book of Stoicism</i>
         </a>{" "}
         and{" "}
-        <a>
+        <a href={cleanCodeUrl}>
           <i>Clean Code</i>
         </a>
         . The last being an essential read, even for developers who might feel
