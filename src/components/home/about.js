@@ -119,7 +119,7 @@ export default function About() {
           <i>The little book of Stoicism</i>
         </a>{" "}
         and{" "}
-        <a href={cleanCodeUrl}>
+        <a href={cleanCodeUrl} target="_blank">
           <i>Clean Code</i>
         </a>
         . The last being an essential read, even for developers who might feel
