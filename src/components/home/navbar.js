@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { navigate } from "gatsby"
 import { IoMdReturnLeft } from "react-icons/io"
-import ReactTypingEffect from "react-typing-effect"
+import ReactTypingEffect from "../../vendor/react-typing-effect/src/lib"
 import { rhythm } from "../../utils/typography"
 
 const Container = styled.div`
@@ -43,8 +43,6 @@ export const blog = `blog`
 export const sections = [welcome, about, contact, blog]
 
 export default function Navbar(props) {
-  const [sectionName, setSectionName] = React.useState("")
-
   function handleSetSection(section) {
     if (section === blog) {
       return navigate("/blog/")
@@ -76,8 +74,8 @@ export default function Navbar(props) {
           active={props.section === section}
           onClick={() => handleSetSection(section)}
         >
-          {props.section === section && renderSectionWithTypingEffect(section)}
-          {`#${section}`}{" "}
+          {props.section === section && renderSectionWithTypingEffect(section)}#
+          {section}
           {section === blog && (
             <IconWrapper>
               <IoMdReturnLeft />
