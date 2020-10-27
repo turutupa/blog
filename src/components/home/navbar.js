@@ -52,6 +52,22 @@ export default function Navbar(props) {
     props.setSection(section)
   }
 
+  function renderSectionWithTypingEffect(section) {
+    try {
+      return (
+        <ReactTypingEffect
+          style={typingStyle}
+          text={[`#${section}`]}
+          speed={50}
+          typingDelay={70}
+          eraseDelay={5000}
+        />
+      )
+    } catch (e) {
+      return ""
+    }
+  }
+
   return (
     <Container>
       {sections.map(section => (
@@ -60,15 +76,7 @@ export default function Navbar(props) {
           active={props.section === section}
           onClick={() => handleSetSection(section)}
         >
-          {props.section === section && (
-            <ReactTypingEffect
-              style={typingStyle}
-              text={[`#${section}`]}
-              speed={50}
-              typingDelay={70}
-              eraseDelay={5000}
-            />
-          )}
+          {props.section === section && renderSectionWithTypingEffect(section)}
           {`#${section}`}{" "}
           {section === blog && (
             <IconWrapper>
