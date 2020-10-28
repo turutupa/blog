@@ -4,7 +4,10 @@ import Button from "../button"
 
 import "./Contact.css"
 
-const Container = styled.div``
+const Container = styled.div`
+  margin-bottom: 0;
+  padding-bottom: 0;
+`
 
 const H1 = styled.h1`
   margin-bottom: 5px;

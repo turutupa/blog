@@ -55,7 +55,7 @@ class Layout extends React.Component {
       <Wrapper>
         <div
           style={{
-            minHeight: "calc(100vh - 110px)",
+            minHeight: "calc(100vh - 117px)",
             position: "relative",
             marginLeft: `auto`,
             marginRight: `auto`,
