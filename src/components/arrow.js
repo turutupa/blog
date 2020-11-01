@@ -25,6 +25,7 @@ const position = {
 }
 
 const Wrapper = styled.div`
+  z-index: 9999;
   position: absolute;
   ${props =>
     props.direction ? getPosition(props.direction) : getPosition("right")}
