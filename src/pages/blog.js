@@ -12,21 +12,6 @@ import Button from "../components/button"
 import "@deckdeckgo/highlight-code"
 import FadeIn from "react-fade-in"
 
-// const SideImage = styled(Img)`
-//   position: fixed !important;
-//   top: 0;
-//   right: 0;
-//   object-fit: cover;
-//   width: 42%;
-//   height: 100vh;
-// `
-
-// const Container = styled.div`
-//   margin-right: ${props => (props.breakpoints ? "40%" : null)};
-//   padding-left: ${props => (props.breakpoints ? "30px" : null)};
-//   padding-right: ${props => (props.breakpoints ? "30px" : null)};
-// `
-
 function Blog(props) {
   // const breakpoints = useBreakpoint()
   const { data } = props
@@ -35,14 +20,6 @@ function Blog(props) {
 
   return (
     <>
-      {/* {!breakpoints.md ? (
-        <SideImage
-          fluid={props?.data?.file?.childImageSharp?.fluid}
-          alt=""
-          objectFit="cover"
-        />
-      ) : null} */}
-      {/* <Container breakpoints={!breakpoints.md}> */}
       <Layout location={props.location} title={siteTitle}>
         <SEO title="All posts" />
         <Bio />

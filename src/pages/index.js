@@ -1,19 +1,13 @@
 import React from "react"
 
-import { fetchSessionStorage } from "../utils/sessionStorage"
-import Home from "../components/home/home"
-import Loader from "../components/loader"
+import { navigate } from "gatsby"
 
 import "./App.css"
 
 function IndexPage(props) {
-  const hasPreviouslyBeenLoaded = fetchSessionStorage("finishedLoading")
+  navigate("/welcome")
 
-  return (
-    <Loader isLoading={!hasPreviouslyBeenLoaded}>
-      <Home {...props} />
-    </Loader>
-  )
+  return <></>
 }
 
 export default IndexPage
