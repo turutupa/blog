@@ -47,6 +47,7 @@ export default function NavArrow(props) {
           entryOffset={80}
           cover
           bg="#00c27e"
+          duration={1}
           direction={props.direction}
           to={props.to}
         >
