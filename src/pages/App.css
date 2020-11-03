@@ -70,3 +70,7 @@ body.dark .button:hover {
   box-shadow: inset 0 0 100px 100px #00c27e;
   border-color: #00c27e;
 }
+
+arrows-classname {
+  text-decoration: none !important;
+}

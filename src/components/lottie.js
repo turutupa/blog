@@ -23,5 +23,5 @@ export default function AnimationComponent(props) {
     }
   }, [])
 
-  return <div ref={animElement} />
+  return <div style={{ zIndex: "1" }} ref={animElement} />
 }
