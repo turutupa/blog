@@ -10,6 +10,7 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-plugin-transition-link`,
     `gatsby-plugin-resolve-src`,
     `gatsby-plugin-dark-mode`,
     `gatsby-plugin-netlify-cms`,

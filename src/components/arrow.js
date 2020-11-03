@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 function getDirectionTransformation(dir) {
   return `transform: rotate(${direction[dir]}deg);`
@@ -42,7 +43,15 @@ export default function NavArrow(props) {
   return (
     <Wrapper direction={props.direction}>
       <FixDirection direction={props.direction}>
-        <Link to={props.to}>Arrow</Link>
+        <AniLink
+          entryOffset={80}
+          cover
+          bg="#00c27e"
+          direction={props.direction}
+          to={props.to}
+        >
+          Arrow
+        </AniLink>
       </FixDirection>
     </Wrapper>
   )
