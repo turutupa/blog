@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-// import { Link } from "gatsby"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 function getDirectionTransformation(dir) {
@@ -44,7 +43,6 @@ export default function NavArrow(props) {
     <Wrapper direction={props.direction}>
       <FixDirection direction={props.direction}>
         <AniLink
-          entryOffset={80}
           cover
           bg="#00c27e"
           duration={1}

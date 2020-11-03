@@ -1,8 +1,6 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-import { useBreakpoint } from "gatsby-plugin-breakpoints"
-import Img from "gatsby-image"
-import styled from "styled-components"
+import { graphql } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -10,10 +8,8 @@ import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 import Button from "../components/button"
 import "@deckdeckgo/highlight-code"
-import FadeIn from "react-fade-in"
 
 function Blog(props) {
-  // const breakpoints = useBreakpoint()
   const { data } = props
   const siteTitle = data.site?.siteMetadata?.title
   const posts = data.allMdx.edges
@@ -34,12 +30,16 @@ function Blog(props) {
                     marginBottom: rhythm(1 / 5),
                   }}
                 >
-                  <Link
+                  <AniLink
+                    cover
+                    bg="#00c27e"
+                    duration={0.5}
+                    direction="right"
                     style={{ boxShadow: `none` }}
                     to={`/blog${node.fields.slug}`}
                   >
                     {title}
-                  </Link>
+                  </AniLink>
                 </h1>
                 <small>{node.frontmatter.date}</small>
                 <p
@@ -51,24 +51,16 @@ function Blog(props) {
             )
           })}
         </div>
-        <Link to="/">
+        <AniLink cover bg="#00c27e" duration={1} direction="up" to="/">
           <Button position="flex-start">Go Home</Button>
-        </Link>
+        </AniLink>
       </Layout>
-      {/* </Container> */}
     </>
   )
 }
 
 export default Blog
 
-// file(relativePath: { eq: "blog-background.jpeg" }) {
-//   childImageSharp {
-//     fluid {
-//       ...GatsbyImageSharpFluid
-//     }
-//   }
-// }
 export const pageQuery = graphql`
   query {
     site {

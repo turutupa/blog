@@ -1,8 +1,9 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import styled from "styled-components"
 
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
 
 import ThemeSwitcher from "../components/themeSwitcher"
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
@@ -26,7 +27,7 @@ const H3 = styled.h3`
   margin-left: 0;
 `
 
-const StyledLink = styled(Link)`
+const Link = styled(AniLink)`
   box-shadow: none;
   text-decoration: none;
   color: inherit;
@@ -38,13 +39,17 @@ class Layout extends React.Component {
     const header = (
       <>
         <H3>
-          <StyledLink to={`/`}>{title}</StyledLink>
+          <Link cover bg="#00c27e" duration={0.5} to="/">
+            {title}
+          </Link>
         </H3>
         {location.pathname !== "/" && (
           <>
             <H3>/</H3>
             <H3>
-              <StyledLink to={"/blog/"}>blog</StyledLink>
+              <Link cover bg="#00c27e" duration={0.5} to="/blog/">
+                blog
+              </Link>
             </H3>
           </>
         )}
