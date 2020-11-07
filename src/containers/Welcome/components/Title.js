@@ -25,7 +25,6 @@ const Title = styled.h1`
   padding-top: 0px;
   ${textShadow}
 `
-
 const Subtitle = styled.h3`
   margin-bottom: 10px;
   padding-bottom: 10px;
