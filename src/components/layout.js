@@ -16,6 +16,7 @@ const Wrapper = styled.div`
 const FixedHeaderWrapper = styled.div`
   position: fixed !important;
   width: 100%;
+  max-width: 100vw;
   z-index: 99999;
 `
 

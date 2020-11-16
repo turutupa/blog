@@ -12,6 +12,7 @@ const Container = styled.div`
   padding-bottom: 0;
   overflow: hidden;
   position: relative;
+  overflow: hidden;
 `
 
 const H1 = styled.h1`
@@ -26,6 +27,7 @@ const LottieWrapper = styled.div`
   display: flex;
   margin-top: -80px;
   justify-content: center;
+  max-width: 100vw;
 `
 
 const StyledLottie = styled(Lottie)`
@@ -66,7 +68,7 @@ export default function Contact() {
       </Body>
 
       <LottieWrapper target="_blank" onClick={() => sendEmail()}>
-        <StyledLottie style={{ minWidth: "500px" }} lottie={contactme} />
+        <StyledLottie lottie={contactme} />
       </LottieWrapper>
     </Container>
   )
