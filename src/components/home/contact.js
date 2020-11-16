@@ -10,9 +10,7 @@ import Lottie from "../lottie"
 const Container = styled.div`
   margin-bottom: 0;
   padding-bottom: 0;
-  overflow: hidden;
   position: relative;
-  overflow: hidden;
 `
 
 const H1 = styled.h1`
@@ -37,6 +35,8 @@ const StyledLottie = styled(Lottie)`
   border-color: rgb(0, 194, 126, 0);
   border-width: 10px;
   border-style: inset;
+  min-width: 80%;
+  margin-bottom: -150px;
 
   &:hover {
     transition: all 0.5s ease-out;
