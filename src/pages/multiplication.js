@@ -106,14 +106,6 @@ export default function Multiplication(props) {
       ) : (
         ""
       )}
-      {/* {incorrectAnswers.length > 0 ? (
-        <div>
-          <h3>Wrong answers</h3>
-          {incorrectAnswers.map(a => a)}
-        </div>
-      ) : (
-        ""
-      )} */}
     </Layout>
   )
 }

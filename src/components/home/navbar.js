@@ -1,14 +1,14 @@
 import React from "react"
 import styled from "styled-components"
-import { navigate } from "gatsby"
-import { IoMdReturnLeft } from "react-icons/io"
 import ReactTypingEffect from "../../vendor/react-typing-effect/src/lib"
 import { rhythm } from "../../utils/typography"
 
-const Container = styled.div`
+import { navigate } from "gatsby"
+
+const Wrapper = styled.div`
   display: flex;
-  justify-content: space-around;
-  margin-top: 50px;
+  justify-content: space-between;
+  margin-top: 75px;
 `
 
 const NavItem = styled.span`
@@ -23,17 +23,11 @@ const NavItem = styled.span`
   }
 `
 
-const IconWrapper = styled.span`
-  position: absolute;
-  right: -20px;
-  top: 4px;
-`
-
 const TypingEffect = styled(ReactTypingEffect)`
   font-weight: bold;
   position: absolute;
   color: #00c27e;
-  width: calc(100% + 11px);
+  width: calc(100% + 12px);
 `
 
 export const welcome = "welcome"
@@ -42,31 +36,28 @@ export const contact = "contact"
 export const blog = `blog`
 export const sections = [welcome, about, contact, blog]
 
+function handleSetSection(section) {
+  navigate(`#${section}`)
+}
+
+function renderSectionWithTypingEffect(section) {
+  try {
+    return (
+      <TypingEffect
+        text={[`#${section}`]}
+        speed={50}
+        typingDelay={70}
+        eraseDelay={5000}
+      />
+    )
+  } catch (e) {
+    return ""
+  }
+}
+
 export default function Navbar(props) {
-  function handleSetSection(section) {
-    if (section === blog) {
-      return navigate("/blog/")
-    }
-    props.setSection(section)
-  }
-
-  function renderSectionWithTypingEffect(section) {
-    try {
-      return (
-        <TypingEffect
-          text={[`#${section}`]}
-          speed={50}
-          typingDelay={70}
-          eraseDelay={5000}
-        />
-      )
-    } catch (e) {
-      return ""
-    }
-  }
-
   return (
-    <Container>
+    <Wrapper>
       {sections.map(section => (
         <NavItem
           key={section}
@@ -75,13 +66,8 @@ export default function Navbar(props) {
         >
           {props.section === section && renderSectionWithTypingEffect(section)}#
           {section}
-          {section === blog && (
-            <IconWrapper>
-              <IoMdReturnLeft />
-            </IconWrapper>
-          )}
         </NavItem>
       ))}
-    </Container>
+    </Wrapper>
   )
 }

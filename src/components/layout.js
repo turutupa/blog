@@ -2,11 +2,24 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
 
 import ThemeSwitcher from "../components/themeSwitcher"
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
 deckDeckGoHighlightElement()
+
+const Wrapper = styled.div``
+
+const StickyHeader = styled.div`
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+`
+
+const Footer = styled.footer`
+  text-align: center;
+  margin: 24px;
+`
 
 const StyledDot = styled.span`
   padding-left: 10px;
@@ -29,22 +42,33 @@ const H3 = styled.h3`
 const StyledLink = styled(Link)`
   box-shadow: none;
   text-decoration: none;
-  color: inherit;
 `
 
 class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
+    const { pathname } = location
+
     const header = (
       <>
         <H3>
-          <StyledLink to={`/`}>{title}</StyledLink>
+          <StyledLink to={`/#welcome`}>
+            <span className="title">{title}</span>
+          </StyledLink>
         </H3>
-        {location.pathname !== "/" && (
+        {pathname !== "/" && pathname !== "/math" && (
           <>
-            <H3>/</H3>
+            <H3>|</H3>
             <H3>
-              <StyledLink to={"/blog/"}>blog</StyledLink>
+              <StyledLink
+                className="go-home"
+                style={{
+                  textDecoration: "underline",
+                }}
+                to={"/#blog"}
+              >
+                go home
+              </StyledLink>
             </H3>
           </>
         )}
@@ -53,18 +77,33 @@ class Layout extends React.Component {
 
     return (
       <Wrapper>
+        <StickyHeader className="sticky-header">
+          <div
+            style={{
+              position: "relative",
+              marginLeft: `auto`,
+              marginRight: `auto`,
+              maxWidth: rhythm(22),
+              padding: `${rhythm(1)} ${rhythm(0.4)}`,
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            <header>{header}</header>
+            <ThemeSwitcher />
+          </div>
+        </StickyHeader>
+
         <div
           style={{
-            minHeight: "calc(100vh - 117px)",
+            minHeight: "calc(100vh - 120px)",
             position: "relative",
             marginLeft: `auto`,
             marginRight: `auto`,
             maxWidth: rhythm(22),
-            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+            padding: `${rhythm(2)} ${rhythm(0.4)}`,
           }}
         >
-          <ThemeSwitcher />
-          <header>{header}</header>
           <main>{children}</main>
         </div>
         <Footer>
@@ -93,14 +132,5 @@ class Layout extends React.Component {
     )
   }
 }
-
-const Wrapper = styled.div`
-  min-height: 100vh;
-`
-
-const Footer = styled.footer`
-  text-align: center;
-  margin: 24px;
-`
 
 export default Layout

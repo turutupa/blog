@@ -1,8 +1,5 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import { useBreakpoint } from "gatsby-plugin-breakpoints"
-import Img from "gatsby-image"
-import styled from "styled-components"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -10,39 +7,14 @@ import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 import Button from "../components/button"
 import "@deckdeckgo/highlight-code"
-import FadeIn from "react-fade-in"
-
-// const SideImage = styled(Img)`
-//   position: fixed !important;
-//   top: 0;
-//   right: 0;
-//   object-fit: cover;
-//   width: 42%;
-//   height: 100vh;
-// `
-
-// const Container = styled.div`
-//   margin-right: ${props => (props.breakpoints ? "40%" : null)};
-//   padding-left: ${props => (props.breakpoints ? "30px" : null)};
-//   padding-right: ${props => (props.breakpoints ? "30px" : null)};
-// `
 
 function Blog(props) {
-  // const breakpoints = useBreakpoint()
   const { data } = props
   const siteTitle = data.site?.siteMetadata?.title
   const posts = data.allMdx.edges
 
   return (
     <>
-      {/* {!breakpoints.md ? (
-        <SideImage
-          fluid={props?.data?.file?.childImageSharp?.fluid}
-          alt=""
-          objectFit="cover"
-        />
-      ) : null} */}
-      {/* <Container breakpoints={!breakpoints.md}> */}
       <Layout location={props.location} title={siteTitle}>
         <SEO title="All posts" />
         <Bio />
@@ -78,20 +50,12 @@ function Blog(props) {
           <Button position="flex-start">Go Home</Button>
         </Link>
       </Layout>
-      {/* </Container> */}
     </>
   )
 }
 
 export default Blog
 
-// file(relativePath: { eq: "blog-background.jpeg" }) {
-//   childImageSharp {
-//     fluid {
-//       ...GatsbyImageSharpFluid
-//     }
-//   }
-// }
 export const pageQuery = graphql`
   query {
     site {

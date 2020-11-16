@@ -26,11 +26,11 @@ const AvatarBorder = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  height: 220px;
-  width: 220px;
+  height: 230px;
+  width: 230px;
   border-radius: 50%;
-  border-width: 1px;
-  border-style: solid;
+  border-width: 3px;
+  border-style: outset;
   border-color: #00c27e;
 `
 

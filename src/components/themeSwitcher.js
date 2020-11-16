@@ -6,8 +6,9 @@ import "./ThemeSwitcher.css"
 import styled from "styled-components"
 
 const Wrapper = styled.div`
-  position: absolute !important;
-  right: 10px;
+  // position: absolute !important;
+  // top: 35px;
+  // right: 10px;
 `
 
 const Img = styled.img`
