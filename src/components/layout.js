@@ -8,12 +8,37 @@ import ThemeSwitcher from "../components/themeSwitcher"
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
 deckDeckGoHighlightElement()
 
-const Wrapper = styled.div``
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column !important;
+`
 
-const StickyHeader = styled.div`
-  position: fixed;
+const FixedHeaderWrapper = styled.div`
+  position: fixed !important;
   width: 100%;
   z-index: 99999;
+`
+
+const FixedHeader = styled.div`
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: ${rhythm(22)};
+  padding: ${rhythm(0.8)} ${rhythm(0.4)};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}}
+`
+
+const Body = styled.div`
+  min-height: calc(100vh - 160px);
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: ${rhythm(22)};
+  padding: ${rhythm(2.5)} ${rhythm(0.4)};
 `
 
 const Footer = styled.footer`
@@ -33,9 +58,11 @@ function DotSeparator() {
 
 const H3 = styled.h3`
   font-family: Montserrat, sans-serif;
-  margin-top: 0;
+
   display: inline;
+  margin-top: 0;
   margin-right: 15px;
+  margin-bottom: 0;
   margin-left: 0;
 `
 
@@ -77,35 +104,15 @@ class Layout extends React.Component {
 
     return (
       <Wrapper>
-        <StickyHeader className="sticky-header">
-          <div
-            style={{
-              position: "relative",
-              marginLeft: `auto`,
-              marginRight: `auto`,
-              maxWidth: rhythm(22),
-              padding: `${rhythm(1)} ${rhythm(0.4)}`,
-              display: "flex",
-              justifyContent: "space-between",
-            }}
-          >
-            <header>{header}</header>
+        <FixedHeaderWrapper className="sticky-header">
+          <FixedHeader>
+            {header}
             <ThemeSwitcher />
-          </div>
-        </StickyHeader>
+          </FixedHeader>
+        </FixedHeaderWrapper>
 
-        <div
-          style={{
-            minHeight: "calc(100vh - 120px)",
-            position: "relative",
-            marginLeft: `auto`,
-            marginRight: `auto`,
-            maxWidth: rhythm(22),
-            padding: `${rhythm(2)} ${rhythm(0.4)}`,
-          }}
-        >
-          <main>{children}</main>
-        </div>
+        <Body>{children}</Body>
+
         <Footer>
           © {new Date().getFullYear()}, Built with love
           <p>

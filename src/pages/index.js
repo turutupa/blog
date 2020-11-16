@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 
 import { fetchSessionStorage } from "../utils/sessionStorage"
 import Home from "../components/home/home"
-import Loader from "../components/loader"
 
 import "./App.css"
 
@@ -11,11 +10,7 @@ function IndexPage(props) {
   const hasPreviouslyBeenLoaded = fetchSessionStorage("finishedLoading")
   const { data } = props
 
-  return (
-    <Loader isLoading={!hasPreviouslyBeenLoaded}>
-      <Home {...props} data={data} />
-    </Loader>
-  )
+  return <Home {...props} data={data} />
 }
 
 export default IndexPage

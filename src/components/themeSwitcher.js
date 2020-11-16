@@ -5,12 +5,6 @@ import "react-toggle/style.css"
 import "./ThemeSwitcher.css"
 import styled from "styled-components"
 
-const Wrapper = styled.div`
-  // position: absolute !important;
-  // top: 35px;
-  // right: 10px;
-`
-
 const Img = styled.img`
   max-width: none;
 `
@@ -26,27 +20,23 @@ export default function ThemeSwitcher() {
     "https://www.flaticon.com/svg/static/icons/svg/740/740880.svg"
 
   return (
-    <Wrapper>
-      <ThemeToggler>
-        {({ theme, toggleTheme }) => {
-          if (!theme) return <label></label>
-          else
-            return (
-              <label>
-                <Toggle
-                  onChange={e =>
-                    toggleTheme(e.target.checked ? "dark" : "light")
-                  }
-                  checked={theme === "dark"}
-                  icons={{
-                    unchecked: renderIcon(sunIconUrl),
-                    checked: renderIcon(moonIconUrl),
-                  }}
-                />
-              </label>
-            )
-        }}
-      </ThemeToggler>
-    </Wrapper>
+    <ThemeToggler>
+      {({ theme, toggleTheme }) => {
+        if (!theme) return <label></label>
+        else
+          return (
+            <label>
+              <Toggle
+                onChange={e => toggleTheme(e.target.checked ? "dark" : "light")}
+                checked={theme === "dark"}
+                icons={{
+                  unchecked: renderIcon(sunIconUrl),
+                  checked: renderIcon(moonIconUrl),
+                }}
+              />
+            </label>
+          )
+      }}
+    </ThemeToggler>
   )
 }
