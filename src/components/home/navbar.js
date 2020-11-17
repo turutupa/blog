@@ -17,6 +17,7 @@ const NavItem = styled.span`
   cursor: pointer;
   font-size: ${rhythm(8 / 15)};
   color: ${props => (props.active ? "rgb(0,0,0,0)" : null)} !important;
+  user-select: none;
 
   &:hover {
     color: #78d6b5;
@@ -63,6 +64,7 @@ export default function Navbar(props) {
           key={section}
           active={props.section === section}
           onClick={() => handleSetSection(section)}
+          className="noSelect"
         >
           {props.section === section && renderSectionWithTypingEffect(section)}#
           {section}

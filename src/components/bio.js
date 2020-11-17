@@ -44,7 +44,7 @@ function Bio() {
               }}
             />
             <div style={{ marginBottom: "25px" }}>
-              Personal blog by <strong>{author}</strong>
+              Created by <strong>{author}</strong>
               <br />
               <div
                 style={{
@@ -56,10 +56,6 @@ function Bio() {
                 <P>
                   Then, <Highlight>write the code</Highlight>
                 </P>
-                {/* <P>while(!noSuccess){`{`}</P> */}
-                {/* <P style={{ paddingLeft: "20px" }}>tryAgain();</P> */}
-                {/* <P style={{ paddingLeft: "20px" }}>beAwesome();</P> */}
-                {/* <P>{`}`}</P> */}
               </div>
             </div>
           </Container>
