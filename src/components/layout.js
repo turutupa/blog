@@ -80,7 +80,7 @@ class Layout extends React.Component {
     const header = (
       <>
         <H3>
-          <StyledLink to={`/#welcome`}>
+          <StyledLink to={`/#welcome`} className="noSelect">
             <span className="title">{title}</span>
           </StyledLink>
         </H3>
