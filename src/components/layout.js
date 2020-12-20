@@ -6,6 +6,10 @@ import { rhythm } from "../utils/typography"
 
 import ThemeSwitcher from "../components/themeSwitcher"
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
+
+import Footer from "./footer"
+
+// initiate code renderer
 deckDeckGoHighlightElement()
 
 const Wrapper = styled.div`
@@ -41,21 +45,6 @@ const Body = styled.div`
   max-width: ${rhythm(22)};
   padding: ${rhythm(2.5)} ${rhythm(0.4)};
 `
-
-const Footer = styled.footer`
-  text-align: center;
-  margin: 24px;
-`
-
-const StyledDot = styled.span`
-  padding-left: 10px;
-  padding-right: 10px;
-  font-weight: bold;
-`
-
-function DotSeparator() {
-  return <StyledDot>·</StyledDot>
-}
 
 const H3 = styled.h3`
   font-family: Montserrat, sans-serif;
@@ -105,7 +94,7 @@ class Layout extends React.Component {
 
     return (
       <Wrapper>
-        <FixedHeaderWrapper className="sticky-header">
+        <FixedHeaderWrapper className="fixed-header">
           <FixedHeader>
             {header}
             <ThemeSwitcher />
@@ -114,28 +103,7 @@ class Layout extends React.Component {
 
         <Body>{children}</Body>
 
-        <Footer>
-          © {new Date().getFullYear()}, Built with love
-          <p>
-            <a
-              href="https://www.linkedin.com/in/albertodelgadocabrera/"
-              target="_blank"
-            >
-              LinkedIn
-            </a>
-            <DotSeparator />
-            <a href="https://www.buymeacoffee.com/turutupa" target="_blank">
-              Buy me a beer
-            </a>
-            <DotSeparator />
-            <a
-              href="https://open.spotify.com/user/metalbatros91?si=96mrGNfHR7y95eVPjjziFQ"
-              target="_blank"
-            >
-              Spotify
-            </a>
-          </p>
-        </Footer>
+        <Footer />
       </Wrapper>
     )
   }

@@ -38,7 +38,7 @@ const Button = styled.div`
   align-items: center;
   user-select: none;
   background-color: ${props =>
-    props.main
+    props.primary
       ? colorPrimaryButton
       : props.secondary
       ? colorSecondaryButton

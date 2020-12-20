@@ -18,7 +18,7 @@ const Wrapper = styled.div`
   transform: scale(0.8);
   transform-origin: top;
   z-index: 1;
-  margin-bottom: -160px;
+  margin-bottom: -100px;
   padding-top: 75px;
   max-height: 870px;
   min-height: 100vh;
@@ -30,7 +30,7 @@ const CalculatorContainer = styled.div`
   position: relative;
   height: 870px;
   padding: 10px;
-  width: 440px;
+  width: 450px;
 `
 
 export default function Calculator() {

@@ -17,8 +17,9 @@ function Blog(props) {
             <div key={node.fields.slug}>
               <h1
                 style={{
-                  fontSize: rhythm(1),
+                  fontSize: rhythm(0.8),
                   marginBottom: rhythm(1 / 5),
+                  fontFamily: `Merriweather`,
                 }}
               >
                 <Link
@@ -28,7 +29,7 @@ function Blog(props) {
                   {title}
                 </Link>
               </h1>
-              <small>{node.frontmatter.date}</small>
+              <small className="blog-date">{node.frontmatter.date}</small>
               <p
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,
