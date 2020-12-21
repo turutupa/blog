@@ -5,7 +5,7 @@ body {
 
 body {
   transition: background-color 1s ease;
-  background-color: #ffffff;
+  background-color: #f3f3f3;
 }
 
 body.dark {
@@ -88,7 +88,7 @@ body.dark .blog-date {
 
 .fixed-header {
   transition: all 1s ease;
-  background-color: white;
+  background-color: rgb(243, 243, 243);
 }
 
 body.dark .fixed-header {
@@ -117,4 +117,20 @@ body.dark .fixed-header {
 .no-arrow-buttons::-webkit-outer-spin-button,
 .no-arrow-buttons::-webkit-inner-spin-button {
   -webkit-appearance: none;
+}
+
+.blog-description {
+  color: black;
+}
+
+.blog-description-container:hover {
+  background-color: white;
+}
+
+body.dark .blog-description-container:hover {
+  background-color: rgb(30, 30, 30) !important;
+}
+
+body.dark .blog-description {
+  color: rgb(243, 243, 243);
 }
