@@ -10,11 +10,11 @@ This is just a reminder to myself on how the *this scope* works in arrow functio
 
 Succinct definition:
 
-> ES6 arrow functions can’t be bound to a `this` keyword, so it will lexically go up a scope, and use the value of `this` in the scope in which it was defined.
+> ES6 arrow functions can’t be bound to a 'this' keyword, so it will lexically go up a scope, and use the value of 'this' in the scope in which it was defined.
 
 If the definition may seem too fancy, there is no better way than a practical example to see the difference in action.
 
-```js
+```
 const arrowFunctionExample = {
   id: 42,
   counter: function counter() {
@@ -39,7 +39,5 @@ regularFunctionExample.counter() // output = undefined
 ```
 
 It is as simple as that!
-
-
 
 *\*\* For beginners: arrow functions are especially useful to access object properties as in the example or for more readable situations; for example when using 'map', 'reduce' or any other built-in higher order function.*
