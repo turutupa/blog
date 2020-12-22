@@ -93,16 +93,24 @@ module.exports = {
           {
             serialize: ({ query: { site, allMdx } }) => {
               return allMdx.edges.map(edge => {
+                let url = undefined
+                if (
+                  edge &&
+                  edge.node &&
+                  edge.node.fields &&
+                  edge.node.fields.title
+                ) {
+                  url = edge.node.fields.title
+                    .trim()
+                    .split(" ")
+                    .join("-")
+                }
+
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
                   tags: edge.node.frontmatter.tags,
-                  url:
-                    site.siteMetadata.siteUrl +
-                    edge.node.fields.title
-                      .trim()
-                      .split(" ")
-                      .join("-"),
+                  url: site.siteMetadata.siteUrl + url,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   custom_elements: [{ "content:encoded": edge.node.html }],
                 })

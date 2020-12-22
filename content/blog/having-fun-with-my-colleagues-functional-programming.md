@@ -1,5 +1,4 @@
 ---
-path: functional-programming
 date: 2020-10-16T07:18:59.884Z
 title: Functional Programming 101
 description: What is functional programming? A reflection on a series of

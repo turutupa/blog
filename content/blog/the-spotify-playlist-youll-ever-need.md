@@ -1,5 +1,4 @@
 ---
-path: albertronik
 date: 2020-10-13T19:05:54.190Z
 title: The spotify playlist you'll ever need
 description: My favorite music playlist for coding
