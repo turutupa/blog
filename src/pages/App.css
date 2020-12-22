@@ -87,12 +87,12 @@ body.dark .blog-date {
 }
 
 .fixed-header {
-  transition: all 1s ease;
+  transition: background-color 1s ease;
   background-color: rgb(243, 243, 243);
 }
 
 body.dark .fixed-header {
-  transition: all 1s ease;
+  transition: background-color 1s ease;
   background-color: rgb(40, 45, 53, 1);
 }
 

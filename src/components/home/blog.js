@@ -9,8 +9,6 @@ import "@deckdeckgo/highlight-code"
 
 const Container = styled.div`
   margin: 50px 0 40px;
-  width: 100vw;
-  max-width: 100% !important;
 `
 
 const PostContainer = styled.div`

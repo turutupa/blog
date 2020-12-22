@@ -4,9 +4,14 @@ import "./Tags.css"
 
 import { rhythm } from "../../utils/typography"
 
+const Container = styled.div`
+  max-width: 100% !important;
+`
+
 const Ul = styled.ul`
-  // position: sticky;
-  // top: 83px;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
   scroll-behavior: smooth;
   display: flex;
   flex-direction: row;
@@ -15,10 +20,9 @@ const Ul = styled.ul`
 `
 
 const Tag = styled.div`
-  // ${props => (props.active ? "outline: 1px solid #00c27e;" : null)}
   display: inline-block;
   padding: 7px 15px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-size: ${rhythm(0.4)};
   box-sizing: border-box;
   border-radius: 15px !important;
@@ -26,7 +30,7 @@ const Tag = styled.div`
   cursor: pointer;
   margin-right: 10px;
   box-shadow: ${props =>
-    props.active ? "-2px 0px #00c27e" : `0px 1px 3px rgb(30, 30, 30, 0.3);`}
+    props.active ? "-2px 0px #00c27e" : `0px 1px 3px rgb(30, 30, 30, 0.3);`};
 `
 
 function getAllTags(posts) {
@@ -44,19 +48,21 @@ export default function Tags(props) {
   const { posts, tagSelected, setTagSelected } = props
 
   return (
-    <Ul className="tags-container">
-      {getAllTags(posts).map(tag => {
-        return (
-          <Tag
-            className="tag"
-            key={tag}
-            onClick={() => setTagSelected(tag)}
-            active={tag === tagSelected}
-          >
-            {tag}
-          </Tag>
-        )
-      })}
-    </Ul>
+    <Container>
+      <Ul className="tags-container">
+        {getAllTags(posts).map(tag => {
+          return (
+            <Tag
+              className="tag"
+              key={tag}
+              onClick={() => setTagSelected(tag)}
+              active={tag === tagSelected}
+            >
+              {tag}
+            </Tag>
+          )
+        })}
+      </Ul>
+    </Container>
   )
 }
