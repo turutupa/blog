@@ -6,17 +6,20 @@ description: Today I learned the most horrible dog fact
 tags:
   - dogs
 ---
+Two months ago, my girlfriend and I adopted a cute little dog. She is lovely and super smart dog. I soon understood what dog love is all about, and why people lose their minds for their best friend.
 
-Two months ago my girlfriend and I adopted a cute little dog. She is lovely and super smart. I soon understood what the dog love is all about, and why people lose their minds for their best friend.
-
-Unfortunately, today I came to learn a harsh dog fact.
+Unfortunately, today I learnt a harsh dog fact.
 
 `- Viewer discretion advised -`
 
 #### Dogs don't like hugs.
 
-Of course there are some dogs that love hugging, and I am not talking about cuddling BTW, nonetheless, I was told today a very good exercise in case you don't believe it. If you going into google images and type something like _'hugging dog'_, you will find an incredible amount of pictures of people hugging a dog with.... _sad drum roll... uncomfortable_ rolling. They are clearly not enjoying or find weird hugging, specially when the _supposely_ owner is picking the dog up.
+Of course there are some dogs that do like hugging, nonetheless, it is apparently something common in many dogs. In case you don't believe me, I was told today a good exercise you can do yourself to prove it. If you search in google images something like *'hugging dog'*, you will find an incredible amount of pictures of people hugging a dog with.... *sad drum roll... uncomfortable* eye rolling. 
 
-I am guessing it is something we will just have to live with. Hopefully your dog will grow a hugger.
+![dog-eye-rolling](../assets/dog-hug.jpeg "Dog's don't like hugs... why!?")
+
+Check out the dog's eyes, please, they are clearly not enjoying or seem confused/forced whilst being hugged, specially when the *supposedly* owner is picking the dog up.
+
+I seems it is something we will have to live with. Hopefully your dog will grow a hugger.
 
 I wish you and your dog the best!
