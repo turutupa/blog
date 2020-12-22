@@ -6,10 +6,11 @@ import { rhythm } from "../../utils/typography"
 
 const Container = styled.div`
   max-width: 100% !important;
+  overflow: hidden;
 `
 
 const Ul = styled.ul`
-  width: 100%;
+  user-select: none;
   margin: 0;
   padding: 20px;
   scroll-behavior: smooth;
@@ -17,9 +18,14 @@ const Ul = styled.ul`
   flex-direction: row;
   justify-content: left;
   flex-wrap: wrap;
+
+  @media (min-width: 768px) {
+    width: 100vw;
+  }
 `
 
 const Tag = styled.div`
+  user-select: none;
   display: inline-block;
   padding: 7px 15px;
   margin-bottom: 10px;
@@ -30,7 +36,12 @@ const Tag = styled.div`
   cursor: pointer;
   margin-right: 10px;
   box-shadow: ${props =>
-    props.active ? "-2px 0px #00c27e" : `0px 1px 3px rgb(30, 30, 30, 0.3);`};
+    props.active ? "0px 2px #00c27e" : `0px 2px 3px rgb(30, 30, 30, 0.3)`};
+
+  &:active {
+    transform: translateY(2px);
+    box-shadow: 0px 1px #00c27e;
+  }
 `
 
 function getAllTags(posts) {
