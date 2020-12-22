@@ -3,6 +3,8 @@ path: welcome
 date: 2020-08-17T07:28:47.571Z
 title: My Journey
 description: My first post, my new adventure
+tags:
+  - personal
 ---
 
 Hi everyone! Specially future _me!_

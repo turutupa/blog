@@ -1,0 +1,23 @@
+.tags-container {
+  background-color: #f3f3f3;
+}
+
+body.dark .tags-container {
+  background-color: #282e34;
+}
+
+.tag {
+  background-color: white;
+}
+
+.tag:hover {
+  filter: brightness(0.95);
+}
+
+body.dark .tag {
+  background-color: rgb(30, 30, 30);
+}
+
+body.dark .tag:hover {
+  background-color: rgb(30, 30, 30, 0.4);
+}

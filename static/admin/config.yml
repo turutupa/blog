@@ -11,8 +11,17 @@ collections:
     folder: content/blog
     create: true
     fields:
-      - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: description, label: Description }
+      - {
+          name: tags,
+          label: Tags,
+          widget: list,
+          allow_add: true,
+          label_singular: Add tag,
+          max: 4,
+          min: 1,
+          default: ["random", "life"],
+        }
       - { name: body, label: Body, widget: markdown }
