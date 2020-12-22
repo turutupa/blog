@@ -17,10 +17,16 @@ body.dark {
 }
 
 p > code {
-  background-color: rgb(245, 245, 245);
+  transition: background-color 1s ease;
+  background-color: rgb(225, 225, 225);
   padding: 15px 40px;
   border-radius: 8px;
   display: flex;
+}
+
+body.dark p > code {
+  transition: background-color 1s ease;
+  background-color: rgb(30, 30, 30);
 }
 
 body h3 > a {
