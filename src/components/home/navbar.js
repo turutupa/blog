@@ -8,7 +8,7 @@ import { navigate } from "gatsby"
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 75px;
+  margin-top: 40px;
 `
 
 const NavItem = styled.span`

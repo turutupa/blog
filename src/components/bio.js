@@ -4,21 +4,12 @@ import Image from "gatsby-image"
 import styled from "styled-components"
 
 import { rhythm } from "../utils/typography"
+import RandomQuotes from "./randomQuotes"
 
 const Container = styled.div`
   display: flex;
   margin-top: 50px;
-`
-
-const P = styled.p`
-  margin-bottom: -8px;
-`
-
-const Highlight = styled.span`
-  background-color: #94dcc0;
-  color: rgb(20, 20, 20);
-  font-weight: bold;
-  padding: 0 5px;
+  margin-bottom: 30px;
 `
 
 function Bio() {
@@ -43,20 +34,11 @@ function Bio() {
                 borderRadius: `50%`,
               }}
             />
-            <div style={{ marginBottom: "25px" }}>
-              Created by <strong>{author}</strong>
+            <div style={{ fontSize: rhythm(0.55), marginBottom: "25px" }}>
+              Written by <strong>{author}</strong> who loves building cool stuff
+              and learning one or two things in the process.
               <br />
-              <div
-                style={{
-                  fontFamily: "monospace",
-                  fontSize: "16px",
-                }}
-              >
-                <P>First, solve the problem</P>
-                <P>
-                  Then, <Highlight>write the code</Highlight>
-                </P>
-              </div>
+              <RandomQuotes />
             </div>
           </Container>
         )

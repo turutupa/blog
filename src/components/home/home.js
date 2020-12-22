@@ -48,7 +48,7 @@ export default function Home(props) {
           `typescript`,
         ]}
       />
-      <Bio />
+      {/* <Bio /> */}
       <Navbar section={section} setSection={setSection} />
       <FadeIn key={section}>{sectionsComponents[section]}</FadeIn>
     </Layout>
