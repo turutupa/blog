@@ -24,4 +24,16 @@ collections:
           min: 1,
           default: ["random", "life"],
         }
+      - {
+          widget: relation,
+          name: related_posts,
+          label: Related Posts,
+          required: false,
+          multiple: true,
+          hint: Other related posts,
+          collection: blog,
+          valueField: title,
+          searchFields: ["title"],
+          displayFields: ["title"],
+        }
       - { name: body, label: Body, widget: markdown }

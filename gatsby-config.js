@@ -130,6 +130,7 @@ module.exports = {
                         title
                         date
                         tags
+                        related_posts
                       }
                     }
                   }

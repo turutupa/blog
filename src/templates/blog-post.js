@@ -20,6 +20,29 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
+        {/* Related posts */}
+        {post.frontmatter.related_posts && (
+          <>
+            <p style={{ marginBottom: 0, marginTop: "20px" }}>Related posts:</p>
+            <ul style={{ listStyleType: "none", paddingLeft: "10px" }}>
+              {post.frontmatter.related_posts.map(p => (
+                <li key={p} style={{ fontSize: "0.9rem" }}>
+                  <Link
+                    to={`/blog/${p
+                      .trim()
+                      .toLowerCase()
+                      .split(" ")
+                      .join("-")}`}
+                  >
+                    {p}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+
+        {/* Title and date */}
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{
@@ -31,7 +54,11 @@ class BlogPostTemplate extends React.Component {
         >
           {post.frontmatter.date}
         </p>
+
+        {/* Post body */}
         <MDXRenderer>{post.body}</MDXRenderer>
+
+        {/* Blog Post Footer */}
         <hr
           style={{
             marginBottom: rhythm(1),
@@ -85,6 +112,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        related_posts
       }
     }
   }

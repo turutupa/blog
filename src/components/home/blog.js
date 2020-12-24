@@ -53,6 +53,7 @@ function Blog(props) {
       <>
         {selectedPosts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
+          const { tags } = node.frontmatter
           return (
             <Link
               style={{ boxShadow: `none` }}
@@ -68,6 +69,13 @@ function Blog(props) {
                     __html: node.frontmatter.description || node.excerpt,
                   }}
                 />
+                {/* <P>
+                  {tags.map(tag => (
+                    <small key={title + tag} style={{ marginRight: "10px" }}>
+                      #{tag}
+                    </small>
+                  ))}
+                </P> */}
               </PostContainer>
             </Link>
           )
