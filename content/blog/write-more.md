@@ -4,8 +4,7 @@ title: Write more
 description: "It turns out it is almost New Year but this goal is no New Year's
   Resolution. I simply want to write more. "
 tags:
-  - random
-  - life
+  - personal
 related_posts:
   - My Journey
 ---
