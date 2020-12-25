@@ -51,7 +51,7 @@ const H3 = styled.h3`
 
   display: inline;
   margin-top: 0;
-  margin-right: 15px;
+  margin-right: 0;
   margin-bottom: 0;
   margin-left: 0;
 `
@@ -59,6 +59,7 @@ const H3 = styled.h3`
 const StyledLink = styled(Link)`
   box-shadow: none;
   text-decoration: none;
+  margin-right: 0;
 `
 
 class Layout extends React.Component {
@@ -68,21 +69,20 @@ class Layout extends React.Component {
 
     const header = (
       <>
-        <H3>
+        <H3 style={{ paddingRight: 0 }}>
           <StyledLink to={`/#welcome`} className="noSelect">
             <span className="title">{title}</span>
           </StyledLink>
         </H3>
-        {pathname !== "/" && pathname !== "/math" && (
+        {pathname !== "/" && pathname.split("/").includes("blog") && (
           <>
-            <H3>|</H3>
+            <H3 style={{ marginRight: "10px", marginLeft: 0 }}>|</H3>
+
             <H3>
               <StyledLink
-                className="go-home"
-                style={{
-                  textDecoration: "underline",
-                }}
+                className="go-home noSelect"
                 to={"/#blog"}
+                style={{ paddingRight: "30px" }}
               >
                 go home
               </StyledLink>

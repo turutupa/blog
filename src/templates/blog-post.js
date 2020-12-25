@@ -23,7 +23,7 @@ class BlogPostTemplate extends React.Component {
         {/* Related posts */}
         {post.frontmatter.related_posts && (
           <>
-            <p style={{ marginBottom: 0, marginTop: "20px" }}>Related posts:</p>
+            <p style={{ marginBottom: 0, marginTop: "40px" }}>Related posts:</p>
             <ul style={{ listStyleType: "none", paddingLeft: "10px" }}>
               {post.frontmatter.related_posts.map(p => (
                 <li key={p} style={{ fontSize: "0.9rem" }}>
