@@ -34,8 +34,8 @@ body h3 > a {
 }
 
 .go-home {
-  color: rgb(225, 225, 225) !important;
-  /* color: #00c27e !important; */
+  /* color: rgb(225, 225, 225) !important; */
+  color: #00c27e !important;
 }
 
 body.dark h3 > a {

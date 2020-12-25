@@ -82,7 +82,7 @@ class Layout extends React.Component {
               <StyledLink
                 className="go-home noSelect"
                 to={"/#blog"}
-                style={{ paddingRight: "30px" }}
+                style={{ paddingRight: "30px", textDecoration: "underline" }}
               >
                 go home
               </StyledLink>
