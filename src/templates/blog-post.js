@@ -21,26 +21,29 @@ class BlogPostTemplate extends React.Component {
           description={post.frontmatter.description || post.excerpt}
         />
         {/* Related posts */}
-        {post.frontmatter.related_posts && (
-          <>
-            <p style={{ marginBottom: 0, marginTop: "40px" }}>Related posts:</p>
-            <ul style={{ listStyleType: "none", paddingLeft: "10px" }}>
-              {post.frontmatter.related_posts.map(p => (
-                <li key={p} style={{ fontSize: "0.9rem" }}>
-                  <Link
-                    to={`/blog/${p
-                      .trim()
-                      .toLowerCase()
-                      .split(" ")
-                      .join("-")}`}
-                  >
-                    {p}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </>
-        )}
+        {post.frontmatter.related_posts &&
+          post.frontmatter.related_posts.length > 0 && (
+            <>
+              <p style={{ marginBottom: 0, marginTop: "40px" }}>
+                Related posts:
+              </p>
+              <ul style={{ listStyleType: "none", paddingLeft: "10px" }}>
+                {post.frontmatter.related_posts.map(p => (
+                  <li key={p} style={{ fontSize: "0.9rem" }}>
+                    <Link
+                      to={`/blog/${p
+                        .trim()
+                        .toLowerCase()
+                        .split(" ")
+                        .join("-")}`}
+                    >
+                      {p}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
 
         {/* Title and date */}
         <h1>{post.frontmatter.title}</h1>
