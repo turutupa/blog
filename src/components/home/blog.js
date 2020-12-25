@@ -14,7 +14,7 @@ const Container = styled.div`
 const PostContainer = styled.div`
   padding: 1px 20px 20px 20px;
   border-radius: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   box-shadow: 0px 3px 6px rgb(30, 30, 30, 0);
 
   &:hover {
@@ -23,7 +23,7 @@ const PostContainer = styled.div`
 `
 
 const H1 = styled.h1`
-  font-size: ${rhythm(0.7)};
+  font-size: ${rhythm(0.8)};
   margin-bottom: ${rhythm(1 / 5)};
   margin-top: 25px;
 `
