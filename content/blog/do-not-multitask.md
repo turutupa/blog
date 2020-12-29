@@ -20,6 +20,6 @@ I have always known I am not a good multitasker; now I find it funny to realise 
 
 > According to a widely cited study, the constant interruption of emails and text messages cuts our productivity by about 40% and makes us at least 10 IQ points dumber.
 
-Nevertheless, I know I have fallen many times to confuse *familiarity with skill.* 
+Nevertheless, as mentioned in the second point of why people fall under the false believe of becoming good at multitasking, I know I have also fallen many times to confuse *familiarity with skill.* How many times you've repeated a task and got the sense you were doing better at it, when in reality, you just got used to it. Perhaps you hadn't even realised until now.
 
 *\* Note: it is easy to tell yourself not to fool yourself, however, how do you do it?*
