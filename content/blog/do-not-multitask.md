@@ -3,7 +3,7 @@ date: 2020-12-25T11:11:51.834Z
 title: Do not multitask
 description: Great piece of knowledge on the difference between familiarity and skill
 tags:
-  - personal
+  - life
 related_posts: []
 ---
 Excerpt from "How to Take Smart Notes"
