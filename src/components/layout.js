@@ -111,12 +111,6 @@ class Layout extends React.Component {
   componentDidMount() {
     try {
       window.addEventListener("scroll", handleScroll)
-      const location = window.location
-      const currentPage =
-        location.hash.length > 0
-          ? location.hash.slice(1)
-          : location.pathname.slice(1)
-      this.setState({ currentPage })
     } catch (e) {
       console.error(e)
     }
