@@ -194,6 +194,7 @@ body.dark .blog-description {
   margin-left: 50px;
   padding-left: 12px;
   font-size: 13px !important;
+  font-weight: normal !important;
 }
 
 @media (min-width: 768px) {
@@ -201,7 +202,8 @@ body.dark .blog-description {
     box-shadow: 0 3px #00c27e;
     margin-left: 50px;
     padding-left: 50px;
-    font-size: 1rem;
+    font-weight: normal !important;
+    font-size: 16px !important;
   }
 }
 
