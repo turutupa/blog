@@ -22,10 +22,9 @@ const Body = styled.p`
 
 const LottieWrapper = styled.div`
   transform: scale(0.5);
+  margin-top: -50px;
   display: flex;
-  margin-top: -80px;
   justify-content: center;
-  max-width: 100vw;
 `
 
 const StyledLottie = styled(Lottie)`

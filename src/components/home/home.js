@@ -1,11 +1,10 @@
 import React from "react"
 import Layout from "../layout"
 import SEO from "../seo"
-import Bio from "../bio"
 
 import FadeIn from "react-fade-in"
 
-import Navbar from "./navbar"
+// import Navbar from "./navbar"
 import Welcome from "./welcome"
 import Contact from "./contact"
 import About from "./about"
@@ -14,7 +13,7 @@ import Blog from "./blog"
 import { welcome, about, contact, blog } from "./navbar"
 
 export default function Home(props) {
-  const siteTitle = "turutupa's garage"
+  const siteTitle = props.data?.site?.siteMetadata?.title
   const [section, setSection] = React.useState(welcome)
 
   React.useEffect(() => {
@@ -48,8 +47,7 @@ export default function Home(props) {
           `typescript`,
         ]}
       />
-      {/* <Bio /> */}
-      <Navbar section={section} setSection={setSection} />
+      {/* <Navbar section={section} setSection={setSection} /> */}
       <FadeIn key={section}>{sectionsComponents[section]}</FadeIn>
     </Layout>
   )

@@ -4,6 +4,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import "./About.css"
 
+import Contact from "./contact"
+
 import {
   howToWinFriendsAndInfluencePeopleUrl,
   theLittleBookOfStoicismUrl,
@@ -19,6 +21,7 @@ const AvatarWrapper = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 50px;
+  margin-bottom: 70px;
 `
 
 const AvatarBorder = styled.div`
@@ -52,11 +55,13 @@ const Li = styled.li`
   padding-left: 30px;
   margin-bottom: 5px;
   word-wrap: break-word;
+  list-style-type: "";
 
   &:before {
     position: absolute;
     left: 14px;
     content: ">";
+    text-shadow: 1px 1px black;
     padding-right: 8px;
     font-weight: bold;
   }
@@ -112,15 +117,15 @@ export default function About() {
         equally important; hike and read - always accompanied by the best tunes.
         Some of the books I've most enjoyed are{" "}
         <a href={howToWinFriendsAndInfluencePeopleUrl} target="_blank">
-          <i>How to win friends and influence people</i>
+          How to win friends and influence people
         </a>
         ,{" "}
         <a href={theLittleBookOfStoicismUrl} target="_blank">
-          <i>The little book of Stoicism</i>
+          The little book of Stoicism
         </a>{" "}
         and{" "}
         <a href={cleanCodeUrl} target="_blank">
-          <i>Clean Code</i>
+          Clean Code
         </a>
         . The last being an essential read, even for developers who might feel
         overqualified for an apparently elementary read.
@@ -137,6 +142,7 @@ export default function About() {
           />
         </AvatarBorder>
       </AvatarWrapper>
+      <Contact />
     </div>
   )
 }

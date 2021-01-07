@@ -10,6 +10,7 @@ collections:
     label: Blog
     folder: content/blog
     create: true
+    sortableFields: ["date", "title", "Updated On", "Description"]
     fields:
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
@@ -36,4 +37,14 @@ collections:
           searchFields: ["title"],
           displayFields: ["title"],
         }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: activity
+    label: activity
+    folder: content/activity
+    create: true
+    sortableFields: ["date", "title"]
+    fields:
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }

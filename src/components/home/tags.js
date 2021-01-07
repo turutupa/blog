@@ -24,7 +24,7 @@ const Ul = styled.ul`
   }
 `
 
-const Tag = styled.div`
+export const Tag = styled.div`
   user-select: none;
   display: inline-block;
   padding: 7px 15px;

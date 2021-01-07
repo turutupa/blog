@@ -7,6 +7,7 @@ import "./App.css"
 
 function IndexPage(props) {
   const { data } = props
+
   return <Home {...props} data={data} />
 }
 
@@ -19,10 +20,14 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fileAbsolutePath: { regex: "/blog/" } }
+    ) {
       edges {
         node {
           excerpt
+          timeToRead
           fields {
             slug
           }

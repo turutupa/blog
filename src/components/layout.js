@@ -28,7 +28,7 @@ const FixedHeader = styled.div`
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  max-width: ${rhythm(22)};
+  max-width: ${rhythm(24)};
   padding: ${rhythm(0.8)} ${rhythm(0.4)};
   display: flex;
   justify-content: space-between;
@@ -38,11 +38,10 @@ const FixedHeader = styled.div`
 `
 
 const Body = styled.div`
-  min-height: calc(100vh - 160px);
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  max-width: ${rhythm(22)};
+  max-width: ${rhythm(24)};
   padding: ${rhythm(2.5)} ${rhythm(0.4)};
 `
 
@@ -56,39 +55,142 @@ const H3 = styled.h3`
   margin-left: 0;
 `
 
-const StyledLink = styled(Link)`
+const Header = styled(Link)`
+  font-size: 1.4rem;
   box-shadow: none;
-  text-decoration: none;
-  margin-right: 0;
+  text-decoration: none !important;
+  margin-right: 2vw;
+  display: none;
+
+  &:hover {
+    filter: brightness(1.4) !important;
+  }
+
+  @media (min-width: 768px) {
+    display: inline-block;
+  }
 `
 
+const SmallHeader = styled(Link)`
+  font-size: 1.2rem;
+  box-shadow: none;
+  text-decoration: none;
+  margin-right: 2vw;
+  display: inline-block !important;
+
+  @media (min-width: 768px) {
+    display: none !important;
+  }
+`
+
+const StyledLink = styled(Link)`
+  font-size: 1.2rem;
+  box-shadow: none;
+  text-decoration: none !important;
+  margin-right: 1vw;
+  padding-right: 10px !important;
+`
+
+function handleScroll() {
+  try {
+    const navbar = document.querySelector(".fixed-header")
+    if (window.scrollY > 20) {
+      navbar.className = "fixed-header scroll"
+    } else {
+      navbar.className = "fixed-header"
+    }
+  } catch (e) {
+    console.error(e)
+  }
+}
 class Layout extends React.Component {
+  state = {}
+
+  componentDidMount() {
+    try {
+      window.addEventListener("scroll", handleScroll)
+      const location = window.location
+      const currentPage =
+        location.hash.length > 0
+          ? location.hash.slice(1)
+          : location.pathname.slice(1)
+      this.setState({ currentPage })
+    } catch (e) {
+      console.error(e)
+    }
+  }
+
+  componentWillUnmount() {
+    try {
+      window.removeEventListener("scroll", handleScroll)
+    } catch (e) {
+      console.error(e)
+    }
+  }
+
   render() {
-    const { location, title, children } = this.props
-    const { pathname } = location
+    const { children } = this.props
+    const { currentPage } = this.state
+    const title = "Alberto Delgado"
 
     const header = (
       <>
-        <H3 style={{ paddingRight: 0 }}>
-          <StyledLink to={`/#welcome`} className="noSelect">
-            <span className="title">{title}</span>
-          </StyledLink>
+        <H3>
+          <SmallHeader
+            to={`/#welcome`}
+            className="noSelect nav-item"
+            onClick={() => this.setState({ currentPage: "welcome" })}
+          >
+            <span className="title">A.D</span>
+          </SmallHeader>
         </H3>
-        {pathname !== "/" && pathname.split("/").includes("blog") && (
-          <>
-            <H3 style={{ marginRight: "10px", marginLeft: 0 }}>|</H3>
-
-            <H3>
-              <StyledLink
-                className="go-home noSelect"
-                to={"/#blog"}
-                style={{ paddingRight: "30px", textDecoration: "underline" }}
-              >
-                go home
-              </StyledLink>
-            </H3>
-          </>
-        )}
+        <H3>
+          <Header
+            to={`/#welcome`}
+            className="noSelect"
+            onClick={() => this.setState({ currentPage: "welcome" })}
+          >
+            <span className="title">{title}</span>
+          </Header>
+        </H3>
+        <>
+          <H3>
+            <StyledLink
+              onClick={() => this.setState({ currentPage: "about" })}
+              className={`noSelect nav-item ${
+                currentPage === "about" ? "nav-item-active" : ""
+              }`}
+              to={"/#about"}
+              style={{ paddingRight: "30px" }}
+            >
+              About
+            </StyledLink>
+          </H3>
+          <H3>
+            <StyledLink
+              onClick={() => this.setState({ currentPage: "blog" })}
+              className={`noSelect nav-item ${
+                currentPage === "blog" ? "nav-item-active" : ""
+              }`}
+              to={"/#blog"}
+              style={{ paddingRight: "30px" }}
+            >
+              Blog
+            </StyledLink>
+          </H3>
+          <H3>
+            <StyledLink
+              onClick={() => this.setState({ currentPage: "activity" })}
+              className={`noSelect nav-item ${
+                currentPage === "activity" ? "nav-item-active" : ""
+              }`}
+              to={"/activity"}
+              style={{ paddingRight: "30px" }}
+            >
+              Activity
+            </StyledLink>
+          </H3>
+        </>
       </>
     )
 
@@ -96,7 +198,7 @@ class Layout extends React.Component {
       <Wrapper>
         <FixedHeaderWrapper className="fixed-header">
           <FixedHeader>
-            {header}
+            <div>{header}</div>
             <ThemeSwitcher />
           </FixedHeader>
         </FixedHeaderWrapper>

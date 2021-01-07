@@ -8,9 +8,10 @@ function DotSeparator() {
 }
 
 const StyledDot = styled.span`
-  padding-left: 20px;
-  padding-right: 20px;
-  font-size: 28px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 32px;
+  color: lightgrey;
 `
 
 const Footer = styled.footer`
@@ -21,7 +22,7 @@ const Footer = styled.footer`
 export default function footer() {
   return (
     <Footer>
-      © {new Date().getFullYear()}, Built with passion
+      © {new Date().getFullYear()}, Thank you for visiting
       <p
         className="noSelect"
         style={{ marginTop: "15px", verticalAlign: "middle" }}

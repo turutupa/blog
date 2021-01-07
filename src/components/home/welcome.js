@@ -2,6 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import { rhythm } from "../../utils/typography"
 
+import Posts from "./posts"
+
 // lottie!
 import Lottie from "../lottie"
 import { developer } from "../../lotties/developer"
@@ -25,7 +27,17 @@ const Body = styled.p`
   margin-bottom: -20px;
 `
 
-export default function Header() {
+const Hr = styled.hr`
+  margin-bottom: 10px;
+  border-top-style: solid;
+  border-color: rgb(100, 100, 100);
+  border-width: 2px;
+`
+
+export default function Welcome(props) {
+  const { data } = props
+  const recentPosts = data.allMdx.edges.slice(0, 3)
+
   return (
     <header>
       <P>Hi! My name is</P>
@@ -37,7 +49,25 @@ export default function Header() {
         beautiful applications and anything in between.
       </Body>
 
-      <Lottie lottie={developer} style={{ marginBottom: "-150px" }} />
+      <section
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginBottom: "50px",
+        }}
+      >
+        <Lottie
+          lottie={developer}
+          style={{
+            marginBottom: "-130px",
+          }}
+        />
+      </section>
+      <h3 style={{ fontFamily: "Montserrat", marginBottom: "5px" }}>
+        Latest Posts
+      </h3>
+      <Hr />
+      {Posts(recentPosts)}
     </header>
   )
 }
