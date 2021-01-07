@@ -1,11 +1,13 @@
 ---
 date: 2020-12-25T13:36:08.893Z
-title: They pretend to pay us, we pretend to work
+title: '"They pretend to pay us, we pretend to work"'
 description: Philosophy behind wages. How much do you think your company pays you?
 tags:
   - life
 ---
-I always believed the theory behind how much a company pays employees is the minimum amount so they stay in the company. Regardless of merit or hard work. At least for low education jobs or new entry level. In other other words, firms would pay the minimum that the workers would accept. You can easily imagine why this would not be the best approach and how employees feel about it. There is no panic in losing a job you feel you are being underpaid for.
+How much does a company pay to its employees? Whereas there are some well known firms for their good paying salaries... how well do the vast majority of companies pay? 
+
+I always believed companies, in general, would try to pay employees the minimum amount so they stay in the company. Regardless of merit or hard work. At least for low education jobs or new entry level. In other other words, firms would try to pay the minimum amount that the workers would accept. You can easily imagine why this would not be the best approach and how employees would feel about it. Basically, there is no panic in losing a job you feel you are being underpaid for, and for the same reason you are not going to fight much or go the extra mile, at least not voluntarily.
 
 This is not what companies really want. As the book "Good economics for hard times" ingeniously points out, there is a Soviet joke: *"They pretend to pay us, we pretend to work."*
 
