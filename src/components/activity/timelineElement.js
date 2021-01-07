@@ -16,7 +16,7 @@ function removeMdHeader(rawBody) {
   let indexLastHyphen = 0
 
   for (let i = 0; i < rawBody.length; i++) {
-    if (rawBody[i] === "-") indexLastHyphen = i
+    if (rawBody[i] === "---") indexLastHyphen = i
   }
 
   return rawBody.slice(indexLastHyphen + 1)
