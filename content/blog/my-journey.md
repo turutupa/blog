@@ -1,7 +1,7 @@
 ---
 date: 2020-08-17T07:28:47.571Z
-title: My Journey
-description: npm run start
+title: mkdir blog && cd blog
+description: "I'm very happy to start my first ever blog! "
 tags:
   - personal
 ---
