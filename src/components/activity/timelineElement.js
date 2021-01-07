@@ -6,11 +6,15 @@ import { VerticalTimelineElement } from "react-vertical-timeline-component"
 import "react-vertical-timeline-component/style.min.css"
 import ReactMarkdown from "react-markdown"
 
+import { rhythm } from "../../utils/typography"
+
 const H1 = styled.h1`
   margin-top: 10px;
   margin-bottom: 5px;
   font-size: 1.4rem;
 `
+
+const ResponsiveText = styled.div``
 
 function removeMdHeader(rawBody) {
   const words = rawBody.split("---")
@@ -31,12 +35,13 @@ export default function TimelineElement(props) {
       iconStyle={{
         background: "#00c27e",
         color: "#fff",
-        transform: "scale(1.2)",
       }}
       icon={<GiJumpingDog />}
     >
       <H1>{title}</H1>
-      <ReactMarkdown>{removeMdHeader(rawBody)}</ReactMarkdown>
+      <ResponsiveText>
+        <ReactMarkdown>{removeMdHeader(rawBody)}</ReactMarkdown>
+      </ResponsiveText>
       {/* <div dangerouslySetInnerHTML={{ __html: removeMdHeader(rawBody) }} /> */}
     </VerticalTimelineElement>
   )

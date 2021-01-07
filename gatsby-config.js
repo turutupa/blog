@@ -69,7 +69,7 @@ module.exports = {
         short_name: `turutupa`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#94dcc0`,
+        theme_color: `#ffffff`,
         display: `minimal-ui`,
         // edit below
         icon: `content/assets/programmer.png`,

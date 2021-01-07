@@ -181,9 +181,28 @@ body.dark .blog-description {
   color: rgb(243, 243, 243);
 }
 
+.vertical-timeline
+  .vertical-timeline--animate
+  .vertical-timeline--one-column-left {
+  margin-left: 0;
+  margin-right: 0 !important;
+  padding-right: 0;
+}
+
 .vertical-timeline-element-content {
-  padding-left: 50px;
   box-shadow: 0 3px #00c27e;
+  margin-left: 50px;
+  padding-left: 12px;
+  font-size: 13px !important;
+}
+
+@media (min-width: 768px) {
+  .vertical-timeline-element-content {
+    box-shadow: 0 3px #00c27e;
+    margin-left: 50px;
+    padding-left: 50px;
+    font-size: 1rem;
+  }
 }
 
 body.dark .vertical-timeline-element-content {

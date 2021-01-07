@@ -104,7 +104,9 @@ function handleScroll() {
   }
 }
 class Layout extends React.Component {
-  state = {}
+  state = {
+    currentPage: "welcome",
+  }
 
   componentDidMount() {
     try {
@@ -138,7 +140,9 @@ class Layout extends React.Component {
         <H3>
           <SmallHeader
             to={`/#welcome`}
-            className="noSelect nav-item"
+            className={`noSelect nav-item ${
+              currentPage === "welcome" ? "nav-item-active" : ""
+            }`}
             onClick={() => this.setState({ currentPage: "welcome" })}
           >
             <span className="title">A.D</span>
@@ -147,7 +151,9 @@ class Layout extends React.Component {
         <H3>
           <Header
             to={`/#welcome`}
-            className="noSelect"
+            className={`noSelect nav-item ${
+              currentPage === "welcome" ? "nav-item-active" : ""
+            }`}
             onClick={() => this.setState({ currentPage: "welcome" })}
           >
             <span className="title">{title}</span>
