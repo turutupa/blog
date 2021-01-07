@@ -13,13 +13,9 @@ const H1 = styled.h1`
 `
 
 function removeMdHeader(rawBody) {
-  let indexLastHyphen = 0
-
-  for (let i = 0; i < rawBody.length; i++) {
-    if (rawBody[i] === "---") indexLastHyphen = i
-  }
-
-  return rawBody.slice(indexLastHyphen + 1)
+  const words = rawBody.split("---")
+  const body = words.pop()
+  return body
 }
 
 export default function TimelineElement(props) {
