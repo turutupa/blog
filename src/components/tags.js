@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import "./Tags.css"
 
-import { rhythm } from "../../utils/typography"
+import { rhythm } from "../utils/typography"
 
 const Container = styled.div`
   max-width: 100% !important;

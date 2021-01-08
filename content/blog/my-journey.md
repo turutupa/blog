@@ -1,6 +1,6 @@
 ---
 date: 2020-08-17T07:28:47.571Z
-title: mkdir blog && git init
+title: cd blog && git init
 description: I am very excited to present my first ever blog!
 tags:
   - personal

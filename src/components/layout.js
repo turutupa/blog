@@ -111,6 +111,9 @@ class Layout extends React.Component {
   componentDidMount() {
     try {
       window.addEventListener("scroll", handleScroll)
+      const location = window.location
+
+      this.setState({ currentPage: location.pathname.slice(1) })
     } catch (e) {
       console.error(e)
     }
@@ -133,7 +136,7 @@ class Layout extends React.Component {
       <>
         <H3>
           <SmallHeader
-            to={`/#welcome`}
+            to={`/welcome`}
             className={`noSelect nav-item ${
               currentPage === "welcome" ? "nav-item-active" : ""
             }`}
@@ -144,7 +147,7 @@ class Layout extends React.Component {
         </H3>
         <H3>
           <Header
-            to={`/#welcome`}
+            to={`/welcome`}
             className={`noSelect nav-item ${
               currentPage === "welcome" ? "nav-item-active" : ""
             }`}
@@ -160,7 +163,7 @@ class Layout extends React.Component {
               className={`noSelect nav-item ${
                 currentPage === "about" ? "nav-item-active" : ""
               }`}
-              to={"/#about"}
+              to={"/about"}
               style={{ paddingRight: "30px" }}
             >
               About
@@ -172,7 +175,7 @@ class Layout extends React.Component {
               className={`noSelect nav-item ${
                 currentPage === "blog" ? "nav-item-active" : ""
               }`}
-              to={"/#blog"}
+              to={"/blog"}
               style={{ paddingRight: "30px" }}
             >
               Blog
