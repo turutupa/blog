@@ -29,7 +29,12 @@ class BlogPostTemplate extends React.Component {
               </p>
               <ul style={{ listStyleType: "none", paddingLeft: "10px" }}>
                 {post.frontmatter.related_posts.map(p => (
-                  <li key={p} style={{ fontSize: "0.9rem" }}>
+                  <li
+                    key={p}
+                    style={{
+                      fontSize: "0.9rem",
+                    }}
+                  >
                     <Link
                       to={`/blog/${p
                         .trim()
@@ -77,14 +82,14 @@ class BlogPostTemplate extends React.Component {
             padding: 0,
           }}
         >
-          <li>
+          <li style={{ listStyleType: '""' }}>
             {previous && (
               <Link to={`/blog${previous.fields.slug}`} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
-          <li>
+          <li style={{ listStyleType: '""' }}>
             {next && (
               <Link to={`/blog${next.fields.slug}`} rel="next">
                 {next.frontmatter.title} →
