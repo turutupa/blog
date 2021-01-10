@@ -1,8 +1,8 @@
 ---
 date: 2020-12-24T17:14:11.075Z
 title: Write more
-description: "It turns out it is almost New Year but this goal is no New Year's
-  Resolution. I simply want to write more. "
+description: I can't believe how much I missed out on this one... I suppose
+  better late than never.
 tags:
   - personal
 related_posts:
