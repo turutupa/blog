@@ -42,7 +42,6 @@ export default function TimelineElement(props) {
       <ResponsiveText>
         <ReactMarkdown>{removeMdHeader(rawBody)}</ReactMarkdown>
       </ResponsiveText>
-      {/* <div dangerouslySetInnerHTML={{ __html: removeMdHeader(rawBody) }} /> */}
     </VerticalTimelineElement>
   )
 }
