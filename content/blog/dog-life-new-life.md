@@ -14,12 +14,12 @@ Unfortunately, today I learnt a harsh dog fact.
 
 #### Dogs don't like hugs.
 
-Of course there are some dogs that do like hugging, nonetheless, it is apparently something common in many dogs. In case you don't believe me, I was told today a good exercise you can do yourself to prove it. If you search in google images something like *'hugging dog'*, you will find an incredible amount of pictures of people hugging a dog with.... *sad drum roll... uncomfortable* eye rolling. 
+Of course there are some dogs that do like hugging, nonetheless, it is apparently something common in many dogs. In case you don't believe me, I was told today a good exercise you can do yourself to prove it. If you search in google images something like *'hugging dog'*, you will find an incredible amount of pictures of people hugging a dog. But what I never noticed which was pointed out to me was, dogs always appeared with uncomfortable rolling eyes!
 
 ![dog-eye-rolling](../assets/dog-hug.jpeg "Dog's don't like hugs... why!?")
 
-Check out the dog's eyes, please, they are clearly not enjoying or seem confused/forced whilst being hugged, specially when the *supposedly* owner is picking the dog up.
+Check out the dog's eyes, please, they are clearly not enjoying or seem confused/forced whilst being hugged, specially when the *supposedly* owner is picking the dog up. 
 
-I seems it is something we will have to live with. Hopefully your dog will grow a hugger.
+This was a huge bummer for me, but it seems it is something we will have to live with. Hopefully your dog will grow a hugger.
 
 I wish you and your dog the best!
