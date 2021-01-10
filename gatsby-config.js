@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 module.exports = {
   siteMetadata: {
     // edit below
@@ -10,6 +12,13 @@ module.exports = {
     },
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // edit below
+        trackingId: process.env.TRACKING_ID,
+      },
+    },
     `gatsby-plugin-dark-mode`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-styled-components`,
@@ -53,13 +62,6 @@ module.exports = {
           },
         ],
         plugins: [`gatsby-remark-images`],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        // edit below
-        // trackingId: `ADD YOUR TRACKING ID HERE`,
       },
     },
     {
