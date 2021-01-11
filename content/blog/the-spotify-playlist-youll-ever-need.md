@@ -5,6 +5,7 @@ description: My favorite music playlist for coding
 tags:
   - programming
   - music
+draft: false
 ---
 
 ![](../assets/coding-music.jpg "This is Albertronik!")

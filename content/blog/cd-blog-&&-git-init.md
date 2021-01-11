@@ -4,6 +4,7 @@ title: cd blog && git init
 description: I am very excited to present my first ever blog!
 tags:
   - personal
+draft: false
 ---
 
 Hi everyone! Specially future _me!_

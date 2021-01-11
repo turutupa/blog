@@ -5,8 +5,10 @@ description: Reminder for myself, I always get the 'this' scope between regular
   function and arrow functions mixed up
 tags:
   - javascript
+draft: false
 ---
-This is just a reminder to myself on how the *this scope* works in arrow functions and regular functions. For some reason, I always remember them the other way round. 
+
+This is just a reminder to myself on how the _this scope_ works in arrow functions and regular functions. For some reason, I always remember them the other way round.
 
 Succinct definition:
 
@@ -40,4 +42,4 @@ regularFunctionExample.counter() // output = undefined
 
 It is as simple as that!
 
-*\*\* For beginners: arrow functions are especially useful to access object properties as in the example or for more readable situations; for example when using 'map', 'reduce' or any other built-in higher order function.*
+_\*\* For beginners: arrow functions are especially useful to access object properties as in the example or for more readable situations; for example when using 'map', 'reduce' or any other built-in higher order function._

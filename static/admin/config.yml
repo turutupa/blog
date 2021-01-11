@@ -23,7 +23,7 @@ collections:
           label_singular: Add tag,
           max: 4,
           min: 1,
-          default: ["random", "life"],
+          default: ["programming"],
         }
       - {
           widget: relation,
@@ -37,6 +37,7 @@ collections:
           searchFields: ["title"],
           displayFields: ["title"],
         }
+      - { name: "draft", label: "Draft", widget: boolean, default: true }
       - { name: body, label: Body, widget: markdown }
 
   - name: activity

@@ -33,7 +33,6 @@ export default function TimelineElement(props) {
       // contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
       date={date}
       iconStyle={{
-        background: "#00c27e",
         color: "#fff",
       }}
       icon={<GiJumpingDog />}

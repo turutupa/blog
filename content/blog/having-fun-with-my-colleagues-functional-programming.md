@@ -6,6 +6,7 @@ description: What is functional programming? A reflection on a series of
 tags:
   - programming
   - javascript
+draft: false
 ---
 
 > Divide each difficulty into as many parts as feasible and necessary to resolve it.

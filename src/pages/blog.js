@@ -18,8 +18,8 @@ function Blog(props) {
 
   const [tagSelected, setTagSelected] = React.useState("All")
 
-  const posts = data.allMdx?.edges
-  const selectedPosts = data.allMdx.edges.filter(post => {
+  const posts = data.allMdx?.edges.filter(post => !post.node.frontmatter.draft)
+  const selectedPosts = posts.filter(post => {
     if (tagSelected === "All") return true
     return post.node.frontmatter.tags.includes(tagSelected)
   })
@@ -65,6 +65,7 @@ export const pageQuery = graphql`
             title
             description
             tags
+            draft
           }
         }
       }
