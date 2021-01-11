@@ -211,6 +211,7 @@ body.dark .vertical-timeline-element-icon {
 }
 .vertical-timeline-element-content p {
   font-weight: 400 !important;
+  margin-bottom: 10px;
 }
 .vertical-timeline-element-content {
   transition: all 0.5s linear;
