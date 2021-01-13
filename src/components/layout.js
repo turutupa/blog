@@ -56,6 +56,7 @@ const H3 = styled.h3`
 `
 
 const Header = styled(Link)`
+  height: 100% !important;
   font-size: 1.4rem;
   box-shadow: none;
   text-decoration: none !important;
@@ -145,13 +146,12 @@ class Layout extends React.Component {
             <span className="title">A.D</span>
           </SmallHeader>
         </H3>
-        <H3>
+        <H3 onClick={() => this.setState({ currentPage: "welcome" })}>
           <Header
             to={`/welcome`}
             className={`noSelect nav-item ${
               currentPage === "welcome" ? "nav-item-active" : ""
             }`}
-            onClick={() => this.setState({ currentPage: "welcome" })}
           >
             <span className="title">{title}</span>
           </Header>

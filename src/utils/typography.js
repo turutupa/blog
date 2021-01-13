@@ -14,7 +14,7 @@ delete Wordpress2016.googleFonts
 const typography = new Typography({
   ...Wordpress2016,
   baseFontSize: "16px",
-  bodyFontFamily: ["Roboto Mono", "Merriweather"],
+  bodyFontFamily: ["Montserrat"],
 })
 
 // Hot reload typography in development.

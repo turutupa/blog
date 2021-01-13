@@ -26,7 +26,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-feed-mdx`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -83,6 +82,13 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    // {
+    //   resolve: "gatsby-plugin-mailchimp",
+    //   options: {
+    //     endpoint: "", // string; add your MC list endpoint here; see instructions below
+    //     timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-feed-mdx`,
       options: {
@@ -102,12 +108,14 @@ module.exports = {
           {
             serialize: ({ query: { site, allMdx } }) => {
               return allMdx.edges.map(edge => {
-                let url = undefined
+                let url = ""
                 if (
                   edge &&
                   edge.node &&
                   edge.node.fields &&
-                  edge.node.fields.title
+                  edge.node.fields.title &&
+                  !edge.node.fields.draft &&
+                  edge.node.fields.related_posts
                 ) {
                   url = edge.node.fields.title
                     .trim()
@@ -139,7 +147,6 @@ module.exports = {
                         title
                         date
                         tags
-                        related_posts
                       }
                     }
                   }
@@ -147,7 +154,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "Your Site's RSS Feed",
+            title: "Alberto Delgado's RSS Feed",
             // optional configuration to insert feed reference in pages:
             // if `string` is used, it will be used to create RegExp and then test if pathname of
             // current page satisfied this regular expression;

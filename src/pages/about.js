@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import "./About.css"
 
 import Contact from "../components/home/contact"
 import Layout from "../components/layout"
@@ -47,7 +46,6 @@ const Avatar = styled(Img)`
 
 const Ul = styled.ul`
   columns: 2;
-  list-style: none;
   padding: 0;
   margin: 0;
 `
@@ -58,6 +56,7 @@ const Li = styled.li`
   margin-bottom: 5px;
   word-wrap: break-word;
   list-style-type: "";
+  ${props => console.log(props)}
 
   &:before {
     position: absolute;
