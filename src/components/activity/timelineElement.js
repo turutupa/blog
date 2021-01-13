@@ -14,8 +14,6 @@ const H1 = styled.h1`
   font-size: 1.4rem;
 `
 
-const ResponsiveText = styled.div``
-
 function removeMdHeader(rawBody) {
   const words = rawBody.split("---")
   const body = words.pop()
@@ -38,9 +36,8 @@ export default function TimelineElement(props) {
       icon={<GiJumpingDog />}
     >
       <H1>{title}</H1>
-      <ResponsiveText>
-        <ReactMarkdown>{removeMdHeader(rawBody)}</ReactMarkdown>
-      </ResponsiveText>
+
+      <ReactMarkdown>{removeMdHeader(rawBody)}</ReactMarkdown>
     </VerticalTimelineElement>
   )
 }

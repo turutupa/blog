@@ -56,13 +56,13 @@ const Li = styled.li`
   margin-bottom: 5px;
   word-wrap: break-word;
   list-style-type: "";
-  ${props => console.log(props)}
 
   &:before {
     position: absolute;
+    top: -5px;
     left: 14px;
     content: ">";
-    text-shadow: 1px 1px black;
+    text-shadow: 0px 2px black;
     padding-right: 8px;
     font-weight: bold;
   }
