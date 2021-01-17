@@ -177,6 +177,7 @@ body.dark .nav-item-active {
 
 .blog-description-container:hover {
   background-color: white;
+  z-index: 10;
 }
 
 body.dark .blog-description-container:hover {
@@ -263,14 +264,14 @@ p > a {
 
 li > a:hover,
 p > a:hover {
-  transition: all 0.5s linear;
+  transition: all 0.3s linear;
   background-color: #00ab84 !important;
   color: white !important;
 }
 
 body.dark p > a:hover,
-li > a:hover {
-  transition: all 0.5s linear;
+body.dark li > a:hover {
+  transition: all 0.3s linear;
   background-color: #94dcc0;
   color: #152139 !important;
 }

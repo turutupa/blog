@@ -5,6 +5,8 @@ import { Link } from "gatsby"
 import { rhythm } from "../utils/typography"
 
 const PostContainer = styled.div`
+  transition: all 0.1s ease-in;
+
   padding: 1px 20px 20px 20px;
   border-radius: 10px;
   margin-bottom: 0px;
@@ -42,7 +44,10 @@ export default function Posts(posts) {
         to={`/blog${node.fields.slug}`}
         key={node.fields.slug}
       >
-        <PostContainer className="blog-description-container">
+        <PostContainer
+          className="blog-description-container"
+          id={node.fields.slug}
+        >
           <H1>{title}</H1>
           <small className="blog-date">
             {node.frontmatter.date} · {node.timeToRead} min read
