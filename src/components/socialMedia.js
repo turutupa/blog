@@ -26,10 +26,13 @@ const socialPlatforms = {
 }
 
 const Anchor = styled.a`
-  box-shadow: none;
+  transition: all 0.3s linear;
+  box-shadow: none !important;
+  margin-right: 2vw;
 
   &:hover {
-    box-shadow: 0 1px 0 0 currentColor;
+    color: currentColor !important;
+    background-color: rgb(0, 0, 0, 0) !important;
   }
 `
 

@@ -266,14 +266,14 @@ li > a:hover,
 p > a:hover {
   transition: all 0.3s linear;
   background-color: #00ab84 !important;
-  color: white !important;
+  color: white;
 }
 
 body.dark p > a:hover,
 body.dark li > a:hover {
   transition: all 0.3s linear;
   background-color: #94dcc0;
-  color: #152139 !important;
+  color: #152139;
 }
 
 li {

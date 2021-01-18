@@ -28,11 +28,11 @@ export default function footer() {
         style={{ marginTop: "15px", verticalAlign: "middle" }}
       >
         <SocialMedia platform="github" />
-        <DotSeparator />
+        {/* <DotSeparator /> */}
         <SocialMedia platform="linkedin" />
-        <DotSeparator />
+        {/* <DotSeparator /> */}
         <SocialMedia platform="buyMeABeer" />
-        <DotSeparator />
+        {/* <DotSeparator /> */}
         <SocialMedia platform="spotify" />
       </p>
     </Footer>
