@@ -107,31 +107,23 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMdx } }) => {
-              return allMdx.edges.map(edge => {
-                let url = ""
-                if (
-                  edge &&
-                  edge.node &&
-                  edge.node.fields &&
-                  edge.node.fields.title &&
-                  !edge.node.fields.draft &&
-                  edge.node.fields.related_posts
-                ) {
-                  url = edge.node.fields.title
-                    .trim()
-                    .split(" ")
-                    .join("-")
-                }
-
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.excerpt,
-                  date: edge.node.frontmatter.date,
-                  tags: edge.node.frontmatter.tags,
-                  url: site.siteMetadata.siteUrl + url,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
+              return allMdx.edges
+                .filter(edge => {
+                  return !edge.node.frontmatter.draft
                 })
-              })
+                .map(edge => {
+                  return Object.assign({}, edge.node.frontmatter, {
+                    description: edge.node.excerpt,
+                    date: edge.node.frontmatter.date,
+                    tags: edge.node.frontmatter.tags,
+                    url:
+                      site.siteMetadata.siteUrl +
+                      "/blog/" +
+                      edge.node.fields.slug,
+                    guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                    custom_elements: [{ "content:encoded": edge.node.html }],
+                  })
+                })
             },
             query: `
               {
@@ -147,6 +139,7 @@ module.exports = {
                         title
                         date
                         tags
+                        draft
                       }
                     }
                   }

@@ -1,5 +1,4 @@
 ---
-path: /dog-makes-noises
 date: 2020-12-20T20:59:47.418Z
 title: Dog life, new life
 description: Today I learned the most horrible dog fact
