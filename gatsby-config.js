@@ -82,13 +82,14 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    // {
-    //   resolve: "gatsby-plugin-mailchimp",
-    //   options: {
-    //     endpoint: "", // string; add your MC list endpoint here; see instructions below
-    //     timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
-    //   },
-    // },
+    {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint:
+          "https://app.us7.list-manage.com/subscribe/post?u=45b8b67bc36cbe803bf194ae9&amp;id=01eda8fe63", // string; add your MC list endpoint here; see instructions below
+        timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
+      },
+    },
     {
       resolve: `gatsby-plugin-feed-mdx`,
       options: {

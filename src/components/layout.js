@@ -7,6 +7,7 @@ import { rhythm } from "../utils/typography"
 import ThemeSwitcher from "../components/themeSwitcher"
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
 
+import NewsLetterSubscription from "./newsletter"
 import Footer from "./footer"
 
 // initiate code renderer
@@ -206,7 +207,11 @@ class Layout extends React.Component {
           </FixedHeader>
         </FixedHeaderWrapper>
 
-        <Body>{children}</Body>
+        <Body>
+          {children}
+
+          <NewsLetterSubscription />
+        </Body>
 
         <Footer />
       </Wrapper>
