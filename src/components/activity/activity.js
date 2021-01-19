@@ -18,7 +18,6 @@ const P = styled.p`
 
 export default function Activity(props) {
   const siteTitle = props.data?.site?.siteMetadata?.title
-
   const timelineElements = props.data?.allMdx?.nodes
 
   return (
@@ -41,6 +40,7 @@ export default function Activity(props) {
           on... and any other stuff I might spend my time on
         </P>
         <Timeline timelineElements={timelineElements} />
+        <p style={{ marginBottom: "75px" }}> </p>
       </FadeIn>
     </Layout>
   )

@@ -9,7 +9,6 @@ const PostContainer = styled.div`
 
   padding: 1px 20px 20px 20px;
   border-radius: 10px;
-  margin-bottom: 0px;
   box-shadow: 0px 3px 6px rgb(30, 30, 30, 0);
 
   &:hover {

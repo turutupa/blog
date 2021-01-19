@@ -145,6 +145,7 @@ export default function About() {
           </AvatarBorder>
         </AvatarWrapper>
         <Contact />
+        <p style={{ marginBottom: "75px" }}> </p>
       </FadeIn>
     </Layout>
   )

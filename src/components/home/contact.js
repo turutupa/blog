@@ -21,8 +21,8 @@ const Body = styled.p`
 `
 
 const LottieWrapper = styled.div`
-  transform: scale(0.5);
-  margin-top: -50px;
+  max-width: 100%;
+  margin-top: 0px;
   display: flex;
   justify-content: center;
 `
@@ -32,15 +32,15 @@ const StyledLottie = styled(Lottie)`
   cursor: pointer;
   border-radius: 50%;
   border-color: rgb(0, 194, 126, 0);
-  border-width: 10px;
+  border-width: 5px;
   border-style: inset;
-  min-width: 80%;
-  margin-bottom: -150px;
+  width: 40%;
+  min-width: 250px !important;
 
   &:hover {
     transition: all 0.5s ease-out;
     filter: brightness(1.3);
-    border-width: 10px;
+    border-width: 5px;
     border-style: inset;
     border-color: #00c27e;
     border-radius: 50%;
