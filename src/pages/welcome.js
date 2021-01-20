@@ -39,7 +39,9 @@ const Hr = styled.hr`
 
 export default function Welcome(props) {
   const { data } = props
-  const recentPosts = data.allMdx.edges.slice(0, 3)
+  const recentPosts = data.allMdx.edges
+    .filter(post => !post.node.frontmatter.draft)
+    .slice(0, 3)
 
   return (
     <Layout>
@@ -102,6 +104,7 @@ export const pageQuery = graphql`
             title
             description
             tags
+            draft
           }
         }
       }

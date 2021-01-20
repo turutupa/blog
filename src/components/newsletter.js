@@ -31,7 +31,7 @@ const InputWrapper = styled.div`
 const Input = styled.input`
   display: block;
   padding: 14px;
-  padding-right: 150px;
+  padding-right: 130px;
   margin-top: 24px;
   margin-bottom: 14px;
   border-radius: 10px;
