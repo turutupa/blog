@@ -45,7 +45,9 @@ After banging my head too many times trying to solve this exercise, I came acros
    Let's look just at the red figure. In this example all number, except 0, are arranged in a circle. Forget 0 for the time being. The key is to interconnect the numbers in such way, that each connection has a different length/chord distance. The line connecting 2 and 3 has a length of 1. The line connecting 4 and 6 has a length of 2. The line connecting 1 and 5 has a length of 3. And 0 and 7 have a fixed defined length of 0. As you can see each pair has a completely different length.
 
    The blue figure provides a symmetrical solution. Both solutions are equally valid, and in fact, there is a third solution. As proposed in [durangobill's post](http://www.durangobill.com/BridgeCyclicSolutions.html), see if you can find it ;)
-3. Now that we have the pairs, the last step would be to permute each of the obtained teams and see if each player will play together *once* and against *twice* each other player. Using the different permutations for the red figure we obtain that the 3 permutations work. To illustrate a valid solution you can check the picture below:[](../assets/screen-shot-2021-02-07-at-19.31.41.png "Tables for 8 players Round Robin")
+3. Now that we have the pairs, the last step would be to permute each of the obtained teams and see if each player will play together *once* and against *twice* each other player. Using the different permutations for the red figure we obtain that the 3 permutations work. To illustrate a valid solution you can check the picture below:
+
+   ![](../assets/screen-shot-2021-02-07-at-19.31.41.png "Tables solution for 8 players")
 
 ## Wrap up
 
@@ -226,8 +228,6 @@ class SwitchRoundRobin {
   }
 }
 ```
-
-
 
 There is definitely a better solution, nonetheless it works and it is easily extendable. I am working on a library to be able to handle double tournaments which will include also brackets tournaments. 
 
