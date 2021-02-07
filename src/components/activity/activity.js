@@ -18,7 +18,7 @@ const P = styled.p`
 
 export default function Activity(props) {
   const siteTitle = props.data?.site?.siteMetadata?.title
-  const timelineElements = props.data?.allMdx?.nodes
+  const timelineElements = props.data?.allMdx?.nodes.reverse()
 
   return (
     <Layout location={props.location} title={siteTitle}>
