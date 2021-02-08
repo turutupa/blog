@@ -31,20 +31,28 @@ Like so many other people, I wanted to have my own little space in the Internet,
   * **[Themes](https://www.gatsbyjs.com/docs/themes/)** - or as I understand them, templates. Although I have drastically changed it, this site uses a [starter blog](https://github.com/thomaswang/gatsby-personal-starter-blog) template. Extremely useful if you have never worked with Gatsby before and you are interested in adding content right away. With this theme you can start blogging since day 1.
 * **Hosting** - where would I host it? Ideally for free right? This would also include future deployments upon changes
 
+  **Solution**: Netlify
+
   Netlify! Simply bind your blog repo to Netlify and each time you commit to a change to a pre-selected branch (normally master or main) Netlify will re-deploy your application with your latest changes. This is super useful not only for latest updates on your blog, but more specifically for each time your Netlify CMS pushes a new blog post.
 * **Have my personal domain** - Regardless of the hosting service you might use, you can always use your personal domain. Nonetheless this was a must-have for me so I'll put it here as a requirement. 
 
+  **Solution**: Google Domains + Netlify
+
   And again, Netlify makes it SUPER easy to simply hook up [your personal domain](https://docs.netlify.com/domains-https/custom-domains/) to your app plus it offers [free SSL certificates](https://docs.netlify.com/domains-https/https-ssl/). So what is not to love? 
 * **Bonus 1** - don't let the  people interest in you miss out! Newsletter wasn't an initial prerequisite but it is indeed a nice-to-have.
+
+  **Solution**: MailChimp
 
   For this part Gatsby made it easy again for me. You will need a MailChimp account and follow [this tutorial](https://www.gatsbyjs.com/plugins/gatsby-plugin-mailchimp/) to add the MailChimp service to your application and more importantly, a RSS Feed also [provided by a Gatsby plugin](https://www.gatsbyjs.com/plugins/gatsby-plugin-feed-mdx/?=feed).
 
   Create a RSS Feed, then after creating a MailChimp account you will have to create a new campaign in MailChimp. Look for *Share blog updates* and simply make it point to your RSS URL. You can select how often the email will be triggered with your new post updates and additionally it will *only* be sent if you did indeed write new posts, or else won't send anything (I will write a more detailed explanation in another post).
 * **Bonus 2** - Analytics! Who and from where are the people reading your blog?
 
-  For this part you'll have to log in into your google analytics account to create a new project and additionally use the [google analytics plugin for Gatsby.js](https://www.gatsbyjs.com/plugins/gatsby-plugin-google-analytics/). The only part which can be tricky is, if you do not create properly the analytics project you will *not* be able to see your tracking id, which is required in your google analytics Gatsby.js plugin. This happened to me too. Please pay attention to this [detail](https://support.google.com/analytics/answer/9539598?hl=en#:~:text=If%20you%20can't%20find,of%20a%20Universal%20Analytics%20property.&text=In%20the%20Property%20column%2C%20click,left%20portion%20of%20the%20panel.).
+  **Solution**: Google Analytics
 
-Some of the parts were trickier than expected so I will try to write more posts on some of them, specially the MailChimp part which I think it is quite fun!
+  For this part you'll have to log in into your Google Analytics account to create a new project and additionally use the [Google Analytics plugin for Gatsby.js](https://www.gatsbyjs.com/plugins/gatsby-plugin-google-analytics/). The only part which can be tricky is, if you do not create properly the analytics project you will *not* be able to see your tracking id, which is required in your Google Analytics Gatsby.js plugin. This happened to me too. Please pay attention to this [detail](https://support.google.com/analytics/answer/9539598?hl=en#:~:text=If%20you%20can't%20find,of%20a%20Universal%20Analytics%20property.&text=In%20the%20Property%20column%2C%20click,left%20portion%20of%20the%20panel.).
+
+Some of the parts were trickier than expected so I will try to write more detailed posts on some of them, specially the MailChimp part which I think it is a quite fun feature!
 
 If you may have any questions or suggestions please don't hesitate to contact me, specially if you are starting your own blog and you are a bit stuck.
 
