@@ -122,7 +122,14 @@ module.exports = {
                       "/blog/" +
                       edge.node.fields.slug,
                     guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                    custom_elements: [{ "content:encoded": edge.node.html }],
+                    custom_elements: [
+                      {
+                        "content:encoded": edge.node.html.replace(
+                          /(?<=\"|\s)\/static\//g,
+                          `${site.siteMetadata.siteUrl}\/static\/`
+                        ),
+                      },
+                    ],
                   })
                 })
             },
