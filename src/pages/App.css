@@ -19,6 +19,7 @@ body.dark {
 
 .gatsby-resp-image-image,
 .gatsby-resp-image-wrapper {
+  transition: all 05s linear;
   border-radius: 15px !important;
   max-width: 100% !important;
 }
@@ -105,8 +106,7 @@ body.dark .blog-date {
 .fixed-header {
   transition: all 0.5s linear !important;
   position: fixed !important;
-  width: 100%;
-  max-width: 100vw;
+  width: 100% !important;
   z-index: 99999;
   transition: background-color 0.5s linear;
   background-color: #00ab84;
