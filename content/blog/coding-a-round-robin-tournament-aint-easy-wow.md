@@ -11,7 +11,7 @@ draft: false
 ---
 *\*\* Wikipedia: A* round-robin tournament *(or* all-play-all tournament*) is a [competition](https://en.wikipedia.org/wiki/Competition "Competition") in which each [contestant](https://en.wikipedia.org/wiki/Contestant "Contestant") meets all other contestants in turn.*
 
-Hey there,
+###### Hey there,
 
 So you might think... how difficult could it be to code a round robin tournament generator? And I agree, for a simple case of N teams in which you want them to play once against each other, there are going to be N - 1 matches and... you get the drill, it really is not that hard. You can easily pick up this [wikipedia article](https://en.wikipedia.org/wiki/Round-robin_tournament) and I am sure you'll solve it in no time!
 
@@ -32,41 +32,123 @@ After banging my head too many times against the wall trying to solve this exerc
 
 In today's blog we will focus in the case of 4N players. More concretely, we will use as example an 8 player round robin tournament.
 
-`Reminder: each player is paired up once and plays twice against each other player`
+Reminder:
 
-1. The first step is the same as solving a traditional round robin tournament. We will use the circle method. One player, in this case Player A, will always stay in position 0, while the others rotate position. You can see in the image below how each player moves along to the next position each round. As there are 8 players, they will each play 7 matches. Therefore there are a total of 7 rounds and thus they advance 7 positions in total.
+`First condition: each player is paired up once `
 
-   ![](../assets/screen-shot-2021-02-07-at-19.05.43.png "8 player sequence")
-2. Ok. Each player nos occupies one position per round and they advance another position per round. The question now is, how do we pair them up so that by the end of the 7 rounds, they all have played *once* with each other and *twice* against all?
+`Second condition (and by extension): each player plays twice against each other player`
 
-   If you do it randomly you will indeed achieve to fulfil the first condition. But you will obtain weird results like, player 1 playing against player 3 four times,  and against player 7 four times, but playing against player 2 zero times. So the second condition doesn't fulfil.
+How does this look like? Well something like this...
 
-   The answer to the question then is quite fascinating. Take a look at the image below.
+Player “A” has had player “B” as a partner once and as an opponent twice.\
+Player “A” has had player “C” as a partner once and as an opponent twice.\
+Player “A” has had player “D” as a partner once and as an opponent twice.\
+Player “A” has had player “E” as a partner once and as an opponent twice.\
+Player “A” has had player “F” as a partner once and as an opponent twice.\
+Player “A” has had player “G” as a partner once and as an opponent twice.\
+Player “A” has had player “H” as a partner once and as an opponent twice.\
+\
+Player “B” has had player “A” as a partner once and as an opponent twice.\
+Player “B” has had player “C” as a partner once and as an opponent twice.
 
-   ![](../assets/screen-shot-2021-02-07-at-19.18.32.png "Pairing for 8 player Round Robin")
+and so on...
 
-   Let's look just at the red figure. In this example all number, except 0, are arranged in a circle. Forget 0 for the time being. The key is to interconnect the numbers in such way, that each connection has a different length/chord distance. The line connecting 2 and 3 has a length of 1. The line connecting 4 and 6 has a length of 2. The line connecting 1 and 5 has a length of 3. And 0 and 7 have a fixed defined length of 0. As you can see each pair has a completely different length.
+To achieve this players must be partnered in a very specific way or else it won't just work. Let's start with the basic setup. 
 
-   The blue figure provides a symmetrical solution. Both solutions are equally valid, and in fact, there is a third solution. As proposed in [durangobill's post](http://www.durangobill.com/BridgeCyclicSolutions.html), see if you can find it ;)
-3. Now that we have the pairs, the last step would be to permute each of the obtained teams and see if each player will play together *once* and against *twice* each other player. Using the different permutations for the red figure we obtain that the 3 permutations work. So to illustrate a valid solution you can check the picture below: 
+* 8 players
+* equals to 4 teams per round
+* equals to 2 matches per round 
 
-   ![](../assets/screen-shot-2021-02-07-at-19.31.41.png "Tables solution for 8 players")
+More visually:
 
-   These two "tables" or in our case, courts, are the positions in which the players will have to play each round. So for the first round it would be:
+![](../assets/screen-shot-2021-02-12-at-12.15.37.png)
 
-   `2 and 3 vs. 4 and 6 | 5 and 1 vs. 7 and 0`
+The players in this picture were randomly placed. The key to solve the exercise, and personally what I found most complicated, is to learn how to pair up the teams so that both conditions fulfil. There are in total 8 different positions, and we have to learn in which position we have to place each player in each round. 
 
-   which translates to
+How do we do this?
 
-   `C and D vs E and G | F and B vs H and A`
+Take a look at the picture below:
+
+![](../assets/screen-shot-2021-02-07-at-19.18.32.png "Pairings for 8 player tournament")
+
+Let's look just at the red figure. In this example all numbers from 0 to 7 - that is for 8 positions - except 0, are arranged in a circle. Forget 0 and 7 for the time being. The key is to interconnect the numbers in such way, that each connection has a different length/chord distance. The line connecting 2 and 3 has a length of 1. The line connecting 4 and 6 has a length of 2. The line connecting 1 and 5 has a length of 3. And 0 and 7 have a fixed defined length of 0. As you can see, each pair has a unique length. So for example, we obtain the following as a possible solution: 
+
+`2 and 3 `**`vs `**
+
+`5 and 1 ``vs `
+
+Other permutations from grouping the red pairs into 2s are also valid.
+
+The blue figure provides a symmetrical solution. Both solutions are equally valid, and in fact, there is a third solution. As proposed in [durangobill's post](http://www.durangobill.com/BridgeCyclicSolutions.html), see if you can find it ;)
+
+In a more visual way, the courts then would look like this:
+
+![](../assets/screen-shot-2021-02-07-at-19.31.41.png "8 players courts")
+
+So if we had in a round:
+
+Player “A” in position 0\
+Player “B” in position 1\
+Player “C” in position 2\
+Player “D” in position 3\
+Player “E” in position 4\
+Player “F” in position 5\
+Player “G” in position 6\
+Player “H” in position 7
+
+The first round would have 2 matches:
+
+`2 and 3 ``vs`
+
+`5 and 1 ``vs`
+
+which translates to
+
+`C and D ``vs`
+
+`F and B ``vs`
+
+The last step then is, how to calculate in what position each player has to play each round? And this is the easy part. If you checked out at the beginning the link for Round Robin Tournament, we will be using here the Circle's Method. 
+
+* Player A is always going to play in position 0
+* All other players are going to rotate, advancing one position per round
+* As there are 8 players the number of rotations is N - 1 thus 7
+
+The resulting rotation can be seen in the following matrix:
+
+![](../assets/screen-shot-2021-02-07-at-19.05.43.png "8 player sequence")
+
+The only thing left to do is place each player in their corresponding position in each round (as we did before) and we will have the schedule. Here is an example of how if would look like for the first 4 rounds:
+
+**Round 1**\
+2 and 3 **vs** 4 and 6\
+5 and 1 **vs** 7 and 0
+
+**Round 2**\
+2 and 3 **vs** 5 and 1\
+4 and 6 **vs** 7 and 0
+
+**Round 3**\
+2 and 3 **vs** 7 and 0 \
+4 and 6 **vs** 5 and 1
+
+**Round 4**\
+4 and 5 **vs** 1 and 3 \
+6 and 2 **vs** 7 and 0
+
+and so on...
+
+And you're done!
 
 ## Wrap up
 
-1. To solve the problem all you have to do is create the positions sequence created in the first step.
-2. Then calculate the different pairing combinations calculated placing the numbers in a circle. Personally I'd suggest just using the ones calculated in [durangobill's post](http://www.durangobill.com/BridgeCyclicSolutions.html). But you could also calculate them. I actually haven't done this yet but will upload later on.
+1. Calculate the different pairing combinations by placing the numbers in a circle. Personally I'd suggest just using the ones calculated in [durangobill's post](http://www.durangobill.com/BridgeCyclicSolutions.html) as the different possible combinations can immensely increase as you increase the number of participants. *I haven't coded this part yet but is in my to-do list.*
+2. *C*reate the positions sequence by place a player in position 0 at all times and having the others rotate position.
 3. Then for each round place each player in their corresponding spot at the table and you'll have your schedule!
 
 ## Code
+
+*\*\* doubles-tournament library coming soon to npm where you will be able to see the entire code, I know at the minute the code below looks quite confusing. I apologise for that. Instead of deleting this section I'll leave in case you want to use it but the important part of the post if the explanation of how Switch Partners Round Robin works.*
 
 This was my code solution to the previous steps. First I created a class to calculate the positions sequences. Simply call *SequenceGenerator.calculate* and it will automatically apply the correct method (for the case of 4N players or other).
 
