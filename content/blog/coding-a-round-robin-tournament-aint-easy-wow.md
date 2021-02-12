@@ -30,7 +30,7 @@ So without further ado, let's solve the freakin brain-teaser!
 
 After banging my head too many times against the wall trying to solve this exercise, I came across this [awesome blog](http://www.durangobill.com/BridgeCyclicSolutions.html) explaining how the cyclic solutions work. In the mentioned blog he solves the problem for the [bridge card game](https://en.wikipedia.org/wiki/Contract_bridge) which interestingly applies to our case! 
 
-In today's blog we will focus in the case of 4N players. More concretely, we will use as example an 8 player round robin tournament.
+In today's blog we will focus in the case of 4N players. More concretely, we will use as example an 8 player Round Robin Tournament.
 
 Reminder:
 
