@@ -53,7 +53,7 @@ Player “B” has had player “C” as a partner once and as an opponent twice
 
 and so on...
 
-To achieve this players must be partnered in a very specific way or else it won't just work. Let's start with the basic setup. 
+To achieve this, players must be partnered in a very specific way or else it won't just work. Let's start with the basic setup. 
 
 * 8 players
 * equals to 4 teams per round
