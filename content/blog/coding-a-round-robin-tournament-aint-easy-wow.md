@@ -47,6 +47,8 @@ How does this look like? Well something like this...
 * Player “A” has had player “F” as a partner once and as an opponent twice.
 * Player “A” has had player “G” as a partner once and as an opponent twice.
 * Player “A” has had player “H” as a partner once and as an opponent twice.
+
+  and...
 * Player “B” has had player “A” as a partner once and as an opponent twice.
 * Player “B” has had player “C” as a partner once and as an opponent twice.
 
@@ -97,13 +99,15 @@ So if we had in a round:
 
 The first round would have 2 matches (as mentioned before):
 
-* 2 and 3 **vs** 4 and 6
-* 5 and 1 **vs** 7 and 0
+2 and 3 **vs** 4 and 6
+
+5 and 1 **vs** 7 and 0
 
 which translates to
 
-* C and D **vs** E and G
-* F and B **vs** A and H
+C and D **vs** E and G
+
+F and B **vs** A and H
 
 Which results in our last step! How to calculate in what position each player has to play each round? And this is the easy part. If you checked out at the beginning the link for Round Robin Tournament, we will be using here the Circle's Method. 
 
@@ -119,23 +123,27 @@ The only thing left to do is place each player in their corresponding position i
 
 **Round 1**
 
-* 2 and 3 **vs** 4 and 6
-* 5 and 1 **vs** 7 and 0
+2 and 3 **vs** 4 and 6
+
+5 and 1 **vs** 7 and 0
 
 **Round 2**
 
-* 2 and 3 **vs** 5 and 1
-* 4 and 6 **vs** 7 and 0
+2 and 3 **vs** 5 and 1
+
+4 and 6 **vs** 7 and 0
 
 **Round 3**
 
-* 2 and 3 **vs** 7 and 0 
-* 4 and 6 **vs** 5 and 1
+2 and 3 **vs** 7 and 0 
+
+4 and 6 **vs** 5 and 1
 
 **Round 4**
 
-* 4 and 5 **vs** 1 and 3 
-* 6 and 2 **vs** 7 and 0
+4 and 5 **vs** 1 and 3 
+
+6 and 2 **vs** 7 and 0
 
 and so on...
 
