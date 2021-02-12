@@ -6,28 +6,31 @@ description: How to create a Switch Round Robin Tournament - what
   combinatoric   disaster!!
 tags:
   - programming
+  - combinations
 draft: false
 ---
-*Wikipedia: A* round-robin tournament *(or* all-play-all tournament*) is a [competition](https://en.wikipedia.org/wiki/Competition "Competition") in which each [contestant](https://en.wikipedia.org/wiki/Contestant "Contestant") meets all other contestants in turn.*
+*\*\* Wikipedia: A* round-robin tournament *(or* all-play-all tournament*) is a [competition](https://en.wikipedia.org/wiki/Competition "Competition") in which each [contestant](https://en.wikipedia.org/wiki/Contestant "Contestant") meets all other contestants in turn.*
 
 Hey there,
 
-So you might think... how difficult could it be to code a round robin tournament generator? And I agree, for a simple case of N teams in which you want them to play once against each other... it really is not that hard. You can easily pick up this [wikipedia article](https://en.wikipedia.org/wiki/Round-robin_tournament) and I am sure you'll solve it in no time!
+So you might think... how difficult could it be to code a round robin tournament generator? And I agree, for a simple case of N teams in which you want them to play once against each other, there are going to be N - 1 matches and... you get the drill, it really is not that hard. You can easily pick up this [wikipedia article](https://en.wikipedia.org/wiki/Round-robin_tournament) and I am sure you'll solve it in no time!
 
 You'll soon see how this actually gets more complicated than anticipated.
 
 This exercise was initially oriented towards a padel tennis doubles tournament. There are two modes:
 
 * **Switch Round Robin Tournament** - each player is paired up with each other player *once* and in extension plays *twice* against each player. The complexity arises when trying to find a solution that fulfils *both* conditions.
-* **Teams Round Robin Tournament** - this would be the classic Round Robin Tournament, each team plays against each team once. It is pretty straightforward.
+* **Teams Round Robin Tournament** - this would be the classic Round Robin Tournament, each team plays against each team once. It is pretty straightforward and the case mentioned at the beginning. We'll skip this mode for today :)
 
-Want a challenge? Let's focus in the first mode then!
+The unexpected complexity came when trying to solve for Switch Round Robin Tournament. I thought I could apply the same methodology as in the Teams Round Robin Tournament but it does get way trickier than expected. The key to solve it is understanding how the combinatorics for each round work.
+
+So without further ado, let's solve the freakin brain-teaser! 
 
 ## Switch Round Robin Tournament
 
 After banging my head too many times against the wall trying to solve this exercise, I came across this [awesome blog](http://www.durangobill.com/BridgeCyclicSolutions.html) explaining how the cyclic solutions work. In the mentioned blog he solves the problem for the [bridge card game](https://en.wikipedia.org/wiki/Contract_bridge) which interestingly applies to our case! 
 
-In today's blog we will focus in the case of 4N players. We will use as example an 8 player round robin.
+In today's blog we will focus in the case of 4N players. More concretely, we will use as example an 8 player round robin tournament.
 
 `Reminder: each player is paired up once and plays twice against each other player`
 
