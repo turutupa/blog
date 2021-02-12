@@ -34,22 +34,21 @@ In today's blog we will focus in the case of 4N players. More concretely, we wil
 
 Reminder:
 
-`First condition: each player is paired up once `
+`First condition: each player is paired up once`
 
 `Second condition (and by extension): each player plays twice against each other player`
 
 How does this look like? Well something like this...
 
-Player “A” has had player “B” as a partner once and as an opponent twice.\
-Player “A” has had player “C” as a partner once and as an opponent twice.\
-Player “A” has had player “D” as a partner once and as an opponent twice.\
-Player “A” has had player “E” as a partner once and as an opponent twice.\
-Player “A” has had player “F” as a partner once and as an opponent twice.\
-Player “A” has had player “G” as a partner once and as an opponent twice.\
-Player “A” has had player “H” as a partner once and as an opponent twice.\
-\
-Player “B” has had player “A” as a partner once and as an opponent twice.\
-Player “B” has had player “C” as a partner once and as an opponent twice.
+* Player “A” has had player “B” as a partner once and as an opponent twice.
+* Player “A” has had player “C” as a partner once and as an opponent twice.
+* Player “A” has had player “D” as a partner once and as an opponent twice.
+* Player “A” has had player “E” as a partner once and as an opponent twice.
+* Player “A” has had player “F” as a partner once and as an opponent twice.
+* Player “A” has had player “G” as a partner once and as an opponent twice.
+* Player “A” has had player “H” as a partner once and as an opponent twice.
+* Player “B” has had player “A” as a partner once and as an opponent twice.
+* Player “B” has had player “C” as a partner once and as an opponent twice.
 
 and so on...
 
@@ -73,7 +72,7 @@ Take a look at the picture below:
 
 Let's look just at the red figure. In this example all numbers from 0 to 7 - that is for 8 positions - except 0, are arranged in a circle. Forget 0 and 7 for the time being. The key is to interconnect the numbers in such way, that each connection has a different length/chord distance. The line connecting 2 and 3 has a length of 1. The line connecting 4 and 6 has a length of 2. The line connecting 1 and 5 has a length of 3. And 0 and 7 have a fixed defined length of 0. As you can see, each pair has a unique length. So for example, we obtain the following as a possible solution: 
 
-`2 and 3 `**`vs `**
+`2 and 3`**`vs `**
 
 `5 and 1 ``vs `
 
@@ -87,31 +86,31 @@ In a more visual way, the courts then would look like this:
 
 So if we had in a round:
 
-Player “A” in position 0\
-Player “B” in position 1\
-Player “C” in position 2\
-Player “D” in position 3\
-Player “E” in position 4\
-Player “F” in position 5\
-Player “G” in position 6\
-Player “H” in position 7
+* Player “A” in position 0
+* Player “B” in position 1
+* Player “C” in position 2
+* Player “D” in position 3
+* Player “E” in position 4
+* Player “F” in position 5
+* Player “G” in position 6
+* Player “H” in position 7
 
-The first round would have 2 matches:
+The first round would have 2 matches (as mentioned before):
 
-`2 and 3 ``vs`
+`2 and 3 ``vs `
 
-`5 and 1 ``vs`
+`5 and 1 ``vs `
 
 which translates to
 
-`C and D ``vs`
+`C and D ``vs `
 
-`F and B ``vs`
+`F and B ``vs `
 
-The last step then is, how to calculate in what position each player has to play each round? And this is the easy part. If you checked out at the beginning the link for Round Robin Tournament, we will be using here the Circle's Method. 
+Which results in our last step! How to calculate in what position each player has to play each round? And this is the easy part. If you checked out at the beginning the link for Round Robin Tournament, we will be using here the Circle's Method. 
 
 * Player A is always going to play in position 0
-* All other players are going to rotate, advancing one position per round
+* All other players are going to rotate, advancing one position per round - which means each player will play in a different position each round, excepts player A of course
 * As there are 8 players the number of rotations is N - 1 thus 7
 
 The resulting rotation can be seen in the following matrix:
@@ -120,21 +119,25 @@ The resulting rotation can be seen in the following matrix:
 
 The only thing left to do is place each player in their corresponding position in each round (as we did before) and we will have the schedule. Here is an example of how if would look like for the first 4 rounds:
 
-**Round 1**\
-2 and 3 **vs** 4 and 6\
-5 and 1 **vs** 7 and 0
+**Round 1**
 
-**Round 2**\
-2 and 3 **vs** 5 and 1\
-4 and 6 **vs** 7 and 0
+* 2 and 3 **vs** 4 and 6
+* 5 and 1 **vs** 7 and 0
 
-**Round 3**\
-2 and 3 **vs** 7 and 0 \
-4 and 6 **vs** 5 and 1
+**Round 2**
 
-**Round 4**\
-4 and 5 **vs** 1 and 3 \
-6 and 2 **vs** 7 and 0
+* 2 and 3 **vs** 5 and 1
+* 4 and 6 **vs** 7 and 0
+
+**Round 3**
+
+* 2 and 3 **vs** 7 and 0 
+* 4 and 6 **vs** 5 and 1
+
+**Round 4**
+
+* 4 and 5 **vs** 1 and 3 
+* 6 and 2 **vs** 7 and 0
 
 and so on...
 
