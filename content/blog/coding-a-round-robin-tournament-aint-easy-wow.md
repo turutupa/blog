@@ -72,9 +72,9 @@ Take a look at the picture below:
 
 Let's look just at the red figure. In this example all numbers from 0 to 7 - that is for 8 positions - except 0, are arranged in a circle. Forget 0 and 7 for the time being. The key is to interconnect the numbers in such way, that each connection has a different length/chord distance. The line connecting 2 and 3 has a length of 1. The line connecting 4 and 6 has a length of 2. The line connecting 1 and 5 has a length of 3. And 0 and 7 have a fixed defined length of 0. As you can see, each pair has a unique length. So for example, we obtain the following as a possible solution: 
 
-`2 and 3`**`vs `**
+2 and 3 **vs** 4 and 6
 
-`5 and 1 ``vs `
+5 and 1 **vs** 7 and 0
 
 Other permutations from grouping the red pairs into 2s are also valid.
 
@@ -97,15 +97,13 @@ So if we had in a round:
 
 The first round would have 2 matches (as mentioned before):
 
-`2 and 3 ``vs `
-
-`5 and 1 ``vs `
+* 2 and 3 **vs** 4 and 6
+* 5 and 1 **vs** 7 and 0
 
 which translates to
 
-`C and D ``vs `
-
-`F and B ``vs `
+* C and D **vs** E and G
+* F and B **vs** A and H
 
 Which results in our last step! How to calculate in what position each player has to play each round? And this is the easy part. If you checked out at the beginning the link for Round Robin Tournament, we will be using here the Circle's Method. 
 
