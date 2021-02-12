@@ -139,7 +139,7 @@ class Layout extends React.Component {
           <SmallHeader
             to={`/welcome`}
             className={`noSelect nav-item ${
-              currentPage === "welcome" ? "nav-item-active" : ""
+              currentPage.includes("welcome") ? "nav-item-active" : ""
             }`}
             onClick={() => this.setState({ currentPage: "welcome" })}
           >
@@ -161,7 +161,7 @@ class Layout extends React.Component {
             <StyledLink
               onClick={() => this.setState({ currentPage: "about" })}
               className={`noSelect nav-item ${
-                currentPage === "about" ? "nav-item-active" : ""
+                currentPage.includes("about") ? "nav-item-active" : ""
               }`}
               to={"/about"}
               style={{ paddingRight: "30px" }}
@@ -173,7 +173,7 @@ class Layout extends React.Component {
             <StyledLink
               onClick={() => this.setState({ currentPage: "blog" })}
               className={`noSelect nav-item ${
-                currentPage === "blog" ? "nav-item-active" : ""
+                currentPage.includes("blog") ? "nav-item-active" : ""
               }`}
               to={"/blog"}
               style={{ paddingRight: "30px" }}
@@ -185,7 +185,7 @@ class Layout extends React.Component {
             <StyledLink
               onClick={() => this.setState({ currentPage: "activity" })}
               className={`noSelect nav-item ${
-                currentPage === "activity" ? "nav-item-active" : ""
+                currentPage.includes("activity") ? "nav-item-active" : ""
               }`}
               to={"/activity"}
               style={{ paddingRight: "30px" }}

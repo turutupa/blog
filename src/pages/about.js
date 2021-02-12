@@ -60,7 +60,7 @@ const Li = styled.li`
   &:before {
     position: absolute;
     top: -5px;
-    left: 14px;
+    left: 10px;
     content: ">";
     text-shadow: 0px 2px black;
     padding-right: 8px;

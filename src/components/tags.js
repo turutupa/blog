@@ -18,10 +18,7 @@ const Ul = styled.ul`
   flex-direction: row;
   justify-content: left;
   flex-wrap: wrap;
-
-  @media (min-width: 768px) {
-    width: 100vw;
-  }
+  width: 100%;
 `
 
 export const Tag = styled.div`

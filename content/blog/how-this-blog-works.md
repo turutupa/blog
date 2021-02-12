@@ -12,6 +12,7 @@ related_posts:
   - Write more
 draft: false
 ---
+
 Do you want to create your own personal blog? You are a developer so you don't want to use WordPress, or any similar tools, cause you feel it defeats your whole purpose of being? You've come to the right place. I'll share with you the architecture of the blog and the solutions used. My intention is not for you to copy my blog,  but for you to have an overview of the things you may require if you want to build a similar one. 
 
 Myself, like so many other people, I also wanted to have my own little space in the Internet, but it wasn't until a few months ago that I actually got into building it. I could write a very long post explaining how I built the entire thing and detailing every single part but it would be too lengthy. Instead, I decided to list the different features I want to have in my blog and what solution I used to make it work. I believe this will provide a more modular overview and enough information for you to keep investigating for yourself. 
