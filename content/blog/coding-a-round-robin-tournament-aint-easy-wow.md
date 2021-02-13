@@ -11,7 +11,7 @@ draft: false
 ---
 *\*\* Wikipedia: A* round-robin tournament *(or* all-play-all tournament*) is a [competition](https://en.wikipedia.org/wiki/Competition "Competition") in which each [contestant](https://en.wikipedia.org/wiki/Contestant "Contestant") meets all other contestants in turn.*
 
-###### Hey there,
+## Hey there,
 
 So you might think... how difficult could it be to code a round robin tournament generator? And I agree, for a simple case of N teams in which you want them to play once against each other, there are going to be N - 1 matches and... you get the drill, it really is not that hard. You can easily pick up this [wikipedia article](https://en.wikipedia.org/wiki/Round-robin_tournament) and I am sure you'll solve it in no time!
 
@@ -19,7 +19,7 @@ You'll soon see how this actually gets more complicated than anticipated.
 
 This exercise was initially oriented towards a padel tennis doubles tournament. There are two modes:
 
-* **Switch Round Robin Tournament** - each player is paired up with each other player *once* and in extension plays *twice* against each player. The complexity arises when trying to find a solution that fulfils *both* conditions.
+* **Switch Round Robin Tournament** - each player is paired up with each other player *once* and plays *twice* against each player. The complexity arises when trying to find a solution that fulfils *both* conditions.
 * **Teams Round Robin Tournament** - this would be the classic Round Robin Tournament, each team plays against each team once. It is pretty straightforward and the case mentioned at the beginning. We'll skip this mode for today :)
 
 The unexpected complexity came when trying to solve for Switch Round Robin Tournament. I thought I could apply the same methodology as in the Teams Round Robin Tournament but it does get way trickier than expected. The key to solve it is understanding how the combinatorics for each round work.
@@ -36,7 +36,7 @@ Reminder:
 
 `First condition: each player is paired up once`
 
-`Second condition (and by extension): each player plays twice against each other player`
+`Second condition: each player plays twice against each other player`
 
 How does this look like? Well something like this...
 
@@ -54,17 +54,17 @@ How does this look like? Well something like this...
 
 and so on...
 
-To achieve this, players must be partnered in a very specific way or else it won't just work. Let's start with the basic setup. 
+To achieve this, players must be partnered in a very specific way or else it won't just work. Let's start with the basics. The tournament consists of
 
 * 8 players
-* equals to 4 teams per round
-* equals to 2 matches per round 
+* which equals to 4 teams - 4 pairs - per round
+* which equals to 2 matches per round 
 
 More visually:
 
-![](../assets/screen-shot-2021-02-12-at-12.15.37.png)
+![](../assets/screen-shot-2021-02-12-at-12.15.37.png "8 player courts")
 
-The players in this picture were randomly placed. The key to solve the exercise, and personally what I found most complicated, is to learn how to pair up the teams so that both conditions fulfil. There are in total 8 different positions, and we have to learn in which position we have to place each player in each round. 
+The players in this picture were randomly placed in one of the 8 different available positions - there are 2 courts with 4 positions per court. The key to solve this exercise is to learn in which **position/location** we have to place each player in each round. 
 
 How do we do this?
 
@@ -97,19 +97,19 @@ So if we had in a round:
 * Player “G” in position 6
 * Player “H” in position 7
 
-The first round would have 2 matches (as mentioned before):
+And placed them in the following positions as we calculated before:
 
 2 and 3 **vs** 4 and 6
 
 5 and 1 **vs** 7 and 0
 
-which translates to
+the resulting matches for the round are:
 
 C and D **vs** E and G
 
 F and B **vs** A and H
 
-Which results in our last step! How to calculate in what position each player has to play each round? And this is the easy part. If you checked out at the beginning the link for Round Robin Tournament, we will be using here the Circle's Method. 
+Which get us into the last step! How to calculate in what position/location each player has to play **each round**? This part is much easier and straightforward. If you checked out at the beginning the link for Round Robin Tournament, we will be using here the Circle's Method:
 
 * Player A is always going to play in position 0
 * All other players are going to rotate, advancing one position per round - which means each player will play in a different position each round, excepts player A of course
@@ -119,31 +119,33 @@ The resulting rotation can be seen in the following matrix:
 
 ![](../assets/screen-shot-2021-02-07-at-19.05.43.png "8 player sequence")
 
-The only thing left to do is place each player in their corresponding position in each round (as we did before) and we will have the schedule. Here is an example of how if would look like for the first 4 rounds:
+The only thing left to do is place each player in their corresponding position in each round (as we did before) and we will obtain the entire schedule.
+
+ Here is an example of how if would look like for the first 4 rounds:
 
 **Round 1**
 
-2 and 3 **vs** 4 and 6
+C and D **vs** E and G
 
-5 and 1 **vs** 7 and 0
+F and B **vs** A and H
 
 **Round 2**
 
-2 and 3 **vs** 5 and 1
+B and C **vs** D and F
 
-4 and 6 **vs** 7 and 0
+E and H **vs** A and G
 
 **Round 3**
 
-2 and 3 **vs** 7 and 0 
+H and B **vs** C and E
 
-4 and 6 **vs** 5 and 1
+D and G **vs** A and F
 
 **Round 4**
 
-4 and 5 **vs** 1 and 3 
+G and H **vs** B and D 
 
-6 and 2 **vs** 7 and 0
+C and F **vs** A and E
 
 and so on...
 
@@ -152,8 +154,8 @@ And you're done!
 ## Wrap up
 
 1. Calculate the different pairing combinations by placing the numbers in a circle. Personally I'd suggest just using the ones calculated in [durangobill's post](http://www.durangobill.com/BridgeCyclicSolutions.html) as the different possible combinations can immensely increase as you increase the number of participants. *I haven't coded this part yet but is in my to-do list.*
-2. *C*reate the positions sequence by place a player in position 0 at all times and having the others rotate position.
-3. Then for each round place each player in their corresponding spot at the table and you'll have your schedule!
+2. *C*reate the positions sequence by placing a player in position 0 at all times and having the others rotate position each round.
+3. Then for each round place each player in their corresponding spot at the court/table and you'll have your schedule!
 
 ## Code
 
