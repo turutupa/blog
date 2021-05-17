@@ -25,12 +25,10 @@ Currently, my favorite use for the CAPS Lock key action is to substitute it for
 
 ## How to
 
-Use this simple steps: https://gist.github.com/tanyuan/55bca522bf50363ae4573d4bdcf06e2e
+Use these simple steps: https://gist.github.com/tanyuan/55bca522bf50363ae4573d4bdcf06e2e , it includes how-to for mac, linux and windows!
 
-I've been searching for long on the internet and this has been by far the easiest way. Karabiner makes it so easy on mac. And AutoHotkey also on windows, but instead of doing it manually in the link you'll have the ahk script which will install the key press combination for you!
+I've been searching for long on the internet and this has been by far the easiest way (at least on mac and windows). Karabiner makes it so easy on mac. And AutoHotkey also on windows, but instead of manually configuring the autohotkey script, in the link you'll have the ahk script to download, which will install the key press combination for you!
 
 Enjoy! 
-
-
 
 Happy hacking
