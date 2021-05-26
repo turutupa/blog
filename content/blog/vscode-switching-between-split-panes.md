@@ -12,9 +12,9 @@ related_posts:
   - Remap CAPS Lock to Escape and Control
 draft: false
 ---
-I am becoming a huge fan of relying only on the keyboard for my workflow. This is no innovation. It's been done for decades. Nonetheless, take this as my small contribution in a mouse-less world. This small snippet will add some ease on your day to day tasks and if you are a vim/tmux guy it will feel completely natural to you.
+I am becoming a huge fan of relying only on the keyboard for my workflow. This is no innovation. It's been done for decades. Nonetheless, take this as my small contribution into a mouse-less world. This small snippet will add some ease on your day to day tasks and if you are a vim/tmux guy it will feel completely natural to you.
 
-```
+```json
 [
     {
         "key": "ctrl+h",
@@ -36,3 +36,7 @@ I am becoming a huge fan of relying only on the keyboard for my workflow. This i
 ```
 
  Simply stick this in your vscode shortcuts extension and you are good to go!
+
+
+
+Happy hacking :)
