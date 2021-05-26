@@ -35,8 +35,6 @@ I am becoming a huge fan of relying only on the keyboard for my workflow. This i
 ]
 ```
 
- Simply stick this in your vscode shortcuts extension and you are good to go!
-
-
+To add this snippet press F1 or ctrl + shift + p and search for *Preferences: Open keyboard shortcuts (JSON)*. If you haven't added any snippets yet, paste the snippet as it is, or else copy and paste only the elements (without the opening and ending brackets \[]).  You're set!
 
 Happy hacking :)
