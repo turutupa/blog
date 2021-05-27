@@ -1,7 +1,7 @@
 ---
 date: 2021-05-27T07:39:15.817Z
-title: Long time no see
-draft: true
+title: Long time no see... farewell!
+draft: false
 ---
 In the past months my life has change quite a bit but not as much as it plans to change. Here's some of the stuff I've been up to:
 
