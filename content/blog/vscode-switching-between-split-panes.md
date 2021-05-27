@@ -1,6 +1,6 @@
 ---
 date: 2021-05-26T15:17:47.004Z
-title: VSCode Switching between Split Panes
+title: VSCode switching between split panes
 description: Switching between split panes in Visual Studio Code Vim style.
   Easy, convenient, and if you're using the CAPs Lock remap you gonna want to
   copy this into your VSCode shortcuts.
