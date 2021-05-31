@@ -59,17 +59,18 @@ export default function Posts(posts) {
             }}
           />
           <P>
-            {tags.map(tag => (
-              <Tag
-                key={title + tag}
-                style={{
-                  marginRight: "10px",
-                  fontSize: rhythm(0.45),
-                }}
-              >
-                <strong>#{tag}</strong>
-              </Tag>
-            ))}
+            {tags &&
+              tags.map(tag => (
+                <Tag
+                  key={title + tag}
+                  style={{
+                    marginRight: "10px",
+                    fontSize: rhythm(0.45),
+                  }}
+                >
+                  <strong>#{tag}</strong>
+                </Tag>
+              ))}
           </P>
         </PostContainer>
       </Link>

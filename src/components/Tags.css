@@ -3,7 +3,7 @@
 }
 
 .tag {
-  transition: background-color 1s ease;
+  transition: background-color 0.5s ease;
   background-color: white;
 }
 
@@ -12,8 +12,9 @@
 }
 
 body.dark .tag {
-  transition: background-color 1s ease;
-  background-color: #0c1424;
+  transition: background-color 0.5s ease;
+  background-color: var(--primary-dark);
+  color: var(--text-color-light);
 }
 
 body.dark .tag:hover {

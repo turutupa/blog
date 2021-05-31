@@ -159,18 +159,6 @@ class Layout extends React.Component {
         <>
           <H3>
             <StyledLink
-              onClick={() => this.setState({ currentPage: "about" })}
-              className={`noSelect nav-item ${
-                currentPage.includes("about") ? "nav-item-active" : ""
-              }`}
-              to={"/about"}
-              style={{ paddingRight: "30px" }}
-            >
-              About
-            </StyledLink>
-          </H3>
-          <H3>
-            <StyledLink
               onClick={() => this.setState({ currentPage: "blog" })}
               className={`noSelect nav-item ${
                 currentPage.includes("blog") ? "nav-item-active" : ""

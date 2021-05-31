@@ -21,5 +21,9 @@
 }
 
 .react-toggle-thumb {
-  box-shadow: 0 0 2px 3px #78d6b5 !important;
+  box-shadow: 0 0 2px 3px var(--primary-light) !important;
+}
+
+.react-toggle-thumb.dark {
+  box-shadow: 0 0 2px 3px var(--primary-dark) !important;
 }

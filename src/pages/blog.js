@@ -18,7 +18,9 @@ function Blog(props) {
 
   const [tagSelected, setTagSelected] = React.useState("All")
 
-  const posts = data.allMdx?.edges.filter(post => !post.node.frontmatter.draft)
+  const posts = data.allMdx?.edges
+    .filter(post => !post.node.frontmatter.draft)
+    .filter(post => post.node.frontmatter.tags)
   const selectedPosts = posts.filter(post => {
     if (tagSelected === "All") return true
     return post.node.frontmatter.tags.includes(tagSelected)

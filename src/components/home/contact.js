@@ -39,10 +39,9 @@ const StyledLottie = styled(Lottie)`
 
   &:hover {
     transition: all 0.5s ease-out;
-    filter: brightness(1.3);
+    // filter: brightness(1.3);
     border-width: 5px;
     border-style: inset;
-    border-color: #00c27e;
     border-radius: 50%;
   }
 `
@@ -67,7 +66,7 @@ export default function Contact() {
       </Body>
 
       <LottieWrapper target="_blank" onClick={() => sendEmail()}>
-        <StyledLottie lottie={contactme} />
+        <StyledLottie lottie={contactme} className="contact-lottie" />
       </LottieWrapper>
     </Container>
   )

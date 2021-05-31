@@ -33,7 +33,10 @@ export const Tag = styled.div`
   cursor: pointer;
   margin-right: 10px;
   box-shadow: ${props =>
-    props.active ? "0px 2px #00c27e" : `0px 2px 3px rgb(30, 30, 30, 0.3)`};
+    props.active
+      ? "0px 2px var(--primary-light)"
+      : `0px 2px 3px rgb(30, 30, 30, 0.3)`};
+  test: ${props => console.log(props)}
 
   &:active {
     transform: translateY(2px);
@@ -44,11 +47,14 @@ export const Tag = styled.div`
 function getAllTags(posts) {
   if (!posts) return []
   const tags = posts.reduce((prev, current) => {
+    if (!current.node.frontmatter.tags) return prev
     for (let tag of current.node.frontmatter.tags) {
+      if (!tag) return prev
       prev.add(tag)
     }
     return prev
   }, new Set())
+
   return ["All", ...tags]
 }
 
