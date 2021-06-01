@@ -104,6 +104,30 @@ function handleScroll() {
     console.error(e)
   }
 }
+
+function hasBlog() {
+  return hasLocation("blog")
+}
+
+function hasWelcome() {
+  return hasLocation("welcome")
+}
+
+function hasActivity() {
+  return hasLocation("activity")
+}
+
+function hasLocation(location) {
+  try {
+    if (window.location.pathname.includes(location)) {
+      return true
+    }
+    return false
+  } catch (e) {
+    return false
+  }
+}
+
 class Layout extends React.Component {
   state = {
     currentPage: "welcome",
@@ -113,8 +137,15 @@ class Layout extends React.Component {
     try {
       window.addEventListener("scroll", handleScroll)
       const location = window.location
+      const pathname = location.pathname
 
-      this.setState({ currentPage: location.pathname.slice(1) })
+      if (hasWelcome()) {
+        this.setState({ currentPage: "welcome" })
+      } else if (hasBlog()) {
+        this.setState({ currentPage: "blog" })
+      } else if (hasActivity()) {
+        this.setState({ currentPage: "activity" })
+      }
     } catch (e) {
       console.error(e)
     }
