@@ -8,7 +8,8 @@ import { contactme } from "../../lotties/contact"
 import Lottie from "../lottie"
 
 const Container = styled.div`
-  margin-bottom: 0;
+  margin-top: 150px;
+  margin-bottom: 0px;
   padding-bottom: 0;
   position: relative;
 `
@@ -39,7 +40,7 @@ const StyledLottie = styled(Lottie)`
 
   &:hover {
     transition: all 0.5s ease-out;
-    // filter: brightness(1.3);
+    filter: brightness(1.3);
     border-width: 5px;
     border-style: inset;
     border-radius: 50%;

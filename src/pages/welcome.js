@@ -190,7 +190,6 @@ export default function Welcome(props) {
             </AvatarBorder>
           </AvatarWrapper>
           <Contact />
-          <p style={{ marginBottom: "75px" }}> </p>
         </header>
         <h3
           style={{

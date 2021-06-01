@@ -28,7 +28,7 @@ export const Tag = styled.div`
   margin-bottom: 10px;
   font-size: ${rhythm(0.4)};
   box-sizing: border-box;
-  border-radius: 15px !important;
+  border-radius: 10px !important;
   white-space: normal;
   cursor: pointer;
   margin-right: 10px;
@@ -36,7 +36,6 @@ export const Tag = styled.div`
     props.active
       ? "0px 2px var(--primary-light)"
       : `0px 2px 3px rgb(30, 30, 30, 0.3)`};
-  test: ${props => console.log(props)}
 
   &:active {
     transform: translateY(2px);
@@ -65,12 +64,13 @@ export default function Tags(props) {
     <Container>
       <Ul className="tags-container">
         {getAllTags(posts).map(tag => {
+          const isTagActive = tag === tagSelected
           return (
             <Tag
-              className="tag"
+              className={`tag ${isTagActive && "tag-active"}`}
               key={tag}
               onClick={() => setTagSelected(tag)}
-              active={tag === tagSelected}
+              // active={tag === tagSelected}
             >
               {tag}
             </Tag>

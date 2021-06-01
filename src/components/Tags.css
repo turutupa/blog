@@ -3,8 +3,10 @@
 }
 
 .tag {
-  transition: background-color 0.5s ease;
   background-color: white;
+  font-family: Montserrat;
+  font-weight: 550;
+  box-shadow: 0 2px 5px rgb(0, 0, 0, 0.08);
 }
 
 .tag:hover {
@@ -12,11 +14,20 @@
 }
 
 body.dark .tag {
-  transition: background-color 0.5s ease;
-  background-color: var(--primary-dark);
+  /* background-color: var(--background-light); */
+  background-color: #d6d6d6;
   color: var(--text-color-light);
 }
 
 body.dark .tag:hover {
   background-color: rgb(30, 30, 30, 0.4);
+  color: var(--text-color-dark);
+}
+
+.tag-active {
+  box-shadow: 0px 3px var(--primary-light);
+}
+
+body.dark .tag-active {
+  box-shadow: 0px 3px var(--primary-light);
 }
