@@ -104,7 +104,7 @@ Coincidentally, [I replied to a vim ](https://dev.to/siddharthshyniben/i-m-switc
 
 If you are thinking about moving to vim or trying to use it similarly to vscode, I present to you [lunarvim](https://github.com/ChristianChiarulli/LunarVim)
 
-It is simply amazing. It does require a minimum setup to get syntax highlighting and stuff like that but it is simply fantastic. I now only use my terminal + tmux + neovim and I can code like the wind. It just feels like home.
+It is simply amazing. It does require a minimum setup to get syntax highlighting and stuff like that working but it is simply fantastic. I now only use my terminal + tmux + neovim and I can code like the wind. It just feels like home.
 
 ### Getting used to vim keybindings
 
