@@ -90,7 +90,7 @@ It basically let's you create sessions, in within a session you may have windows
 
 It's confusing at first but there are plenty videos explaining how it works. It is extremely useful and tidy. The only problem is the default keybindings aren't the best and the theme looks a bit meh... fortunately there is a plug-n-play config for tmux I always use:
 
-* **[oh-my-tmux](https://github.com/gpakosz/.tmux)** install it. You will love it. 
+* **[oh-my-tmux](https://github.com/gpakosz/.tmux)** install it. You will love it. It basically adds intuitive keybindings, an informative status bar at the bottom among many other things. Take a look at the repo and you'll instantly understand why you should use it if you don't know how to tweak it by yourself.
 * Another great plugin is [tmux resurrect](https://github.com/tmux-plugins/tmux-resurrect). Let's you save sessions so you can continue where you left it even after pc reboot. I installed it recently for the first time and it is a must-have plugin for me from now on.
 * A good read is [tmux product free-mouse development](<* https://www.amazon.com/tmux-Productive-Development-Brian-Hogan/dp/1934356964>). Spend one or two evenings with it, it'll make some sense on the topic. Super easy read.
 
