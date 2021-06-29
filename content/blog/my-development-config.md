@@ -68,7 +68,7 @@ To change the settings you'll have to edit a yml file at ~/.config/alacritty/ala
 
 ## zsh && Oh-my-zsh!
 
-I've been using this for a long time and I feel really comfortable with it so I haven't experienced many other shells lately. It even came by default on my old macbook pro so feels like home. I like installing oh-my-zsh for the themes and some of the out-of-the-box functionalities. I run it with the default theme. I like its simplicity. You can also check [powerlevel10k](https://github.com/romkatv/powerlevel10k). I did use that for some time and it is really nice. 
+It is a shell like many others out there. You might be used to using powershell - windows - or bash - linux and mac. I've been using this for a long time and I feel really comfortable with it so I haven't experienced many other shells lately. It even came by default on my old macbook pro so feels like home. I like installing oh-my-zsh for the themes and some of the out-of-the-box functionalities. I run it with the default theme. I like its simplicity. You can also check [powerlevel10k](https://github.com/romkatv/powerlevel10k). I did use that for some time and it is really nice. 
 
 I heard about fish and some others but never got my hands into them. 
 
