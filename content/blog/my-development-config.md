@@ -11,11 +11,9 @@ tags:
   - linux
 draft: false
 ---
-
-
 ![](../assets/rice-screenshot.jpg "develop-config")
 
-In this post I'll share my setup, some of the configurations and some of the reasons behind it. This is by no means finished nor the ultimate guide, more like just sharing in case your curious or if you are already curious on any of the topics.
+In this post I'll share development my setup, some of the configurations and some of the reasons behind it. This is by no means finished nor the ultimate guide, more like just sharing in case your curious or if you are already curious on any of the topics.
 
 My config is compounded by
 
