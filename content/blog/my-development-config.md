@@ -13,7 +13,7 @@ draft: false
 ---
 ![](../assets/rice-screenshot.jpg "develop-config")
 
-In this post I'll share development my setup, some of the configurations and some of the reasons behind it. This is by no means finished nor the ultimate guide. More like just sharing in case your curious or if you had explored some of the below tools, hopefully I'll shed some light on how you can incorporate them into your workflow.
+In this post I'll share development my setup, some of the configurations and some of the reasons behind it. This is by no means finished nor the ultimate guide. More like just sharing in case you're curious or if you had explored some of the below tools, hopefully I'll shed some light on how you can incorporate them into your workflow.
 
 My config is compounded by
 
