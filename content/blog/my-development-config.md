@@ -47,7 +47,7 @@ These are minor things and fixes, such as extensions and fixes.
   * User themes: I don't use any, I like it as it is
 * **Workspaces** I like the alttab mod so much that I wanted to use the same system to move around workspaces. Perhaps in the future I will use i3wm, but for the time being I modified some settings to apply my own keybinding to move around workspaces:
 
-  $ `gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Control><Alt>h']"`
+   `$ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Control><Alt>h']"`
 
   `$ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Control><Alt>l']"`
 
