@@ -2,10 +2,10 @@
 date: 2021-06-29T08:36:44.976Z
 title: My development config
 description: "Recently I installed linux and had to install my development
-  setup. It wasn't until now that I had realized how much it has grown, at least
-  in complexity. Some of the stuff I am using right now is Fedora distro,
-  alacritty terminal, neovim (for the most part, intellij for java), tmux, and
-  some extensions/tweaks for linux. "
+  setup. It wasn't until now that I had realized how much it has grown. Some of
+  the stuff I am using right now is Fedora distro, alacritty terminal, neovim
+  (for the most part, intellij for java), tmux, and some extensions/tweaks for
+  linux. "
 tags:
   - programming
   - linux
