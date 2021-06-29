@@ -2,10 +2,10 @@
 date: 2021-06-29T08:36:44.976Z
 title: My development config
 description: "Recently I installed linux and had to install my development
-  setup. It wasn't until now that I had realized how much it has grown. Some of
-  the stuff I am using right now is Fedora distro, alacritty terminal, neovim
-  (for the most part, intellij for java), tmux, and some extensions/tweaks for
-  linux. "
+  setup. It wasn't until then that I realized how much it has grown. Some of the
+  stuff I am using right now is Fedora distro, alacritty terminal, neovim (for
+  the most part, intellij for java), tmux, and some extensions/tweaks for linux.
+  "
 tags:
   - programming
   - linux
@@ -13,7 +13,7 @@ draft: false
 ---
 ![](../assets/rice-screenshot.jpg "develop-config")
 
-In this post I'll share development my setup, some of the configurations and some of the reasons behind it. This is by no means finished nor the ultimate guide, more like just sharing in case your curious or if you are already curious on any of the topics.
+In this post I'll share development my setup, some of the configurations and some of the reasons behind it. This is by no means finished nor the ultimate guide. More like just sharing in case your curious or if you had explored some of the below tools, hopefully I'll shed some light on how you can incorporate them into your workflow.
 
 My config is compounded by
 
