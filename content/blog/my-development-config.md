@@ -45,8 +45,9 @@ These are minor things and fixes, such as extensions and fixes.
   * User themes: I don't use any, I like it as it is
 * **Workspaces** I like the alttab mod so much that I wanted to use the same system to move around workspaces. Perhaps in the future I will use i3wm, but for the time being I modified some settings to apply my own keybinding to move around workspaces:
 
-  * gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Control><Alt>h']"
-  * gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Control><Alt>l']"
+  `gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Control><Alt>h']"`
+
+  `gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Control><Alt>l']"`
 
   What this does is, pressing Alt + Control + either L or H will move to the left or right workspace. This is a comfortable keybinding because as I mentioned earlier I modified my Caps Lock to work as Left Control. So switching between workspaces or apps feels natural. Although the most efficient way of moving around should be switching between apps, not workspaces, but I like to have the option.
 * **Bluetooth** I had a small issue with my bluetooth headphones where I would hear static noise while listening to music, If you suffer from the same annoying problem, simply install blueman (either via apt or dnf or whatever your package manager is) and in **/etc/bluetooth/main.conf** go to the last line and add **Disable=headset**
