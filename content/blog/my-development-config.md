@@ -2,10 +2,10 @@
 date: 2021-06-29T08:36:44.976Z
 title: My development config
 description: "Recently I installed linux and had to install my development
-  setup. It wasn't until now that I had realized how much it has grown, at least
-  in complexity. Some of the stuff I am using right now is Fedora distro,
-  alacritty terminal, neovim (for the most part, intellij for java), tmux, and
-  some extensions/tweaks for linux. "
+  setup. It wasn't until then that I realized how much it has grown. Some of the
+  stuff I am using right now is Fedora distro, alacritty terminal, neovim (for
+  the most part, intellij for java), tmux, and some extensions/tweaks for linux.
+  "
 tags:
   - programming
   - linux
@@ -13,14 +13,14 @@ draft: false
 ---
 ![](../assets/rice-screenshot.jpg "develop-config")
 
-In this post I'll share development my setup, some of the configurations and some of the reasons behind it. This is by no means finished nor the ultimate guide, more like just sharing in case your curious or if you are already curious on any of the topics.
+In this post I'll share development my setup, some of the configurations and some of the reasons behind it. This is by no means finished nor the ultimate guide. More like just sharing in case you're curious or if you had explored some of the below tools, hopefully I'll shed some light on how you can incorporate them into your workflow.
 
 My config is compounded by
 
 * **Fedora**
-* **Linux tweaks**
+* **Linux/Desktop tweaks**
 * **Alacritty**
-* **Oh-my-zsh!**
+* **zsh && Oh-my-zsh!**
 * **Tmux**
 * **Neovim**
 * **Intellij**
@@ -35,7 +35,7 @@ If you are wondering what laptop I bought it's the Asus Zephyrus G15. If you hav
 
 Nonetheless, by the time I installed Fedora it had already released Fedora 34 with Gnome 40 and it works super smooth so I am quite happy with it.
 
-## Linux tweaks
+## Linux/Desktop tweaks
 
 These are minor things and fixes, such as extensions and fixes. 
 
@@ -44,6 +44,7 @@ These are minor things and fixes, such as extensions and fixes.
 
   * Disable background logo: disables Fedora logo from the background image
   * [AltTab Mod](https://extensions.gnome.org/extension/4007/alttab-mod/): when using alt + tab you may use hjkl to switch between apps. Extremely comfortable if you are already using vim keybindings or are used to them
+  * [Unite](https://extensions.gnome.org/extension/1287/unite/https://extensions.gnome.org/extension/1287/unite/): use this to remove title bars from application windows. For example, you may have the application Spotify and by default it comes with the title bar, which to me, it is not adding any value. With this extension I can remove plus the title bar of all other applications. Use with caution as you won't be able to drag windows around anymore - you will have no title bar to select and drag. 
   * User themes: I don't use any, I like it as it is
 * **Workspaces** I like the alttab mod so much that I wanted to use the same system to move around workspaces. Perhaps in the future I will use i3wm, but for the time being I modified some settings to apply my own keybinding to move around workspaces:
 
@@ -51,10 +52,15 @@ These are minor things and fixes, such as extensions and fixes.
 
   `$ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Control><Alt>l']"`
 
-  What this does is, pressing Alt + Control + either L or H will move to the left or right workspace. This is a comfortable keybinding because as I mentioned earlier I modified my Caps Lock to work as Left Control. So switching between workspaces or apps feels natural. Although the most efficient way of moving around should be switching between apps, not workspaces, but I like to have the option.
+  What this does is, pressing Alt + Control + either L or H will move to the left or right workspace. This is a comfortable keybinding because as I mentioned earlier, I modified my Caps Lock to work as Left Control. So switching between workspaces or apps feels natural. Although the most efficient way of moving around should be switching between apps, not workspaces, but I like to have the option.
 * **Bluetooth** I had a small issue with my bluetooth headphones where I would hear static noise while listening to music, If you suffer from the same annoying problem, simply install blueman (either via apt or dnf or whatever your package manager is) and in **/etc/bluetooth/main.conf** go to the last line and add **Disable=headset**
 
   Don't ask me what does it do. I just follow a stackoverflow post. 
+* **[Pop_Os! shell](https://github.com/pop-os/shell)** I feel like sooner or late I will use [i3wm](https://i3wm.org/) or [i3-gaps](https://github.com/Airblader/i3), but I haven't found the time to try it out yet. What is i3? It replaces your desktop environment for an entirely new one which only works with the keyboard, or this is the idea behind it. You've seen the desktops divided (as in the picture shown at the top) in tiles? i3 is a window manager. It arranges for you windows and has easy keybindings to move them around, stack them and whatnot. 
+
+  I will update this post as soon as I try it out myself, for the time being I compromised and installed Pop_OS! shell which is the window managing system used by Pop_OS! system. 
+
+  The advantage is that you may use it along with gnome and you may activate and deactivate tiling mode on the fly, so not as constraining. So far I am having a blast with pop_os shell, so I don't think I'll take too long on trying i3 which would be the way to fully commit to a full mouseless environment. But for now pop_os works like a charm.I can easily move apps between workspaces, open several apps on the same workspace - they get re-order automatically - and all of these without moving my hands from the keyboard.
 
 ## Alacritty
 
@@ -82,9 +88,9 @@ I do install some plugins
 
 I freakin love tmux.
 
-The fist time I used it I didn't have any knowledge whatsoever on vim or its keybindings. Now I can't imagine my workflow without tmux. So what the heck is tmux?
+The fist time I used it I didn't have any knowledge whatsoever on vim or its keybindings. I tried it for the second time, and with my acquired muscle memory and a better comprehension on what tmux can bring to the table, I can't imagine my workflow without it. So what the heck is tmux?
 
-tmux is a terminal mutiplexer. So... what the heck is a terminal multiplexer?
+tmux is a terminal mutiplexer. So again... what the heck is a terminal multiplexer?
 
 It basically let's you create sessions, in within a session you may have windows, and in each window you can device that window in panes. Even more amazingly... you may "detach" from a session or from all sessions, and as long as you haven't rebooted, you may "attach" again to them and continue where you lef it. 
 
