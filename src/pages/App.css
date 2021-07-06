@@ -30,7 +30,7 @@ body.dark {
 .gatsby-resp-image-image,
 .gatsby-resp-image-wrapper {
   transition: all 05s linear;
-  border-radius: 15px !important;
+  border-radius: 3px !important;
   max-width: 100% !important;
 }
 
