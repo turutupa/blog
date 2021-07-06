@@ -58,7 +58,9 @@ These are minor things and fixes, such as extensions and fixes.
   Don't ask me what does it do. I just follow a stackoverflow post. 
 * **[Pop_Os! shell](https://github.com/pop-os/shell)** I feel like sooner or late I will use [i3wm](https://i3wm.org/) or [i3-gaps](https://github.com/Airblader/i3), but I haven't found the time to try it out yet. What is i3? It replaces your desktop environment for an entirely new one which only works with the keyboard, or this is the idea behind it. You've seen the desktops divided (as in the picture shown at the top) in tiles? i3 is a window manager. It arranges for you windows and has easy keybindings to move them around, stack them and whatnot. 
 
-  I will update this post as soon as I try it out myself, for the time being I compromised and installed Pop_OS! shell which is the window managing system used by Pop_OS! system. You may use it in gnome and you may activate tiling mode or deactivate on the fly, so not as constraining. I am loving so much so far I don't think I'll take too long on trying i3. But for the time being it works above my expectations.I can easily move apps between workspaces, open several apps on the same workspace and all without moving my hands from the keyboard.
+  I will update this post as soon as I try it out myself, for the time being I compromised and installed Pop_OS! shell which is the window managing system used by Pop_OS! system. 
+
+  The advantage is that you may use it along with gnome and you may activate and deactivate tiling mode on the fly, so not as constraining. So far I am having a blast with pop_os shell, so I don't think I'll take too long on trying i3 which would be the way to fully commit to a full mouseless environment. But for now pop_os works like a charm.I can easily move apps between workspaces, open several apps on the same workspace - they get re-order automatically - and all of these without moving my hands from the keyboard.
 
 ## Alacritty
 
