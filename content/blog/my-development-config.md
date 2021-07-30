@@ -112,7 +112,7 @@ If you are thinking about moving to vim or trying to use it similarly to vscode,
 
 It is simply amazing. It does require a minimum setup to get syntax highlighting and stuff like that working but it is simply fantastic. I now only use my terminal + tmux + neovim and I can code like the wind. It just feels like home.
 
-### Getting used to vim keybindings
+### Bonus! How to get used to vim keybindings
 
 You might be thinking all of this is awesome... so great to have a cool neovim config and whatever... but the reality is, you have no idea about vim keybindings, and they are ANNOYING. It is hard at first, yes. Anyone daring to say otherwise is just lying. In order to make this transition easier here are some tricks and tips
 
