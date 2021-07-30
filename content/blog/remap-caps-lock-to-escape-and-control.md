@@ -32,3 +32,14 @@ I've been searching for long on the internet and this has been by far the easies
 Enjoy! 
 
 Happy hacking
+
+## EDIT:
+
+I no longer use the trick to have caps lock as control and escape at the same time. Main reason, at least in windows was that I wanted to use that key for gaming as well, and if I used it whilst pressing another key it'd work as control but else, it would work as escape and the menu/settings would pop up. 
+
+I simply change CAPS lock to act as Control now by
+
+* **Windows:** using [Power Toys](https://github.com/microsoft/PowerToys). It is a really cool tool, you should install it regardless of your intentions on remapping keys. It also provides a similar search bar in the middle of the screen as Macs do, window zones and presets and many other cool stuff. 
+* **Linux:** using gnome tweaks (if you use gnome) simply select CAPS Lock to act as control in the *Keyboard & Mouse > Additional Layout Options*
+
+Now whenever I want to go into normal mode in vim I use *Control + C* instead of single press on control. It is not as convenient but after I while you don't even notice anymore.
