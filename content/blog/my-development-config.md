@@ -102,7 +102,9 @@ It's confusing at first but there are plenty videos explaining how it works. It 
 
 ## neovim
 
-I have always done wed development so my preferred editor has always been Visual Studio Code. There is no way I'd change that for anything else. As you might have guessed from the paragraph title, I did. 
+I have always done web development so my preferred editor has always been Visual Studio Code. Top text editor and super light and easy to config. There is no way I'd change that for anything else. \
+
+But, as you might have guessed from the paragraph title, I did. 
 
 For some reason I have always been attracted to vim or anything related to a mouseless workflow. I initially started using vim only to quickly edit files on terminal and not much beyond that. That was until I came across some videos from the [Primeagen](https://www.youtube.com/watch?v=bdumjiHabhQ), he has amazing videos related to vim and development. Or even just telling stories which are quite fun. That's when my curiosity for vim really triggered. 
 
