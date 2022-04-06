@@ -13,6 +13,9 @@ import Footer from "./footer"
 // initiate code renderer
 deckDeckGoHighlightElement()
 
+// max-width of layout in rythm sizes - the heck is that
+const maxWidth = rhythm(30);
+
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column !important;
@@ -28,7 +31,7 @@ const FixedHeader = styled.div`
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  max-width: ${rhythm(24)};
+  max-width: ${maxWidth};
   padding: ${rhythm(0.8)} ${rhythm(0.4)};
   display: flex;
   justify-content: space-between;
@@ -41,8 +44,8 @@ const Body = styled.div`
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  max-width: ${rhythm(24)};
-  padding: ${rhythm(2.5)} ${rhythm(0.4)};
+  max-width: ${maxWidth};
+  padding: ${rhythm(4)} ${rhythm(0.4)};
 `
 
 const H3 = styled.h3`

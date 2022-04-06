@@ -36,7 +36,7 @@ const StyledLottie = styled(Lottie)`
   border-width: 5px;
   border-style: inset;
   width: 40%;
-  min-width: 250px !important;
+  width: 250px;
 
   &:hover {
     transition: all 0.5s ease-out;

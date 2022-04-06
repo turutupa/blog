@@ -13,7 +13,7 @@ delete Wordpress2016.googleFonts
 
 const typography = new Typography({
   ...Wordpress2016,
-  baseFontSize: "16px",
+  baseFontSize: "18px",
   bodyWeight: 400,
   bodyFontFamily: ["Merriweather"],
 })

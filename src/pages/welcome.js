@@ -23,8 +23,8 @@ const AvatarWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 50px;
-  margin-bottom: 70px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 `
 
 const AvatarBorder = styled.div`
@@ -143,7 +143,8 @@ export default function Welcome(props) {
             <Lottie
               lottie={developer}
               style={{
-                marginBottom: "-60px",
+                marginBottom: "0px",
+                marginTop: "60px"
               }}
             />
           </section>

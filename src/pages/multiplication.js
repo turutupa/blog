@@ -24,7 +24,7 @@ export default function Multiplication(props) {
   const executeScroll = () => scrollToRef(myRef)
 
   React.useEffect(() => {
-    executeScroll()
+    // executeScroll()
     setFirstNumber(randomTwoDigitNumber())
     setSecondNumber(randomTwoDigitNumber())
   }, [counter])

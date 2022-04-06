@@ -14,10 +14,8 @@ function renderIcon(src) {
 }
 
 export default function ThemeSwitcher() {
-  const sunIconUrl =
-    "https://www.flaticon.com/svg/static/icons/svg/146/146199.svg"
-  const moonIconUrl =
-    "https://www.flaticon.com/svg/static/icons/svg/740/740880.svg"
+  const sunIconUrl = "https://cdn-icons-png.flaticon.com/512/979/979585.png";
+  const moonIconUrl = "https://cdn-icons-png.flaticon.com/512/740/740878.png";
 
   return (
     <ThemeToggler>
